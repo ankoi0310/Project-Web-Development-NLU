@@ -1,0 +1,370 @@
+.header {
+    width: 100%;
+    height: 6.4rem;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+
+.header .logo {
+    height: 6.4rem;
+}
+
+.header .logo .logo-img {
+    height: 6.4rem;
+    vertical-align: baseline;
+}
+
+.header .navbar .nav-list-item {
+    padding: 0.8rem 1.5rem;
+    position: relative;
+}
+
+.header .navbar .nav-list-item::after {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 0.5rem;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50px;
+    background-color: #46bf9d;
+    opacity: 0.7;
+    display: none;
+}
+
+.header .navbar .nav-list-item.active a {
+    color: #46bf9d;
+}
+
+.header .navbar .nav-list-item.active::after {
+    display: block;
+}
+
+.header .navbar .nav-list-item a {
+    font-size: 1.6rem;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+.header .navbar .nav-list-item:hover a {
+    color: #46bf9d;
+}
+
+.header .header-btn .header-list .header-list-item {
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 50px;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+}
+
+.header .header-btn .header-list .header-list-item:hover a {
+    color: #46bf9d;
+}
+
+.header .header-btn .header-list .header-list-item:hover {
+    background-color: rgba(70, 191, 157, 0.2);
+}
+
+.header .header-btn .header-list .header-list-item > a ion-icon {
+    font-size: 2.4rem;
+    vertical-align: middle;
+}
+
+/* end header */
+
+/* main content ---------------------------------------------------------- */
+
+.content {
+    margin-top: 6.4rem;
+    padding: 4rem 0;
+    height: 1200px;
+    position: relative;
+    z-index: 1;
+}
+
+.content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40rem;
+    z-index: -1;
+    background-color: #46bf9d;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+    opacity: 0.5;
+}
+
+.content .product-img .product-img-main {
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.content .product-img .product-img-main img {
+    width: 100%;
+}
+
+.content .product-img .product-img-list .product-img-list-item {
+    height: 7rem;
+    border-radius: 8px;
+    border: 2px solid #eee;
+    transition: all 0.1s ease-in-out;
+}
+
+.content .product-img .product-img-list .product-img-list-item.active,
+.content .product-img .product-img-list .product-img-list-item:hover {
+    border-color: #46bf9d;
+}
+
+.content .detail {
+    padding: 3rem 5rem;
+}
+
+.content .detail .product-title {
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: #303030;
+    text-transform: uppercase;
+}
+
+.content .detail .product-description {
+    font-size: 1.4rem;
+    color: #3a3a3a;
+}
+
+.content .detail .product-size,
+.content .detail .product-material {
+    font-size: 1.7rem;
+    font-style: italic;
+    font-weight: normal;
+    color: #3a3a3a;
+    margin-bottom: 0.5rem;
+}
+
+.content .detail .product-size span {
+    font-weight: 400;
+    margin-left: 2rem;
+}
+
+.content .detail .product-material span {
+    font-weight: 400;
+    margin-left: 4.6rem;
+}
+
+.content .detail .product-color {
+    margin: 1rem 0;
+}
+
+.content .detail .product-color span {
+    font-size: 1.7rem;
+    font-style: italic;
+    color: #3a3a3a;
+}
+
+.content .detail .product-color .color {
+    width: 140px;
+    height: 40px;
+    background-color: #eee;
+    border-radius: 25px;
+    position: relative;
+    left: 4.6rem;
+    transform: translateY(-15%);
+}
+
+.content .detail .product-color .color .color-item {
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    transform: translateY(-50%);
+    width: 2rem;
+    height: 2rem;
+    background-color: #e2806e;
+    border-radius: 50px;
+}
+
+.content .detail .product-color .color .color-item:nth-child(2) {
+    left: 6rem;
+    background-color: #4d4b4a;
+}
+
+.content .detail .product-color .color .color-item:nth-child(3) {
+    left: 10rem;
+    background-color: #7bb7c5;
+}
+
+.content .detail .product-color .color .color-item.select::before,
+.content .detail .product-color .color .color-item:hover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: scale(1.6);
+    border-radius: 50px;
+    border: 4px solid #e0e0e0;
+}
+
+.content .detail .product-rate {
+    position: relative;
+    height: 3rem;
+}
+
+.content .detail .product-rate ion-icon {
+    position: absolute;
+    font-size: 2.4rem;
+    color: #ff865d;
+}
+
+.content .detail .product-rate ion-icon:nth-child(2) {
+    opacity: 0.2;
+}
+
+.content .detail .product-rate span {
+    position: absolute;
+    left: 4rem;
+    font-size: 1.6rem;
+    color: #ff865d;
+}
+
+.content .detail .product-rate span.rate-count {
+    margin-left: 3rem;
+}
+
+.content .detail .product-price {
+    width: 100px;
+    height: 50px;
+    margin: 3rem 0;
+}
+
+.content .detail .product-price .promotion-price {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #46bf9d;
+}
+
+.content .detail .product-price .original-price {
+    font-size: 2rem;
+    text-decoration: line-through;
+    color: #666;
+    margin-left: 2rem;
+}
+
+.content .detail .product-add-cart {
+    font-size: 2rem;
+    color: #fff;
+    height: 6rem;
+}
+
+.content .detail .product-add-cart .quantity {
+    background-color: #41cc88;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 8px 0 0 8px;
+}
+
+.content .detail .product-add-cart .quantity:hover {
+    background-color: rgba(65, 204, 137, 0.95);
+}
+
+.content .detail .product-add-cart .quantity button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.content .detail .product-add-cart .quantity .btn-minus ion-icon {
+    font-size: 3.5rem;
+    color: #1eb48a;
+}
+
+.content .detail .product-add-cart .quantity .btn-add ion-icon {
+    font-size: 3.5rem;
+    color: #fff;
+}
+
+.content .detail .product-add-cart .quantity span {
+    margin: 0 1rem;
+}
+
+.content .detail .product-add-cart .btn-add-to-cart {
+    background-color: #45d58f;
+    border-radius: 0 8px 8px 0;
+    color: #fff;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.content .detail .product-add-cart .btn-add-to-cart:hover {
+    background-color: rgba(69, 213, 143, 0.92);
+}
+
+.content .detail .product-add-cart .btn-add-to-cart span {
+    margin-left: 20px;
+}
+
+.content .detail .wish-list {
+    position: relative;
+    cursor: pointer;
+    height: 2.5rem;
+}
+
+.content .detail .wish-list ion-icon {
+    position: absolute;
+    top: 0;
+    font-size: 2.4rem;
+    color: #4d4b4a;
+}
+
+.content .detail .wish-list ion-icon:nth-child(2) {
+    transform: scale(1.1);
+    color: #46bf9d;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.content .detail .wish-list:hover ion-icon:nth-child(2) {
+    visibility: visible;
+    opacity: 1;
+}
+
+.content .detail .wish-list span {
+    position: absolute;
+    top: 0;
+    left: 4rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+/* end content .product */
+
+.content .description {
+    margin-top: 6rem;
+}
+
+.content .description h2 {
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.content .description p {
+    padding: 0.5rem 3rem;
+    font-size: 1.6rem;
+}
+
+.content .description p:first-of-type {
+    padding: 1rem 3rem 2rem;
+}
