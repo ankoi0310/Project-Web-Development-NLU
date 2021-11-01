@@ -1,0 +1,75 @@
+/* id = section_logo */
+.light_gray_bg{
+    background: #e8eae9;
+    width: 100%;
+}
+.container_1{
+    height: 80px;
+    width: 100%;
+    margin: 0 auto;
+   background: #e8eae9; 
+}
+.container_1 .alpha{  
+    width: 300px;
+    float: left;
+    clear: right;
+}
+.container_1 .alpha img{
+    height: 80px;
+}
+.container_1 .search{
+    width: 520px;
+    float: right;
+    margin-right: 50px;
+}
+.container_1 .search .search_zone{
+width: 440px;
+height: 40px;
+border-radius: 3%;
+margin-top: 20px;
+padding-left: 15px ;
+
+}
+.container_1 .right_text .pix_button{
+    font-weight: bolder;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+.container_1 .beta{
+    height: 80px;
+width: 120px;
+float: right;
+margin-top: 30px;
+text-align: center;
+margin-right: 30px;
+}
+.container_1 .omega{
+height: 80px;
+width: 130px;
+float: right;
+margin-top: 30px;
+text-align: center;
+margin-right: 20px;
+}
+.container_1 .omega span{
+    background: orange;
+    padding: 10px;
+    border-radius: 5%;
+}
+.container_1 .y{
+    height: 80px;
+width: 130px;
+float: right;
+margin-top: 30px;
+text-align: center;
+margin-right: 20px;
+}
+.container_1 .y span{
+    background: blue;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 5%;
+}

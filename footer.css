@@ -1,0 +1,57 @@
+/* id = section_footer */
+.pixfort_party_15{
+    width: 100%;
+    height: 80px;
+    background: #023f3b;
+}
+.pixfort_party_15 .container{
+width: 1200px;
+margin: 0 auto;
+}
+.pixfort_party_15 .container .alpha{
+float: left;
+width: 50%;
+padding-top: 30px;
+
+}
+.pixfort_party_15 .container .alpha .pix_text{
+font-size: 18px;
+}
+.pixfort_party_15 .container .alpha .pix_text .rights_st{
+    color: gray;
+}
+.pixfort_party_15 .container .alpha .pix_text .pixfort_st{
+    color: #1c87e0;
+}
+.pixfort_party_15 .container .omega{
+float: right;
+width: 50%;
+}
+.pixfort_party_15 .container .omega .pix_builder_bg{
+float: right;
+clear: left;
+}
+.pixfort_party_15 .container .omega ul{
+list-style-type: none;
+
+}
+.pixfort_party_15 .container .omega ul li {
+float: right;
+clear: left;
+padding-top: 20px;
+}
+.pixfort_party_15 .container .omega ul .normal_gray {
+    padding-left: 30px;
+    
+}
+.pixfort_party_15 .container .omega ul li a {
+    text-decoration: none;
+    color: gray;
+    font-size: 18px;
+}
+.pixfort_party_15 .container .omega .likes_st{
+padding-top: 32px;
+font-size: 15px;
+color: gray;
+padding-left: 210px;
+}
