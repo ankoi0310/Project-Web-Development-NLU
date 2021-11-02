@@ -12,17 +12,17 @@
             integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
             crossorigin="anonymous"
         />
-        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/base.css" />
         <link rel="stylesheet" href="./css/product-detail.css" />
     </head>
     <body>
         <header class="header">
             <div class="container">
                 <div class="d-flex justify-content-between align-items-center">
-                    <div class="logo col-1">
+                    <div class="logo col-2">
                         <img src="./images/logo.jpg" alt="Logo" class="logo-img" />
                     </div>
-                    <div class="navbar col-4">
+                    <div class="navbar col-6">
                         <nav>
                             <ul class="nav-list d-flex justify-content-center">
                                 <li class="nav-list-item"><a href="#">Trang chủ</a></li>
@@ -105,12 +105,31 @@
                             Vật liệu: <span>Chân gỗ - Vải cao cấp</span>
                         </p>
                         <div class="product-color d-flex justify-content-lg-start">
-                            <span>Màu sắc</span>
+                            <span>Màu sắc:</span>
                             <ul class="color">
                                 <li class="color-item select"></li>
                                 <li class="color-item"></li>
                                 <li class="color-item"></li>
                             </ul>
+                        </div>
+                        <div class="quantity">
+                            <span>Số lượng:</span>
+                            <div
+                                class="
+                                    btn-quantity
+                                    d-flex
+                                    justify-content-center
+                                    align-items-center
+                                "
+                            >
+                                <button class="btn-minus">
+                                    <ion-icon name="remove-circle"></ion-icon>
+                                </button>
+                                <span>1</span>
+                                <button class="btn-add">
+                                    <ion-icon name="add-circle"></ion-icon>
+                                </button>
+                            </div>
                         </div>
                         <div class="product-rate">
                             <ion-icon name="star-outline"></ion-icon>
@@ -128,26 +147,11 @@
                         >
                             <span class="promotion-price">25.415.000</span>
                             <span class="original-price">29.900.000</span>
+                            <span class="reduce-percent">15% GIẢM</span>
                         </div>
                         <div class="product-add-cart d-flex justify-content-start">
-                            <div
-                                class="
-                                    quantity
-                                    col-4
-                                    d-flex
-                                    justify-content-center
-                                    align-items-center
-                                "
-                            >
-                                <button class="btn-minus">
-                                    <ion-icon name="remove-circle"></ion-icon>
-                                </button>
-                                <span>1</span>
-                                <button class="btn-add">
-                                    <ion-icon name="add-circle"></ion-icon>
-                                </button>
-                            </div>
-                            <button class="btn btn-add-to-cart col-6">
+                            <button class="btn-purchase col-4">Mua ngay</button>
+                            <button class="btn-add-to-cart col-7">
                                 <i class="fab fa-opencart"></i>
                                 <span>Thêm vào giỏ hàng</span>
                             </button>

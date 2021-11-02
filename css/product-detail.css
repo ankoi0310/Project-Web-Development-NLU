@@ -32,13 +32,13 @@
     left: 50%;
     transform: translateX(-50%);
     border-radius: 50px;
-    background-color: #46bf9d;
+    background-color: var(--primary-color);
     opacity: 0.7;
     display: none;
 }
 
 .header .navbar .nav-list-item.active a {
-    color: #46bf9d;
+    color: var(--primary-color);
 }
 
 .header .navbar .nav-list-item.active::after {
@@ -52,7 +52,7 @@
 }
 
 .header .navbar .nav-list-item:hover a {
-    color: #46bf9d;
+    color: var(--primary-color);
 }
 
 .header .header-btn .header-list .header-list-item {
@@ -65,11 +65,11 @@
 }
 
 .header .header-btn .header-list .header-list-item:hover a {
-    color: #46bf9d;
+    color: var(--primary-color);
 }
 
 .header .header-btn .header-list .header-list-item:hover {
-    background-color: rgba(70, 191, 157, 0.2);
+    background-color: var(--primary-color-rgba);
 }
 
 .header .header-btn .header-list .header-list-item > a ion-icon {
@@ -97,7 +97,7 @@
     width: 100%;
     height: 40rem;
     z-index: -1;
-    background-color: #46bf9d;
+    background-color: var(--primary-color);
     clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
     opacity: 0.5;
 }
@@ -120,7 +120,7 @@
 
 .content .product-img .product-img-list .product-img-list-item.active,
 .content .product-img .product-img-list .product-img-list-item:hover {
-    border-color: #46bf9d;
+    border-color: var(--primary-color);
 }
 
 .content .detail {
@@ -130,13 +130,13 @@
 .content .detail .product-title {
     font-size: 3.2rem;
     font-weight: 600;
-    color: #303030;
+    color: var(--text-black);
     text-transform: uppercase;
 }
 
 .content .detail .product-description {
     font-size: 1.4rem;
-    color: #3a3a3a;
+    color: var(--text-black);
 }
 
 .content .detail .product-size,
@@ -144,7 +144,7 @@
     font-size: 1.7rem;
     font-style: italic;
     font-weight: normal;
-    color: #3a3a3a;
+    color: var(--text-black);
     margin-bottom: 0.5rem;
 }
 
@@ -165,13 +165,13 @@
 .content .detail .product-color span {
     font-size: 1.7rem;
     font-style: italic;
-    color: #3a3a3a;
+    color: var(--text-black);
 }
 
 .content .detail .product-color .color {
     width: 140px;
     height: 40px;
-    background-color: #eee;
+    background-color: var(--grey-color);
     border-radius: 25px;
     position: relative;
     left: 4.6rem;
@@ -209,6 +209,62 @@
     border: 4px solid #e0e0e0;
 }
 
+.content .detail .quantity {
+    font-size: 2rem;
+    color: #fff;
+    margin: 1rem 0 2.5rem;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.content .detail .quantity > span {
+    font-size: 1.7rem;
+    font-style: italic;
+    color: var(--text-black);
+    margin: 0;
+}
+
+.content .detail .quantity .btn-quantity {
+    background-color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    left: 25%;
+    transform: translateY(-15%);
+    transition: all 0.2s ease;
+}
+
+.content .detail .quantity .btn-quantity:hover {
+    background-color: var(--primary-color-hover);
+}
+
+.content .detail .quantity .btn-quantity button {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.content .detail .quantity .btn-minus ion-icon {
+    font-size: 3.5rem;
+    color: #1eb48a;
+}
+
+.content .detail .quantity .btn-add ion-icon {
+    font-size: 3.5rem;
+    color: #fff;
+}
+
+.content .detail .quantity .btn-quantity span {
+    margin: 0 2.4rem;
+}
+
 .content .detail .product-rate {
     position: relative;
     height: 3rem;
@@ -217,7 +273,7 @@
 .content .detail .product-rate ion-icon {
     position: absolute;
     font-size: 2.4rem;
-    color: #ff865d;
+    color: var(--secondary-color);
 }
 
 .content .detail .product-rate ion-icon:nth-child(2) {
@@ -228,7 +284,7 @@
     position: absolute;
     left: 4rem;
     font-size: 1.6rem;
-    color: #ff865d;
+    color: var(--secondary-color);
 }
 
 .content .detail .product-rate span.rate-count {
@@ -236,7 +292,7 @@
 }
 
 .content .detail .product-price {
-    width: 100px;
+    width: auto;
     height: 50px;
     margin: 3rem 0;
 }
@@ -244,71 +300,57 @@
 .content .detail .product-price .promotion-price {
     font-size: 4rem;
     font-weight: bold;
-    color: #46bf9d;
+    color: var(--primary-color);
 }
 
 .content .detail .product-price .original-price {
     font-size: 2rem;
     text-decoration: line-through;
-    color: #666;
+    color: var(--text-grey);
     margin-left: 2rem;
 }
 
+.content .detail .product-price .reduce-percent {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--text-white);
+    background-color: var(--secondary-color);
+    margin-left: 2rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
 .content .detail .product-add-cart {
-    font-size: 2rem;
+    height: 5rem;
+}
+
+.content .detail .product-add-cart .btn-purchase {
+    background-color: var(--primary-color);
+    margin-right: 2rem;
+    border: none;
     color: #fff;
-    height: 6rem;
-}
-
-.content .detail .product-add-cart .quantity {
-    background-color: #41cc88;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    border-radius: 8px 0 0 8px;
-}
-
-.content .detail .product-add-cart .quantity:hover {
-    background-color: rgba(65, 204, 137, 0.95);
-}
-
-.content .detail .product-add-cart .quantity button {
-    width: 40px;
-    height: 40px;
+    font-size: 1.8rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: none;
-    outline: none;
-    background-color: transparent;
+    transition: all 0.2s ease;
 }
 
-.content .detail .product-add-cart .quantity .btn-minus ion-icon {
-    font-size: 3.5rem;
-    color: #1eb48a;
-}
-
-.content .detail .product-add-cart .quantity .btn-add ion-icon {
-    font-size: 3.5rem;
-    color: #fff;
-}
-
-.content .detail .product-add-cart .quantity span {
-    margin: 0 1rem;
+.content .detail .product-add-cart .btn-purchase:hover {
+    background-color: var(--primary-color-hover);
 }
 
 .content .detail .product-add-cart .btn-add-to-cart {
-    background-color: #45d58f;
-    border-radius: 0 8px 8px 0;
-    color: #fff;
-    font-size: 1.6rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.2s ease;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    background-color: #fff;
+    border: 3px solid var(--primary-color);
+    transition: all 0.2s ease-in-out;
 }
 
 .content .detail .product-add-cart .btn-add-to-cart:hover {
-    background-color: rgba(69, 213, 143, 0.92);
+    background-color: var(--primary-color-rgba1);
 }
 
 .content .detail .product-add-cart .btn-add-to-cart span {
@@ -330,7 +372,7 @@
 
 .content .detail .wish-list ion-icon:nth-child(2) {
     transform: scale(1.1);
-    color: #46bf9d;
+    color: var(--primary-color);
     visibility: hidden;
     opacity: 0;
     transition: all 0.2s ease-in-out;
@@ -357,7 +399,7 @@
 
 .content .description h2 {
     padding: 1.5rem;
-    background-color: rgba(0, 0, 0, 0.02);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .content .description p {
