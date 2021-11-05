@@ -1,0 +1,75 @@
+/* id = section_logo */
+.header{
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+
+}
+
+.header .logo {
+    height: 80px;
+    width: 20%;
+    float: left;
+}
+
+.header .logo .logo-img {
+    height: 80px;
+    padding-left: 30%;
+}
+
+.header .navbar {
+    width: 45%;
+    float: left;
+    height: 80px;
+}
+.header .navbar ul{
+    height: 80px;
+    margin: 0px;
+    padding: 0px;
+}
+.header .navbar .nav-list-item {
+    padding-right: 25px;
+    list-style-type: none;
+    float: left;
+    clear: right;
+    margin-top: 31.5px;
+}
+
+.header .navbar .nav-list-item a{
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bolder;
+    color: gray;
+
+}
+
+.header .header-btn{
+    width: 35%;
+    float: right;
+    height: 80px;
+
+}
+.header .header-btn ul{
+    height: 80px;
+    margin: 0px;
+    padding: 0px;
+}
+.header .header-btn .header-list-item{
+    float: left;
+    clear: right;
+    padding-left: 15px;
+    padding-right: 15px;
+    list-style-type: none;
+
+}
+.header .header-btn .header-list-item a{
+    text-decoration: none;
+    font-size: 17px;
+    margin-top: 31.5px;
+    color: gray;
+
+}
+.header .header-btn .text{
+    font-weight: bolder;
+    margin-top: 31.5px;
+}
