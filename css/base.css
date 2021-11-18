@@ -49,3 +49,8 @@ a {
     text-decoration: none;
     color: #999;
 }
+
+.container {
+    width: 120rem;
+    margin: 0 auto;
+}
