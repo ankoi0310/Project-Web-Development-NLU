@@ -1,6 +1,6 @@
 /* index.html */
 
-/* id = section_slider */
+/* id = section_slider */ 
 
 .pixfort_pix_slider{
     width: 100%;
@@ -17,10 +17,11 @@
     font-weight: bolder;
     padding-top: 20px;
     margin-left: 100px;
-    margin-bottom: -90px;
+    margin-bottom: 20px;
 }
 .pixfort_pix_slider .editContent .blue_text{
     color: #0fbbad;
+    padding-top: 40px;
 }
 .pixfort_pix_slider .image{
     margin-top: 31px;
