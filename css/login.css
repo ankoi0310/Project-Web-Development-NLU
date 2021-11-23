@@ -1,0 +1,29 @@
+body {
+    background: #000000;
+}
+
+#login {
+    position: absolute;
+    width: 930px;
+    height: 618px;
+    left: 495px;
+    top: 242px;
+    background: #FFFFFF;
+}
+
+#image-left {
+    width: 450px;
+    height: 618px;
+    left: 495px;
+    top: 242px;
+    background: url('../images/login.png');
+    float: left;
+}
+
+#logo-img {
+    position: absolute;
+    width: 123px;
+    height: 52px;
+    left: 975px;
+    top: 282px;
+}
