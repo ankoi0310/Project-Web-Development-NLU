@@ -1,6 +1,7 @@
 :root {
     --login-width: 930px;
     --login-height: 618px;
+    --login-font-family: Sofia Pro, sans-serif;
 }
 
 .modal {
@@ -25,17 +26,111 @@
     background: rgba(255, 255, 255, 1);
 }
 
-.left {
+.modal-content .left {
     float: left;
     width: 450px;
     height: var(--login-height);
     background: url('../images/login.png');
 }
 
-.right {
+.modal-content .right {
     float: right;
+    padding: 20px;
     width: calc(var(--login-width) - 450px);
     height: var(--login-height);
+}
+
+.modal-content .right #signin-facebook {
+    background: #FFFFFF;
+    box-shadow: 0 4px 20px rgba(97, 97, 103, 0.18);
+    border-radius: 40px;
+}
+
+.modal-content .right .title {
+    font-family: var(--login-font-family);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    margin-top: 122px;
+    margin-bottom: 24px;
+}
+
+.modal-content .right .form-group:first-child {
+    margin-top: 24px;
+    margin-bottom: 30px;
+}
+
+.modal-content .right label {
+    font-family: var(--login-font-family);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+}
+
+.modal-content .right input {
+    width: 420px;
+    height: 48px;
+    border: 1px solid #B6B8B8;
+    box-sizing: border-box;
+    border-radius: 40px;
+    padding: 0 24px;
+}
+
+.modal-content .right input#password {
+    margin-bottom: 30px;
+}
+
+.modal-content .right input::placeholder {
+    position: absolute;
+    height: 20px;
+    left: 24px;
+    top: 14px;
+    font-family: var(--login-font-family);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.02em;
+    color: #B6B8B8;
+}
+
+.modal-content .right .forgot-password {
+    float: right;
+    width: 119px;
+    height: 20px;
+    left: 1276px;
+    top: 620px;
+    font-family: var(--login-font-family);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    color: #DA3E31;
+}
+
+.modal-content .right .forgot-password:hover {
+    cursor: pointer;
+}
+
+.form-group #show {
+    float: right;
+    position: relative;
+    margin-right: 40px;
+    margin-top: -62px;
+    z-index: 2;
+    font-size: 14px;
+}
+
+.form-group #show:hover {
+    cursor: pointer;
 }
 
 .left:after, .right:after {
@@ -46,7 +141,6 @@
 .close {
     color: #AAAAAA;
     float: right;
-    padding-right: 10px;
     font-size: 28px;
     font-weight: lighter;
 }
