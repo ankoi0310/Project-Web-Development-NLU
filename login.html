@@ -16,51 +16,34 @@
         <div class="modal-content">
             <div class="left"></div>
             <div class="right">
+                <img src="images/logo.jpg" alt="Logo"/>
                 <span class="close">&times;</span>
                 <h4 class="title">Welcome Back</h4>
-                <button id="signin-facebook">Sign in with Facebook</button>
-                <span>Or</span>
-                <form action="">
+                <button id="signin-facebook"><i class="fab fa-facebook-f"></i> Sign in with Facebook</button>
+                <button id="signin-google"><i class="fab fa-google"></i></button>
+                <br>
+                <span class="d-flex justify-content-center pt-12 pb-16">Or</span>
+                <form action="" method="POST">
                     <div class="form-group">
-                        <label for="email">Your email</label>
+                        <label for="email" class="form-label">Your email</label>
                         <input type="text" id="email" name="email" placeholder="ex: ankoi0310@gmail.com">
                     </div>
                     <div class="form-group">
-                        <label for="password">Password</label>
+                        <label for="password" class="form-label">Password</label>
                         <span class="forgot-password">Forgot password?</span>
                         <input type="password" id="password" name="password">
                         <span id="show" class="far fa-eye-slash"></span>
                     </div>
+                    <div class="form-group">
+                        <input type="submit" id="submit" value="Sign in">
+                    </div>
                 </form>
+                <div class="register">
+                    <span>New member? <a href="">Register Now</a></span>
+                </div>
             </div>
         </div>
     </div>
-    <script>
-        let modal = document.getElementById("login");
-        let btnLogin = document.getElementById("btnLogin");
-        let closeBtn = document.getElementsByClassName("close")[0];
-
-        // Show/hide modal login
-        btnLogin.onclick = () => modal.style.display = "block";
-        closeBtn.onclick = () => modal.style.display = "none";
-        window.onclick = (event) => {
-            if (event.target === modal) modal.style.display = "none";
-        }
-
-        // Show/hide password
-        let show = document.getElementById("show");
-        let inputPassword = document.getElementById("password");
-        show.onclick = () => {
-            if (show.classList.contains("fa-eye")) {
-                show.classList.remove("fa-eye");
-                show.classList.add("fa-eye-slash");
-                inputPassword.attributes.getNamedItem("type").value = "password";
-            } else {
-                show.classList.add("fa-eye");
-                show.classList.remove("fa-eye-slash");
-                inputPassword.attributes.getNamedItem("type").value = "text";
-            }
-        }
-    </script>
+    <script src="js/login.js"></script>
 </body>
 </html>

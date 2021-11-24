@@ -1,7 +1,35 @@
 :root {
     --login-width: 930px;
     --login-height: 618px;
-    --login-font-family: Sofia Pro, sans-serif;
+}
+
+body {
+    font-family: Sofia Pro, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #5D5F5F;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.justify-content-center {
+    justify-content: center !important;
+}
+
+.pt-12 {
+    padding-top: 12px !important;
+}
+
+.pb-16 {
+    padding-bottom: 16px !important;
+}
+
+.form-label {
+    margin-bottom: 12px !important;
 }
 
 .modal {
@@ -24,6 +52,7 @@
     margin: 0 auto;
     top: 15%;
     background: rgba(255, 255, 255, 1);
+    border-radius: 20px;
 }
 
 .modal-content .left {
@@ -31,40 +60,81 @@
     width: 450px;
     height: var(--login-height);
     background: url('../images/login.png');
+    border-radius: 20px 0 0 20px;
 }
 
 .modal-content .right {
     float: right;
-    padding: 20px;
+    padding: 10px 20px;
     width: calc(var(--login-width) - 450px);
     height: var(--login-height);
 }
 
-.modal-content .right #signin-facebook {
+.modal-content .right img {
+    width: 100px;
+    height: 60px;
+}
+
+/* Close button */
+.modal-content .right .close {
+    color: #AAAAAA;
+    float: right;
+    font-size: 28px;
+    font-weight: lighter;
+}
+
+.modal-content .right .close:hover,
+.modal-content .right .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#signin-facebook, #signin-google {
+    height: 35px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: width 0.5s;
+}
+
+#signin-facebook {
+    width: 395px;
     background: #FFFFFF;
     box-shadow: 0 4px 20px rgba(97, 97, 103, 0.18);
-    border-radius: 40px;
+}
+
+#signin-facebook:hover {
+    background: #009dff;
+    color: #FFFFFF;
+}
+
+#signin-google {
+    width: 35px;
+    background: #F4F4F5;
+}
+
+#signin-google:hover {
+    background: #e32525;
+    color: #FFFFFF;
 }
 
 .modal-content .right .title {
-    font-family: var(--login-font-family);
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
     line-height: 36px;
     display: flex;
     align-items: center;
-    margin-top: 122px;
+    margin-top: 12px;
     margin-bottom: 24px;
 }
 
 .modal-content .right .form-group:first-child {
-    margin-top: 24px;
     margin-bottom: 30px;
 }
 
 .modal-content .right label {
-    font-family: var(--login-font-family);
+    display: inline-block;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -73,7 +143,7 @@
 }
 
 .modal-content .right input {
-    width: 420px;
+    width: 440px;
     height: 48px;
     border: 1px solid #B6B8B8;
     box-sizing: border-box;
@@ -90,7 +160,6 @@
     height: 20px;
     left: 24px;
     top: 14px;
-    font-family: var(--login-font-family);
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -107,7 +176,6 @@
     height: 20px;
     left: 1276px;
     top: 620px;
-    font-family: var(--login-font-family);
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -133,21 +201,35 @@
     cursor: pointer;
 }
 
+.form-group #submit {
+    font-family: Sofia Pro, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    letter-spacing: 0.02em;
+    background: #E9672B;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.modal-content .right .register {
+    font-family: Sofia Pro, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #5D5F5F;
+    margin-top: 24px;
+}
+
+.modal-content .right .register a {
+    color: #0d6efd;
+}
+
 .left:after, .right:after {
     clear: both;
-}
-
-/* Close button */
-.close {
-    color: #AAAAAA;
-    float: right;
-    font-size: 28px;
-    font-weight: lighter;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
 }
