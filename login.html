@@ -49,13 +49,16 @@
 
         // Show/hide password
         let show = document.getElementById("show");
+        let inputPassword = document.getElementById("password");
         show.onclick = () => {
             if (show.classList.contains("fa-eye")) {
                 show.classList.remove("fa-eye");
                 show.classList.add("fa-eye-slash");
+                inputPassword.attributes.getNamedItem("type").value = "password";
             } else {
                 show.classList.add("fa-eye");
                 show.classList.remove("fa-eye-slash");
+                inputPassword.attributes.getNamedItem("type").value = "text";
             }
         }
     </script>
