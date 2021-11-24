@@ -8,45 +8,29 @@
             integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>Login</title>
     <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="box">
-                <div class="logo">
-                    <img src="images/logo.jpg" alt="Logo" class="logo-img" />
-                </div>
-                <nav class="navigation">
-                    <ul class="navigation-list">
-                        <li class="navigation-item"><a href="#">Trang chủ</a></li>
-                        <li class="navigation-item active"><a href="#">Sản phẩm</a></li>
-                        <li class="navigation-item"><a href="#">Mới</a></li>
-                        <li class="navigation-item"><a href="#">Khuyến mãi</a></li>
-                        <li class="navigation-item"><a href="#">Blog</a></li>
-                    </ul>
-                </nav>
-                <div class="header-btn">
-                    <ul class="header-list">
-                        <li class="header-item">
-                            <a href="#"><ion-icon name="search-outline"></ion-icon></a>
-                        </li>
-                        <li class="header-item">
-                            <a href="#"><ion-icon name="heart-outline"></ion-icon></a>
-                        </li>
-                        <li class="header-item">
-                            <a href="#"><ion-icon name="cart-outline"></ion-icon></a>
-                        </li>
-                        <li class="header-item"><a href="#">Đăng nhập</a></li>
-                        <li class="header-item"><a href="#">Đăng ký</a></li>
-                    </ul>
-                </div>
+    <button id="btnLogin">Login</button>
+    <div id="login" class="modal">
+        <div class="modal-content">
+            <div class="left"></div>
+            <div class="right">
+                <span class="close">&times;</span>
+                <h4>Welcome Back</h4>
             </div>
         </div>
-    </header>
-    <div id="login">
-        <div id="image-left"></div>
     </div>
+    <script>
+        let modal = document.getElementById("login");
+        let btnLogin = document.getElementById("btnLogin");
+        let closeBtn = document.getElementsByClassName("close")[0];
+
+        btnLogin.onclick = () => modal.style.display = "block";
+        closeBtn.onclick = () => modal.style.display = "none";
+        window.onclick = (event) => {
+            if (event.target === modal) modal.style.display = "none";
+        }
+    </script>
 </body>
 </html>
