@@ -240,7 +240,7 @@ img {
     cursor: pointer;
 }
 
-#signin-submit, #signup-submit {
+.form-group input[type="submit"] {
     font-family: Sofia Pro, sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -248,7 +248,7 @@ img {
     line-height: 20px;
     color: #FFFFFF;
     letter-spacing: 0.02em;
-    background: #E9672B;
+    background: var(--primary-color);
     border-radius: 40px;
     cursor: pointer;
 }
@@ -285,7 +285,7 @@ img {
 }
 
 .register a, .signin a {
-    color: #0d6efd;
+    color: var(--primary-color);
 }
 
 .left:after, .right:after {
