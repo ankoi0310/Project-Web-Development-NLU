@@ -1,48 +1,6 @@
 :root {
     --login-width: 930px;
-    --login-height: 618px;
-}
-
-body {
-    font-family: Sofia Pro, sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    letter-spacing: 0.02em;
-    color: #5D5F5F;
-}
-
-.d-flex {
-    display: flex !important;
-}
-
-.justify-content-center {
-    justify-content: center !important;
-}
-
-.pt-12 {
-    padding-top: 12px !important;
-}
-
-.pb-16 {
-    padding-bottom: 16px !important;
-}
-
-.form-label {
-    margin-bottom: 12px !important;
-}
-
-.modal {
-    position: absolute;
-    display: block;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.3);
+    --login-height: 700px;
 }
 
 .modal-content {
@@ -50,7 +8,7 @@ body {
     width: var(--login-width);
     height: var(--login-height);
     margin: 0 auto;
-    top: 15%;
+    top: 10%;
     background: rgba(255, 255, 255, 1);
     border-radius: 20px;
 }
@@ -59,7 +17,9 @@ body {
     float: left;
     width: 450px;
     height: var(--login-height);
-    background: url('../images/login.png');
+    background-image: url('../images/login.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 20px 0 0 20px;
 }
 
@@ -90,30 +50,30 @@ body {
     cursor: pointer;
 }
 
-#signin-facebook, #signin-google {
+#signup-facebook, #signup-google {
     height: 35px;
     border-radius: 40px;
     cursor: pointer;
     transition: width 0.5s;
 }
 
-#signin-facebook {
+#signup-facebook {
     width: 395px;
     background: #FFFFFF;
     box-shadow: 0 4px 20px rgba(97, 97, 103, 0.18);
 }
 
-#signin-facebook:hover {
+#signup-facebook:hover {
     background: #009dff;
     color: #FFFFFF;
 }
 
-#signin-google {
+#signup-google {
     width: 35px;
     background: #F4F4F5;
 }
 
-#signin-google:hover {
+#signup-google:hover {
     background: #e32525;
     color: #FFFFFF;
 }
@@ -129,8 +89,8 @@ body {
     margin-bottom: 24px;
 }
 
-.modal-content .right .form-group:first-child {
-    margin-bottom: 30px;
+.modal-content .right .form-group {
+    margin-bottom: 20px;
 }
 
 .modal-content .right label {
@@ -142,7 +102,7 @@ body {
     letter-spacing: 0.02em;
 }
 
-.modal-content .right input {
+.form-group input {
     width: 440px;
     height: 48px;
     border: 1px solid #B6B8B8;
@@ -151,11 +111,11 @@ body {
     padding: 0 24px;
 }
 
-.modal-content .right input#password {
-    margin-bottom: 30px;
+.form-group input#password {
+    margin-bottom: 10px;
 }
 
-.modal-content .right input::placeholder {
+.form-group input::placeholder {
     position: absolute;
     height: 20px;
     left: 24px;
@@ -170,29 +130,11 @@ body {
     color: #B6B8B8;
 }
 
-.modal-content .right .forgot-password {
-    float: right;
-    width: 119px;
-    height: 20px;
-    left: 1276px;
-    top: 620px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.02em;
-    color: #DA3E31;
-}
-
-.modal-content .right .forgot-password:hover {
-    cursor: pointer;
-}
-
 .form-group #show {
     float: right;
     position: relative;
-    margin-right: 40px;
-    margin-top: -62px;
+    margin-right: 16px;
+    margin-top: -42px;
     z-index: 2;
     font-size: 14px;
 }
@@ -214,7 +156,26 @@ body {
     cursor: pointer;
 }
 
-.modal-content .right .register {
+.form-check-group {
+    display: flex;
+    height: 40px;
+}
+
+.form-check-group input {
+    width: 18px;
+    height: 18px;
+}
+
+.form-check-group span {
+    font-weight: normal;
+    font-size: 16px;
+    padding-left: 10px;
+    margin-top: -10px;
+    line-height: 1.2em;
+    letter-spacing: 0.02em;
+}
+
+.modal-content .right .signin {
     font-family: Sofia Pro, sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -226,7 +187,7 @@ body {
     margin-top: 24px;
 }
 
-.modal-content .right .register a {
+.modal-content .right .signin a {
     color: #0d6efd;
 }
 

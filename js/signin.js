@@ -1,10 +1,10 @@
 let modal$ = $("#login");
 
 // Show/hide modal login
-$("#btnLogin").on('click', () => modal$.show());
-$(".close").first().on('click', () => modal$.hide());
+$("#btnLogin").on('click', () => modal$.addClass('show'));
+$(".close").first().on('click', () => modal$.removeClass('show'));
 $(window).on('click', (e) => {
-    if ($(e.target).is(modal$)) modal$.hide();
+    if ($(e.target).is(modal$)) modal$.removeClass('show');
 })
 
 // Hover facebook/google button
