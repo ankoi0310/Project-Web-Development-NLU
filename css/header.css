@@ -113,3 +113,19 @@
     font-size: 2.4rem;
     vertical-align: middle;
 }
+
+.card-count {
+    font-size: 1rem;
+    color: #fff;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    z-index: 10;
+    top: 0;
+    right: 10%;
+    border-radius: 50px;
+    background-color: var(--primary-color);
+}

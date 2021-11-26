@@ -50,6 +50,10 @@ a {
     color: #999;
 }
 
+button {
+    cursor: pointer;
+}
+
 .container {
     width: 120rem;
     margin: 0 auto;

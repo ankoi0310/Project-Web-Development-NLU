@@ -12,6 +12,11 @@
             crossorigin="anonymous"
         />
         <link rel="stylesheet" href="./css/base.css" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+        />
         <link rel="stylesheet" href="./css/header.css" />
         <link rel="stylesheet" href="./css/footer.css" />
         <link rel="stylesheet" href="./css/product-detail.css" />
@@ -44,6 +49,7 @@
                             </li>
                             <li class="header-item">
                                 <a href="#"><ion-icon name="cart-outline"></ion-icon></a>
+                                <span class="card-count">0</span>
                             </li>
                             <li class="header-item"><a href="#">Đăng nhập</a></li>
                             <li class="header-item"><a href="#">Đăng ký</a></li>
@@ -99,50 +105,80 @@
                             balance between its comport, functions and look.
                         </p>
                         <br />
-                        <p class="product-size">
-                            Kích thước: <span>D2400/1350 - R830 - C700 mm</span>
+                        <p class="paragraph">
+                            <span class="p-title">Kích thước:</span>
+                            <span class="product-size">D2400/1350 - R830 - C700 mm</span>
                         </p>
-                        <p class="product-material">
-                            Vật liệu: <span>Chân gỗ - Vải cao cấp</span>
+                        <p class="paragraph">
+                            <span class="p-title">Vật liệu:</span>
+                            <span class="product-material">Chân gỗ - Vải cao cấp</span>
                         </p>
-                        <div class="product-color">
-                            <span>Màu sắc:</span>
-                            <ul class="color">
-                                <li class="color-item select"></li>
-                                <li class="color-item"></li>
-                                <li class="color-item"></li>
-                            </ul>
-                        </div>
-                        <div class="quantity">
-                            <span>Số lượng:</span>
-                            <div class="btn-quantity">
-                                <button class="btn-minus">
-                                    <ion-icon name="remove-circle"></ion-icon>
-                                </button>
-                                <span>1</span>
-                                <button class="btn-add">
-                                    <ion-icon name="add-circle"></ion-icon>
-                                </button>
+                        <form class="form" action="" method="get">
+                            <div class="product-color">
+                                <span class="p-title">Màu sắc:</span>
+                                <ul class="color">
+                                    <li class="color-item">
+                                        <input
+                                            class="input-radio"
+                                            id="color-1"
+                                            type="radio"
+                                            name="color"
+                                            checked
+                                        />
+                                        <label class="color-title" for="color-1"> </label>
+                                    </li>
+                                    <li class="color-item">
+                                        <input
+                                            class="input-radio"
+                                            id="color-2"
+                                            type="radio"
+                                            name="color"
+                                        />
+                                        <label class="color-title" for="color-2"> </label>
+                                    </li>
+                                    <li class="color-item">
+                                        <input
+                                            class="input-radio"
+                                            id="color-3"
+                                            type="radio"
+                                            name="color"
+                                        />
+                                        <label class="color-title" for="color-3"> </label>
+                                    </li>
+                                </ul>
                             </div>
-                        </div>
-                        <div class="product-rate">
-                            <ion-icon name="star-outline"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <span>4.2</span>
-                            <span class="rate-count">(8 khách hàng đã review)</span>
-                        </div>
-                        <div class="product-price">
-                            <span class="promotion-price">25.415.000</span>
-                            <span class="original-price">29.900.000</span>
-                            <span class="reduce-percent">15% GIẢM</span>
-                        </div>
-                        <div class="product-add-cart">
-                            <button class="btn-purchase">Mua ngay</button>
-                            <button class="btn-add-to-cart">
-                                <i class="fab fa-opencart"></i>
-                                <span>Thêm vào giỏ hàng</span>
-                            </button>
-                        </div>
+                            <div class="quantity">
+                                <span class="p-title">Số lượng:</span>
+                                <div class="btn-quantity">
+                                    <div class="btn-minus">
+                                        <ion-icon name="remove-circle"></ion-icon>
+                                    </div>
+                                    <input type="text" class="quantity-count" value="1" />
+                                    <div class="btn-add">
+                                        <ion-icon name="add-circle"></ion-icon>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-rate">
+                                <ion-icon name="star-outline"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <span>4.2</span>
+                                <span class="rate-count">(8 khách hàng đã review)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="promotion-price">25.415.000</span>
+                                <span class="original-price">29.900.000</span>
+                                <span class="reduce-percent">15% GIẢM</span>
+                            </div>
+                            <div class="product-add-cart">
+                                <button class="btn-purchase">Mua ngay</button>
+                                <div class="btn-add-to-cart">
+                                    <i class="fab fa-opencart"></i>
+                                    <span>Thêm vào giỏ hàng</span>
+                                </div>
+                            </div>
+                        </form>
+
                         <div class="wish-list">
                             <ion-icon name="heart-outline"></ion-icon>
                             <ion-icon name="heart"></ion-icon>
@@ -269,25 +305,25 @@
                             </div>
                             <div class="info-item footer-signup">
                                 <form action="#" method="post">
-
                                     <input
-                                    class="input pos-abs"
-                                    type="email"
-                                    name="email"
-                                    id="email"
-                                    placeholder="Hãy nhập vào email"
+                                        class="input pos-abs"
+                                        type="email"
+                                        name="email"
+                                        id="email"
+                                        placeholder="Hãy nhập vào email"
                                     />
                                     <a href="#" class="btn-signup pos-abs">
                                         <i class="fas fa-location-arrow"></i>
                                     </a>
                                 </form>
-                                </div>
                             </div>
                         </div>
                     </section>
                 </div>
             </div>
         </footer>
+
+        <script src="/js/product-detail.js"></script>
         <script
             type="module"
             src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
