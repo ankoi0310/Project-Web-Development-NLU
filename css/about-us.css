@@ -1,0 +1,78 @@
+.about-us {
+    margin-top: 10rem;
+}
+
+.about-us .title {
+    width: 500px;
+    margin: 0 auto 10px;
+}
+
+.about-us .title span {
+    font-family: Sofia Pro, sans-serif;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 28px;
+    line-height: 40px;
+    color: #1D1F1F;
+    text-align: center;
+}
+
+.about-us p {
+    font-family: Sofia Pro, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    color: #5D5F5F;
+    margin: 16px 0;
+    width: 570px;
+}
+
+.about-us .content {
+    padding: 20px 25px 20px 20px;
+}
+
+.about-us .content span:first-child {
+    font-family: Sofia Pro, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #E9672B;
+}
+
+.about-us .content .title {
+    width: 370px;
+    display: block;
+    margin: 0;
+}
+
+.about-us .content .title span {
+    font-weight: bolder;
+    font-size: 30px;
+    line-height: 40px;
+    color: #1D1F1F;
+}
+
+#image-1 img {
+    width: 50rem;
+}
+
+#image-2 {
+    padding-right: 60px;
+}
+
+#image-2 img {
+    width: 400px;
+    height: 530px;
+}
+
+#image-3 img {
+    width: 300px;
+    height: 400px;
+    margin: 65px 0;
+}
+
+

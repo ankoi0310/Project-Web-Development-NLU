@@ -4,35 +4,6 @@
     --signup-height: 700px;
 }
 
-body {
-     font-family: Sofia Pro, sans-serif;
-     font-style: normal;
-     font-weight: bold;
-     font-size: 14px;
-     letter-spacing: 0.02em;
-     color: #5D5F5F;
- }
-
-.d-flex {
-    display: flex !important;
-}
-
-.justify-content-center {
-    justify-content: center !important;
-}
-
-.pt-12 {
-    padding-top: 12px !important;
-}
-
-.pb-16 {
-    padding-bottom: 16px !important;
-}
-
-.form-label {
-    margin-bottom: 12px !important;
-}
-
 .modal {
     position: absolute;
     z-index: 1;
