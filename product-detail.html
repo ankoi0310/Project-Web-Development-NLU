@@ -19,6 +19,7 @@
         />
         <link rel="stylesheet" href="./css/header.css" />
         <link rel="stylesheet" href="./css/footer.css" />
+        <link rel="stylesheet" href="./css/card.css" />
         <link rel="stylesheet" href="./css/product-detail.css" />
     </head>
     <body>
@@ -61,146 +62,381 @@
 
         <main class="content">
             <div class="container">
-                <div class="product">
-                    <section class="product-img">
-                        <div class="product-img-main">
-                            <img
-                                src="./images/sofa_vai_poppy/sofa_vai_poppy_mau_hong_5.jpg"
-                                alt=""
-                            />
-                        </div>
-                        <div class="product-img-list">
-                            <img
-                                class="product-img-item active mx-3"
-                                src="./images/sofa_vai_poppy/sofa_vai_poppy_mau_hong_5.jpg"
-                                alt=""
-                            />
-                            <img
-                                class="product-img-item mx-3"
-                                src="./images/sofa_vai_poppy/sofa_vai_poppy_mau_hong_2.jpg"
-                                alt=""
-                            />
-                            <img
-                                class="product-img-item mx-3"
-                                src="./images/sofa_vai_poppy/sofa_vai_poppy_mau_hong_1.jpg"
-                                alt=""
-                            />
-                            <img
-                                class="product-img-item mx-3"
-                                src="./images/sofa_vai_poppy/sofa_vai_poppy_den_xam.jpg"
-                                alt=""
-                            />
-                            <img
-                                class="product-img-item mx-3"
-                                src="./images/sofa_vai_poppy/sofa_vai_poppy_xanh_duong.jpg"
-                                alt=""
-                            />
-                        </div>
-                    </section>
-                    <section class="product-detail">
-                        <h1 class="product-title">Sofa vải Poppy màu hồng</h1>
-                        <p class="product-description">
-                            Warm and welcoming, neat and stylish. The supporting seat cushions,
-                            the cover's soft finish and the tight fit gives this sofa a perfect
-                            balance between its comport, functions and look.
-                        </p>
-                        <br />
-                        <p class="paragraph">
-                            <span class="p-title">Kích thước:</span>
-                            <span class="product-size">D2400/1350 - R830 - C700 mm</span>
-                        </p>
-                        <p class="paragraph">
-                            <span class="p-title">Vật liệu:</span>
-                            <span class="product-material">Chân gỗ - Vải cao cấp</span>
-                        </p>
-                        <form class="form" action="" method="get">
-                            <div class="product-color">
-                                <span class="p-title">Màu sắc:</span>
-                                <ul class="color">
-                                    <li class="color-item">
-                                        <input
-                                            class="input-radio"
-                                            id="color-1"
-                                            type="radio"
-                                            name="color"
-                                            checked
-                                        />
-                                        <label class="color-title" for="color-1"> </label>
-                                    </li>
-                                    <li class="color-item">
-                                        <input
-                                            class="input-radio"
-                                            id="color-2"
-                                            type="radio"
-                                            name="color"
-                                        />
-                                        <label class="color-title" for="color-2"> </label>
-                                    </li>
-                                    <li class="color-item">
-                                        <input
-                                            class="input-radio"
-                                            id="color-3"
-                                            type="radio"
-                                            name="color"
-                                        />
-                                        <label class="color-title" for="color-3"> </label>
-                                    </li>
-                                </ul>
+                <div class="product-content">
+                    <div class="product">
+                        <section class="product-img">
+                            <div class="product-img-main">
+                                <img
+                                    src="./images/sofa_vai_poppy/sofa_vai_poppy_mau_hong_5.jpg"
+                                    alt=""
+                                />
                             </div>
-                            <div class="quantity">
-                                <span class="p-title">Số lượng:</span>
-                                <div class="btn-quantity">
-                                    <div class="btn-minus">
-                                        <ion-icon name="remove-circle"></ion-icon>
-                                    </div>
-                                    <input type="text" class="quantity-count" value="1" />
-                                    <div class="btn-add">
-                                        <ion-icon name="add-circle"></ion-icon>
+                            <div class="product-img-list">
+                                <img
+                                    class="product-img-item active mx-3"
+                                    src="./images/sofa_vai_poppy/sofa_vai_poppy_mau_hong_5.jpg"
+                                    alt=""
+                                />
+                                <img
+                                    class="product-img-item mx-3"
+                                    src="./images/sofa_vai_poppy/sofa_vai_poppy_mau_hong_2.jpg"
+                                    alt=""
+                                />
+                                <img
+                                    class="product-img-item mx-3"
+                                    src="./images/sofa_vai_poppy/sofa_vai_poppy_mau_hong_1.jpg"
+                                    alt=""
+                                />
+                                <img
+                                    class="product-img-item mx-3"
+                                    src="./images/sofa_vai_poppy/sofa_vai_poppy_den_xam.jpg"
+                                    alt=""
+                                />
+                                <img
+                                    class="product-img-item mx-3"
+                                    src="./images/sofa_vai_poppy/sofa_vai_poppy_xanh_duong.jpg"
+                                    alt=""
+                                />
+                            </div>
+                        </section>
+                        <section class="product-detail">
+                            <h1 class="product-title">Sofa vải Poppy màu hồng</h1>
+                            <p class="product-description">
+                                Warm and welcoming, neat and stylish. The supporting seat
+                                cushions, the cover's soft finish and the tight fit gives this
+                                sofa a perfect balance between its comport, functions and look.
+                            </p>
+                            <br />
+                            <p class="paragraph">
+                                <span class="p-title">Kích thước:</span>
+                                <span class="product-size">D2400/1350 - R830 - C700 mm</span>
+                            </p>
+                            <p class="paragraph">
+                                <span class="p-title">Vật liệu:</span>
+                                <span class="product-material">Chân gỗ - Vải cao cấp</span>
+                            </p>
+                            <form class="form" action="" method="get">
+                                <div class="product-color">
+                                    <span class="p-title">Màu sắc:</span>
+                                    <ul class="color">
+                                        <li class="color-item">
+                                            <input
+                                                class="input-radio"
+                                                id="color-1"
+                                                type="radio"
+                                                name="color"
+                                                checked
+                                            />
+                                            <label class="color-title" for="color-1"> </label>
+                                        </li>
+                                        <li class="color-item">
+                                            <input
+                                                class="input-radio"
+                                                id="color-2"
+                                                type="radio"
+                                                name="color"
+                                            />
+                                            <label class="color-title" for="color-2"> </label>
+                                        </li>
+                                        <li class="color-item">
+                                            <input
+                                                class="input-radio"
+                                                id="color-3"
+                                                type="radio"
+                                                name="color"
+                                            />
+                                            <label class="color-title" for="color-3"> </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="quantity">
+                                    <span class="p-title">Số lượng:</span>
+                                    <div class="btn-quantity">
+                                        <div class="btn-minus">
+                                            <ion-icon name="remove-circle"></ion-icon>
+                                        </div>
+                                        <input type="text" class="quantity-count" value="1" />
+                                        <div class="btn-add">
+                                            <ion-icon name="add-circle"></ion-icon>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="product-rate">
-                                <ion-icon name="star-outline"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <span>4.2</span>
-                                <span class="rate-count">(8 khách hàng đã review)</span>
-                            </div>
-                            <div class="product-price">
-                                <span class="promotion-price">25.415.000</span>
-                                <span class="original-price">29.900.000</span>
-                                <span class="reduce-percent">15% GIẢM</span>
-                            </div>
-                            <div class="product-add-cart">
-                                <button class="btn-purchase">Mua ngay</button>
-                                <div class="btn-add-to-cart">
-                                    <i class="fab fa-opencart"></i>
-                                    <span>Thêm vào giỏ hàng</span>
+                                <div class="product-rate">
+                                    <ion-icon name="star-outline"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <span>4.2</span>
+                                    <span class="rate-count">(8 khách hàng đã review)</span>
                                 </div>
-                            </div>
-                        </form>
+                                <div class="product-price">
+                                    <span class="promotion-price">25.415.000</span>
+                                    <span class="original-price">29.900.000</span>
+                                    <span class="reduce-percent">15% GIẢM</span>
+                                </div>
+                                <div class="product-add-cart">
+                                    <button class="btn-purchase">Mua ngay</button>
+                                    <div class="btn-add-to-cart">
+                                        <i class="fab fa-opencart"></i>
+                                        <span>Thêm vào giỏ hàng</span>
+                                    </div>
+                                </div>
+                            </form>
 
-                        <div class="wish-list">
-                            <ion-icon name="heart-outline"></ion-icon>
-                            <ion-icon name="heart"></ion-icon>
-                            <span>Thêm vào danh sách yêu thích</span>
+                            <div class="wish-list">
+                                <ion-icon name="heart-outline"></ion-icon>
+                                <ion-icon name="heart"></ion-icon>
+                                <span>Thêm vào danh sách yêu thích</span>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="description">
+                        <h2 class="product-info-text">MÔ TẢ SẢN PHẨM</h2>
+                        <p class="paragraph">
+                            Sofa Poppy góc phải vải màu xanh Sẽ không ngoa nếu nói rằng mùa hè
+                            này những gì tươi trẻ nhất, xanh tươi nhất và hiện đại nhất sẽ gọi
+                            tên chiếc Sofa này với thiết kế hiện đại tinh giản và với tông màu
+                            không thể nào hot hơn là xanh Pastel cho sắc màu không gian nhà bạn
+                            luôn bừng sáng và sức sống. Với thiết kế góc nhỏ gọn nhưng không kém
+                            phần tiện dụng cho bạn sự trải nghiệm êm ái và thoải mái khi có thể
+                            duỗi thẳng cơ thể nằm oài cho 1 ngày thư thái bạn nhé!
+                        </p>
+                        <p class="paragraph">Kích thước: D2400/1350 - R830 - C700 mm</p>
+                        <p class="paragraph">Vật liệu: Chân gỗ - Vải cao cấp</p>
+                    </div>
+
+                    <div class="review">
+                        <h2 class="product-info-text">ĐÁNH GIÁ SẢN PHẨM</h2>
+                        <div class="user-review">
+                            <div class="user-review--info">
+                                <div class="user-review--info__left">
+                                    <img
+                                        class="user-review--img"
+                                        src="/images/user/user-1.jpg"
+                                        alt="customer avatar"
+                                    />
+                                </div>
+                                <div class="user-review--info__right user-review--comment">
+                                    <div class="user-review--box">
+                                        <div class="user-review--name">Khoa Pug</div>
+                                        <div class="user-review--rate">
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star-half"></ion-icon>
+                                        </div>
+                                    </div>
+                                    <p class="comment">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                                        elit. Pariatur, consequuntur? Dolorem quod ipsum cumque.
+                                        Animi illo qui rerum molestiae id enim quasi accusantium
+                                        sapiente facilis non dolores, facere, error neque!
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                    </section>
+                        <div class="user-review">
+                            <div class="user-review--info">
+                                <div class="user-review--info__left">
+                                    <img
+                                        class="user-review--img"
+                                        src="/images/user/user-2.jpg"
+                                        alt="customer avatar 2"
+                                    />
+                                </div>
+                                <div class="user-review--info__right user-review--comment">
+                                    <div class="user-review--box">
+                                        <div class="user-review--name">Mayuko</div>
+                                        <div class="user-review--rate">
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star-half"></ion-icon>
+                                        </div>
+                                    </div>
+                                    <p class="comment">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                                        elit. Pariatur, consequuntur? Dolorem quod ipsum cumque.
+                                        Animi illo qui rerum molestiae id enim quasi accusantium
+                                        sapiente facilis non dolores, facere, error neque!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-review">
+                            <div class="user-review--info">
+                                <div class="user-review--info__left">
+                                    <img
+                                        class="user-review--img"
+                                        src="/images/user/user-3.jpg"
+                                        alt="customer avatar 3"
+                                    />
+                                </div>
+                                <div class="user-review--info__right user-review--comment">
+                                    <div class="user-review--box">
+                                        <div class="user-review--name">Vuong Pham</div>
+                                        <div class="user-review--rate">
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star-half"></ion-icon>
+                                        </div>
+                                    </div>
+                                    <p class="comment">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                                        elit. Pariatur, consequuntur? Dolorem quod ipsum cumque.
+                                        Animi illo qui rerum molestiae id enim quasi accusantium
+                                        sapiente facilis non dolores, facere, error neque!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relate-product">
+                        <h2 class="product-info-text">SẢN PHẨM LIÊN QUAN</h2>
+                        <div class="cards">
+                            <div class="card">
+                                <div class="card-sale">
+                                    <span class="percent-sale">-35%</span>
+                                </div>
+                                <div class="card-img">
+                                    <img
+                                        class="card-img-item"
+                                        src="./images/ngan_ghep_ke_sach/ke_sach.png"
+                                        alt="card image"
+                                    />
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-title">
+                                        <p>Ngăn Trang Trí - Ngăn Ghép Kệ Sách</p>
+                                    </div>
+                                    <div class="card-price">
+                                        <span class="card-promotion-price">129.000</span>
+                                        <span class="card-original-price">199.000</span>
+                                    </div>
+                                    <div class="card-detail">
+                                        <div class="card-rate">
+                                            <ion-icon name="star-outline"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <span>4.2</span>
+                                        </div>
+                                        <div class="card-wistlist">
+                                            <ion-icon name="heart-outline"></ion-icon>
+                                        </div>
+                                    </div>
+                                    <a href="/product-detail.html" class="btn-add-card"
+                                        >Xem ngay</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-sale">
+                                    <span class="percent-sale">-35%</span>
+                                </div>
+                                <div class="card-img">
+                                    <img
+                                        class="card-img-item"
+                                        src="./images/ngan_ghep_ke_sach/ke_sach.png"
+                                        alt="card image"
+                                    />
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-title">
+                                        <p>Ngăn Trang Trí - Ngăn Ghép Kệ Sách</p>
+                                    </div>
+                                    <div class="card-price">
+                                        <span class="card-promotion-price">129.000</span>
+                                        <span class="card-original-price">199.000</span>
+                                    </div>
+                                    <div class="card-detail">
+                                        <div class="card-rate">
+                                            <ion-icon name="star-outline"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <span>4.2</span>
+                                        </div>
+                                        <div class="card-wistlist">
+                                            <ion-icon name="heart-outline"></ion-icon>
+                                        </div>
+                                    </div>
+                                    <a href="/product-detail.html" class="btn-add-card"
+                                        >Xem ngay</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-sale">
+                                    <span class="percent-sale">-35%</span>
+                                </div>
+                                <div class="card-img">
+                                    <img
+                                        class="card-img-item"
+                                        src="./images/ngan_ghep_ke_sach/ke_sach.png"
+                                        alt="card image"
+                                    />
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-title">
+                                        <p>Ngăn Trang Trí - Ngăn Ghép Kệ Sách</p>
+                                    </div>
+                                    <div class="card-price">
+                                        <span class="card-promotion-price">129.000</span>
+                                        <span class="card-original-price">199.000</span>
+                                    </div>
+                                    <div class="card-detail">
+                                        <div class="card-rate">
+                                            <ion-icon name="star-outline"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <span>4.2</span>
+                                        </div>
+                                        <div class="card-wistlist">
+                                            <ion-icon name="heart-outline"></ion-icon>
+                                        </div>
+                                    </div>
+                                    <a href="/product-detail.html" class="btn-add-card"
+                                        >Xem ngay</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-sale">
+                                    <span class="percent-sale">-35%</span>
+                                </div>
+                                <div class="card-img">
+                                    <img
+                                        class="card-img-item"
+                                        src="./images/ngan_ghep_ke_sach/ke_sach.png"
+                                        alt="card image"
+                                    />
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-title">
+                                        <p>Ngăn Trang Trí - Ngăn Ghép Kệ Sách</p>
+                                    </div>
+                                    <div class="card-price">
+                                        <span class="card-promotion-price">129.000</span>
+                                        <span class="card-original-price">199.000</span>
+                                    </div>
+                                    <div class="card-detail">
+                                        <div class="card-rate">
+                                            <ion-icon name="star-outline"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <span>4.2</span>
+                                        </div>
+                                        <div class="card-wistlist">
+                                            <ion-icon name="heart-outline"></ion-icon>
+                                        </div>
+                                    </div>
+                                    <a href="/product-detail.html" class="btn-add-card"
+                                        >Xem ngay</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="description">
-                    <h2>MÔ TẢ SẢN PHẨM</h2>
-                    <p>
-                        Sofa Poppy góc phải vải màu xanh Sẽ không ngoa nếu nói rằng mùa hè này
-                        những gì tươi trẻ nhất, xanh tươi nhất và hiện đại nhất sẽ gọi tên chiếc
-                        Sofa này với thiết kế hiện đại tinh giản và với tông màu không thể nào
-                        hot hơn là xanh Pastel cho sắc màu không gian nhà bạn luôn bừng sáng và
-                        sức sống. Với thiết kế góc nhỏ gọn nhưng không kém phần tiện dụng cho
-                        bạn sự trải nghiệm êm ái và thoải mái khi có thể duỗi thẳng cơ thể nằm
-                        oài cho 1 ngày thư thái bạn nhé!
-                    </p>
-                    <p>Kích thước: D2400/1350 - R830 - C700 mm</p>
-                    <p>Vật liệu: Chân gỗ - Vải cao cấp</p>
-                </div>
-                <div class="review"></div>
             </div>
         </main>
         <footer class="footer">

@@ -41,7 +41,8 @@ if (+cartCount.textContent < 1) cartCount.style.display = 'none'
 else cartCount.style.display = 'flex'
 
 btnAddCart.onclick = () => {
-    cartCount.innerHTML = +cartCount.textContent + 1
+    let count = +document.querySelector('.quantity-count').value
+    cartCount.innerHTML = +cartCount.textContent + count
     if (+cartCount.textContent < 1) cartCount.style.display = 'none'
     else cartCount.style.display = 'flex'
 }
