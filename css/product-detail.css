@@ -1,6 +1,7 @@
 .content {
     margin-top: 6.4rem;
     padding: 4rem 0;
+    height: 1200px;
     position: relative;
     z-index: 1;
 }
@@ -16,11 +17,6 @@
     background-color: var(--primary-color);
     clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
     opacity: 0.5;
-}
-
-.product-content {
-    display: flex;
-    flex-direction: column;
 }
 
 .product {
@@ -365,100 +361,20 @@
 
 /* end content .product */
 
-.product-info-text {
-    text-transform: uppercase;
-    font-size: 1.7rem;
+.description {
+    margin-top: 6rem;
+}
+
+.description h2 {
     padding: 1.5rem;
-    border-radius: 4px;
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-/* description */
-.description {
-    margin: 6rem 0;
-}
-
-.paragraph {
+.description p {
     padding: 0.5rem 3rem;
     font-size: 1.6rem;
 }
 
 .description p:first-of-type {
-    padding: 1rem 3rem;
-}
-
-/* review */
-.review {
-    margin-bottom: 6rem;
-}
-
-.user-review {
-    display: flex;
-    flex-direction: column;
-    margin-top: 3rem;
-    padding-left: 2rem;
-}
-
-.user-review--info {
-    display: flex;
-    justify-content: space-between;
-}
-
-.user-review--info__left {
-    width: 6rem;
-    height: 6rem;
-    margin-right: 2rem;
-}
-
-.user-review--img {
-    width: 100%;
-    border-radius: 50px;
-}
-
-.user-review--info__right {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-.user-review--box {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 0.5rem;
-}
-
-.user-review--name {
-    font-size: 1.6rem;
-    margin-right: 2rem;
-    font-weight: 700;
-}
-
-.user-review--rate {
-    display: inline-block;
-    font-size: 1.4rem;
-    color: var(--secondary-color);
-}
-
-.user-review--comment {
-    font-size: 1.4rem;
-    background-color: #f5f5f5;
-    padding: 1rem 2rem 1.5rem;
-    border-radius: 16px;
-}
-
-.comment {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-/* relate product */
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -3rem;
-    padding-top: 3rem;
+    padding: 1rem 3rem 2rem;
 }

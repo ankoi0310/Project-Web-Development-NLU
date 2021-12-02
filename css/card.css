@@ -72,14 +72,14 @@
     justify-content: flex-start;
 }
 
-.card-promotion-price {
+.promotion-price {
     color: var(--primary-color);
     font-size: 2.2rem;
     font-weight: bold;
     padding-right: 1rem;
 }
 
-.card-original-price {
+.original-price {
     color: var(--text-grey);
     font-size: 1.6rem;
     text-decoration: line-through;
@@ -119,9 +119,9 @@
     cursor: pointer;
 }
 
-.btn-add-card,
-.bnt-add-card:link,
-.btn-add-card:visited {
+.btn-add,
+.bnt-add:link,
+.btn-add:visited {
     display: inline-block;
     background-color: var(--primary-color);
     color: var(--text-white);
@@ -137,7 +137,7 @@
     transition: all 0.2s ease-in-out;
 }
 
-.card:hover .btn-add-card {
+.card:hover .btn-add {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
