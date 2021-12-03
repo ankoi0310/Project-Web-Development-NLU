@@ -91,7 +91,7 @@
     font-size: 1.6rem;
     font-weight: bold;
     border-radius: 50px;
-    cursor: pointer;
+    cursor: pointer;: 50px;
     transition: all 0.2s ease-in-out;
     position: relative;
 }
