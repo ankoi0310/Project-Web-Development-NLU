@@ -1,0 +1,142 @@
+.page{
+    width: 100%;
+    height: 550px;
+    background: white;
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    background: white;
+    height: 550px;   
+    display: border-box;
+}
+.container .main_left{
+    float: left;
+    width: 25%;
+    background: #ee4d2d;
+}
+.container .main_left .user_name{
+    width: 100%;
+    height: 60px;
+    border-bottom: 2px solid gray;
+}
+.container .main_left .user_name .name{
+color: white;
+font-weight: 700;
+padding-top: 20px;
+text-align: center;
+}
+.container .main_left .choice{
+    width: 100%;
+    height: 490px;
+    padding-top: 10px;
+}
+.container .main_left .choice .text_choice{
+color: white;
+height: 20px;
+width: 80%;
+cursor: pointer;
+padding-bottom: 10px;
+margin-bottom: 15px;
+margin-left: 10%;
+}
+.container .main_left .choice .text_choice .icon{
+   float: left;
+   width: 8%;
+height: 20px;
+padding-top: 6px;
+margin-left: 10%;
+}
+.container .main_left .choice .text_choice p{
+    float: right;
+    width: 82%;
+height: 20px;
+padding-top: 6px;
+
+}
+.container .main_left .choice .text_user{
+background: white;
+border-radius: 15px;
+color: black;
+margin-left: 10%;
+}
+
+.container .main_right{
+    float: right;
+    width: 75%;
+    background: whitesmoke;
+}
+.container .main_right .title{
+    width: 100%;
+    height: 60px;
+    border-bottom: 2px solid gray;
+}
+.container .main_right .title p{
+    padding-left: 30px;
+}
+.container .main_right .title .p1{
+padding-top: 21px;
+font-size: 18px;
+font-weight: bolder;
+}
+.container .main_right .info{
+    width: 100%;
+    height: 500px;
+    overflow: auto;
+}
+.container .main_right .info .text{
+    width: 840px;
+    height: 84px;
+    margin-top:30px;
+    margin-left: 30px;
+    background: white;
+    cursor: pointer;
+}
+.container .main_right .info .text .product_img{
+float: left;
+width: 10%;
+background-image: url(../images/main/p1.png);
+height: 100%;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+border-right: 2.1px solid black;
+}
+.container .main_right .info .text .product_info{
+float: right;
+width: 89.75%;
+display: flex;
+
+}
+.container .main_right .info .text .product_info .name{
+    width: 50%;
+    overflow: hidden;
+    height: 64px;
+}
+.container .main_right .info .text .product_info .name p{
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 15px;
+    color: black;
+}
+.container .main_right .info .text .product_info .price{
+    width: 20%;
+    padding-left: 5%;
+    height: 84px;
+}
+.container .main_right .info .text .product_info .price p{
+    padding-top: 35px;
+    font-size: 14px;
+    color: black;
+}
+.container .main_right .info .text .product_info .date{
+    width: 20%;
+    padding-left: 5%;
+    height: 84px;
+}
+.container .main_right .info .text .product_info .date p{
+    padding-top: 35px;
+    font-size: 14px;
+    color: black;
+}
