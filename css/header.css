@@ -10,6 +10,7 @@
 }
 
 .header .box {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,7 +36,6 @@
 }
 
 .navigation-item {
-    padding: 0.8rem 1.5rem;
     cursor: pointer;
     position: relative;
 }
@@ -52,6 +52,11 @@
     background-color: var(--primary-color);
     opacity: 0.7;
     display: none;
+}
+
+.navigation-item a {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
 }
 
 .navigation-item.active a {
@@ -85,10 +90,15 @@
 .header-item {
     font-size: 1.6rem;
     font-weight: bold;
-    padding: 5px 15px;
     border-radius: 50px;
+    cursor: pointer;: 50px;
     transition: all 0.2s ease-in-out;
     position: relative;
+}
+
+.header-item a {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
 }
 
 .header-item:hover a {
@@ -102,4 +112,20 @@
 .header-item > a ion-icon {
     font-size: 2.4rem;
     vertical-align: middle;
+}
+
+.card-count {
+    font-size: 1rem;
+    color: #fff;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    z-index: 10;
+    top: 0;
+    right: 10%;
+    border-radius: 50px;
+    background-color: var(--primary-color);
 }
