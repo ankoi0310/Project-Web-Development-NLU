@@ -82,3 +82,11 @@ button {
 .col-3-4 {
     width: 75%;
 }
+
+.text-primary {
+    color: var(--primary-color);
+}
+
+.text-bold {
+    font-weight: bold;
+}
