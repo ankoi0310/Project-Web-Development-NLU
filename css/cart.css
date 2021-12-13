@@ -1,8 +1,7 @@
 .content {
     margin-top: 6.4rem;
-    padding-top: 3rem;
+    padding: 3rem 0 6rem;
     background-color: rgb(245, 245, 245);
-    height: 200vh;
 }
 
 .box-control {
@@ -18,8 +17,32 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
+.box-header {
+    margin-bottom: 2rem;
+}
+
+.box-list-product {
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    max-height: 60vh;
+    overflow-y: overlay;
+}
+
+.box-list-product::-webkit-scrollbar {
+    width: 5px;
+}
+
+.box-list-product::-webkit-scrollbar-thumb {
+    background-color: #dddddd;
+    border-radius: 25px;
+}
+
 .box-product {
-    height: 12rem;
+    flex: 1 0 12rem;
+}
+
+.box-product:not(:first-child) {
     margin-top: 2rem;
 }
 
@@ -178,7 +201,35 @@
 
 /* box payment */
 .box-payment {
-    margin-top: 3rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.box-payment__top {
+    height: 6rem;
+    border-radius: 4px 4px 0 0;
+}
+
+.box-payment__bottom {
+    font-size: 2rem;
+    height: 7rem;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 0 0 4px 4px;
+}
+
+.total-payment-product {
+    font-weight: 500;
+    color: #5f5f5f;
+    margin-right: 2rem;
+}
+.total-payment-price {
+    margin-right: 2rem;
+}
+
+.btn-payment {
+    padding: 1.5rem 4rem;
 }
 
 .box-payment .box-icon-remove {
@@ -251,7 +302,7 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(0) rotate(280deg);
+    transform: translate(-50%, -50%) scale(0);
     z-index: 500;
     width: 70rem;
     border-radius: 6px;
@@ -265,7 +316,7 @@
 .show-popup-voucher {
     opacity: 1;
     visibility: visible;
-    transform: translate(-50%, -50%) scale(1) rotate(0);
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .popup-title {
@@ -325,12 +376,114 @@
     background: var(--fourth-color-hover);
 }
 
+.btn-disabled {
+    color: var(--text-white);
+    background-color: #d4d4d4;
+}
+
+.btn-disabled:hover {
+    background-color: #d4d4d4;
+    cursor: not-allowed;
+}
+
 /* box list voucher */
 .box-list-voucher {
     width: 100%;
-    height: 5rem;
-    background-color: red;
     margin: 2rem 0;
+    max-height: 35rem;
+    overflow-y: auto;
+}
+
+.box-list-voucher::-webkit-scrollbar {
+    width: 4px;
+}
+
+.box-list-voucher::-webkit-scrollbar-thumb {
+    background-color: #dddddd;
+    border-radius: 25px;
+}
+
+.voucher-item {
+    display: flex;
+    height: 10rem;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.08);
+}
+
+.voucher-item:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+.voucher-title {
+    flex: 0 0 25%;
+    background-image: linear-gradient(to right, transparent 5%, var(--primary-color) 5%);
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.voucher-tag {
+    background: radial-gradient(ellipse at center, #fff 0%, #fff 30%, transparent 30%),
+        var(--primary-color);
+    background-size: 2rem 2rem;
+    background-repeat: repeat-y;
+    background-position: -1rem 0;
+    width: 1rem;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.voucher-tag::after {
+    content: attr(data-tag);
+    position: absolute;
+    top: -2px;
+    left: -1px;
+    padding: 0 0.5rem;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border-radius: 4px;
+}
+
+.voucher-title > span {
+    flex: 1;
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: var(--text-white);
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.voucher-description {
+    flex: 1;
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding: 1rem 2rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 0 6px 6px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.voucher-description__title {
+    color: var(--text-black);
+}
+
+.voucher-description__item {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.description-border {
+    padding: 0 0.5rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
 }
 
 /* box btn bottom (cancel, comfirm) */
@@ -352,4 +505,8 @@
 
 .box-voucher-bottom .btn-cancel:hover {
     background-color: #e4e4e4;
+}
+
+.footer {
+    margin-top: 0;
 }

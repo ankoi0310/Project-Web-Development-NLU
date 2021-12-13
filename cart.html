@@ -12,6 +12,7 @@
         />
         <link rel="stylesheet" href="./css/base.css" />
         <link rel="stylesheet" href="./css/header.css" />
+        <link rel="stylesheet" href="./css/footer.css" />
         <link rel="stylesheet" href="./css/cart.css" />
         <title>Giỏ hàng</title>
     </head>
@@ -111,7 +112,7 @@
 
         <main class="content">
             <div class="container">
-                <div class="box-control">
+                <div class="box-control box-header">
                     <div class="box-control__item">
                         <input
                             class="c-checkbox"
@@ -134,143 +135,369 @@
                     </div>
                 </div>
 
-                <div class="box-control box-product">
-                    <div class="box-control__item">
-                        <input
-                            class="c-checkbox"
-                            type="checkbox"
-                            id="select-1"
-                            name="check-1"
-                            value="product-id-1"
-                        />
-                        <label class="c-label" for="select-1"></label>
-                    </div>
-                    <div class="box-control__item box-name">
-                        <img
-                            src="./images/ngan_ghep_ke_sach/ke_sach.png"
-                            alt="box product card 1"
-                            class="box__product-img"
-                        />
-                        <div class="box__product-info">
-                            <span class="box__product-name">
-                                Ngăn Trang Trí - Ngăn Ghép Kệ Sách Ngăn Trang Trí - Ngăn Ghép Kệ
-                                Sách
-                            </span>
+                <div class="box-list-product">
+                    <div class="box-control box-product">
+                        <div class="box-control__item">
+                            <input
+                                class="c-checkbox"
+                                type="checkbox"
+                                id="select-1"
+                                name="check-1"
+                                value="product-id-1"
+                            />
+                            <label class="c-label" for="select-1"></label>
+                        </div>
+                        <div class="box-control__item box-name">
+                            <img
+                                src="./images/ngan_ghep_ke_sach/ke_sach.png"
+                                alt="box product card 1"
+                                class="box__product-img"
+                            />
+                            <div class="box__product-info">
+                                <span class="box__product-name">
+                                    Ngăn Trang Trí - Ngăn Ghép Kệ Sách Ngăn Trang Trí - Ngăn
+                                    Ghép Kệ Sách
+                                </span>
+                            </div>
+                        </div>
+                        <div class="box-control__item box-price text-primary text-bold">
+                            129.000
+                        </div>
+                        <div class="box-control__item box-quantity">
+                            <button class="box-btn__add">
+                                <ion-icon name="add-outline"></ion-icon>
+                            </button>
+                            <input
+                                type="text"
+                                class="box-product-quantity"
+                                value="2"
+                                name="product-quantity"
+                            />
+                            <button class="box-btn__minus">
+                                <ion-icon name="remove-outline"></ion-icon>
+                            </button>
+                        </div>
+                        <div class="box-control__item box-final-price text-primary text-bold">
+                            258.000
+                        </div>
+                        <div class="box-control__item box-remove">
+                            <a
+                                href="?remove-product-id=#"
+                                class="box-icon-remove box-icon-remove-1"
+                            >
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </a>
                         </div>
                     </div>
-                    <div class="box-control__item box-price text-primary text-bold">
-                        129.000
-                    </div>
-                    <div class="box-control__item box-quantity">
-                        <button class="box-btn__add">
-                            <ion-icon name="add-outline"></ion-icon>
-                        </button>
-                        <input
-                            type="text"
-                            class="box-product-quantity"
-                            value="2"
-                            name="product-quantity"
-                        />
-                        <button class="box-btn__minus">
-                            <ion-icon name="remove-outline"></ion-icon>
-                        </button>
-                    </div>
-                    <div class="box-control__item box-final-price text-primary text-bold">
-                        258.000
-                    </div>
-                    <div class="box-control__item box-remove">
-                        <a
-                            href="?remove-product-id=#"
-                            class="box-icon-remove box-icon-remove-1"
-                        >
-                            <ion-icon name="trash-outline"></ion-icon>
-                        </a>
-                    </div>
-                </div>
-                <div class="box-control box-product">
-                    <div class="box-control__item">
-                        <input
-                            class="c-checkbox"
-                            type="checkbox"
-                            id="select-1"
-                            name="check-1"
-                            value="product-id-1"
-                        />
-                        <label class="c-label" for="select-1"></label>
-                    </div>
-                    <div class="box-control__item box-name">
-                        <img
-                            src="./images/ngan_ghep_ke_sach/ke_sach.png"
-                            alt="box product card 1"
-                            class="box__product-img"
-                        />
-                        <div class="box__product-info">
-                            <span class="box__product-name">
-                                Ngăn Trang Trí - Ngăn Ghép Kệ Sách Ngăn Trang Trí - Ngăn Ghép Kệ
-                                Sách
-                            </span>
+                    <div class="box-control box-product">
+                        <div class="box-control__item">
+                            <input
+                                class="c-checkbox"
+                                type="checkbox"
+                                id="select-2"
+                                name="check-2"
+                                value="product-id-2"
+                            />
+                            <label class="c-label" for="select-2"></label>
+                        </div>
+                        <div class="box-control__item box-name">
+                            <img
+                                src="./images/ngan_ghep_ke_sach/ke_sach.png"
+                                alt="box product card 1"
+                                class="box__product-img"
+                            />
+                            <div class="box__product-info">
+                                <span class="box__product-name">
+                                    Ngăn Trang Trí - Ngăn Ghép Kệ Sách Ngăn Trang Trí - Ngăn
+                                    Ghép Kệ Sách
+                                </span>
+                            </div>
+                        </div>
+                        <div class="box-control__item box-price text-primary text-bold">
+                            129.000
+                        </div>
+                        <div class="box-control__item box-quantity">
+                            <button class="box-btn__add">
+                                <ion-icon name="add-outline"></ion-icon>
+                            </button>
+                            <input
+                                type="text"
+                                class="box-product-quantity"
+                                value="2"
+                                name="product-quantity"
+                            />
+                            <button class="box-btn__minus">
+                                <ion-icon name="remove-outline"></ion-icon>
+                            </button>
+                        </div>
+                        <div class="box-control__item box-final-price text-primary text-bold">
+                            258.000
+                        </div>
+                        <div class="box-control__item box-remove">
+                            <a
+                                href="?remove-product-id=#"
+                                class="box-icon-remove box-icon-remove-1"
+                            >
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </a>
                         </div>
                     </div>
-                    <div class="box-control__item box-price text-primary text-bold">
-                        129.000
+                    <div class="box-control box-product">
+                        <div class="box-control__item">
+                            <input
+                                class="c-checkbox"
+                                type="checkbox"
+                                id="select-2"
+                                name="check-2"
+                                value="product-id-2"
+                            />
+                            <label class="c-label" for="select-2"></label>
+                        </div>
+                        <div class="box-control__item box-name">
+                            <img
+                                src="./images/ngan_ghep_ke_sach/ke_sach.png"
+                                alt="box product card 1"
+                                class="box__product-img"
+                            />
+                            <div class="box__product-info">
+                                <span class="box__product-name">
+                                    Ngăn Trang Trí - Ngăn Ghép Kệ Sách Ngăn Trang Trí - Ngăn
+                                    Ghép Kệ Sách
+                                </span>
+                            </div>
+                        </div>
+                        <div class="box-control__item box-price text-primary text-bold">
+                            129.000
+                        </div>
+                        <div class="box-control__item box-quantity">
+                            <button class="box-btn__add">
+                                <ion-icon name="add-outline"></ion-icon>
+                            </button>
+                            <input
+                                type="text"
+                                class="box-product-quantity"
+                                value="2"
+                                name="product-quantity"
+                            />
+                            <button class="box-btn__minus">
+                                <ion-icon name="remove-outline"></ion-icon>
+                            </button>
+                        </div>
+                        <div class="box-control__item box-final-price text-primary text-bold">
+                            258.000
+                        </div>
+                        <div class="box-control__item box-remove">
+                            <a
+                                href="?remove-product-id=#"
+                                class="box-icon-remove box-icon-remove-1"
+                            >
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </a>
+                        </div>
                     </div>
-                    <div class="box-control__item box-quantity">
-                        <button class="box-btn__add">
-                            <ion-icon name="add-outline"></ion-icon>
-                        </button>
-                        <input
-                            type="text"
-                            class="box-product-quantity"
-                            value="2"
-                            name="product-quantity"
-                        />
-                        <button class="box-btn__minus">
-                            <ion-icon name="remove-outline"></ion-icon>
-                        </button>
+                    <div class="box-control box-product">
+                        <div class="box-control__item">
+                            <input
+                                class="c-checkbox"
+                                type="checkbox"
+                                id="select-2"
+                                name="check-2"
+                                value="product-id-2"
+                            />
+                            <label class="c-label" for="select-2"></label>
+                        </div>
+                        <div class="box-control__item box-name">
+                            <img
+                                src="./images/ngan_ghep_ke_sach/ke_sach.png"
+                                alt="box product card 1"
+                                class="box__product-img"
+                            />
+                            <div class="box__product-info">
+                                <span class="box__product-name">
+                                    Ngăn Trang Trí - Ngăn Ghép Kệ Sách Ngăn Trang Trí - Ngăn
+                                    Ghép Kệ Sách
+                                </span>
+                            </div>
+                        </div>
+                        <div class="box-control__item box-price text-primary text-bold">
+                            129.000
+                        </div>
+                        <div class="box-control__item box-quantity">
+                            <button class="box-btn__add">
+                                <ion-icon name="add-outline"></ion-icon>
+                            </button>
+                            <input
+                                type="text"
+                                class="box-product-quantity"
+                                value="2"
+                                name="product-quantity"
+                            />
+                            <button class="box-btn__minus">
+                                <ion-icon name="remove-outline"></ion-icon>
+                            </button>
+                        </div>
+                        <div class="box-control__item box-final-price text-primary text-bold">
+                            258.000
+                        </div>
+                        <div class="box-control__item box-remove">
+                            <a
+                                href="?remove-product-id=#"
+                                class="box-icon-remove box-icon-remove-1"
+                            >
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </a>
+                        </div>
                     </div>
-                    <div class="box-control__item box-final-price text-primary text-bold">
-                        258.000
+                    <div class="box-control box-product">
+                        <div class="box-control__item">
+                            <input
+                                class="c-checkbox"
+                                type="checkbox"
+                                id="select-2"
+                                name="check-2"
+                                value="product-id-2"
+                            />
+                            <label class="c-label" for="select-2"></label>
+                        </div>
+                        <div class="box-control__item box-name">
+                            <img
+                                src="./images/ngan_ghep_ke_sach/ke_sach.png"
+                                alt="box product card 1"
+                                class="box__product-img"
+                            />
+                            <div class="box__product-info">
+                                <span class="box__product-name">
+                                    Ngăn Trang Trí - Ngăn Ghép Kệ Sách Ngăn Trang Trí - Ngăn
+                                    Ghép Kệ Sách
+                                </span>
+                            </div>
+                        </div>
+                        <div class="box-control__item box-price text-primary text-bold">
+                            129.000
+                        </div>
+                        <div class="box-control__item box-quantity">
+                            <button class="box-btn__add">
+                                <ion-icon name="add-outline"></ion-icon>
+                            </button>
+                            <input
+                                type="text"
+                                class="box-product-quantity"
+                                value="2"
+                                name="product-quantity"
+                            />
+                            <button class="box-btn__minus">
+                                <ion-icon name="remove-outline"></ion-icon>
+                            </button>
+                        </div>
+                        <div class="box-control__item box-final-price text-primary text-bold">
+                            258.000
+                        </div>
+                        <div class="box-control__item box-remove">
+                            <a
+                                href="?remove-product-id=#"
+                                class="box-icon-remove box-icon-remove-1"
+                            >
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </a>
+                        </div>
                     </div>
-                    <div class="box-control__item box-remove">
-                        <a
-                            href="?remove-product-id=#"
-                            class="box-icon-remove box-icon-remove-1"
-                        >
-                            <ion-icon name="trash-outline"></ion-icon>
-                        </a>
+                    <div class="box-control box-product">
+                        <div class="box-control__item">
+                            <input
+                                class="c-checkbox"
+                                type="checkbox"
+                                id="select-2"
+                                name="check-2"
+                                value="product-id-2"
+                            />
+                            <label class="c-label" for="select-2"></label>
+                        </div>
+                        <div class="box-control__item box-name">
+                            <img
+                                src="./images/ngan_ghep_ke_sach/ke_sach.png"
+                                alt="box product card 1"
+                                class="box__product-img"
+                            />
+                            <div class="box__product-info">
+                                <span class="box__product-name">
+                                    Ngăn Trang Trí - Ngăn Ghép Kệ Sách Ngăn Trang Trí - Ngăn
+                                    Ghép Kệ Sách
+                                </span>
+                            </div>
+                        </div>
+                        <div class="box-control__item box-price text-primary text-bold">
+                            129.000
+                        </div>
+                        <div class="box-control__item box-quantity">
+                            <button class="box-btn__add">
+                                <ion-icon name="add-outline"></ion-icon>
+                            </button>
+                            <input
+                                type="text"
+                                class="box-product-quantity"
+                                value="2"
+                                name="product-quantity"
+                            />
+                            <button class="box-btn__minus">
+                                <ion-icon name="remove-outline"></ion-icon>
+                            </button>
+                        </div>
+                        <div class="box-control__item box-final-price text-primary text-bold">
+                            258.000
+                        </div>
+                        <div class="box-control__item box-remove">
+                            <a
+                                href="?remove-product-id=#"
+                                class="box-icon-remove box-icon-remove-1"
+                            >
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="box-control box-payment">
-                    <div class="box-control__item">
-                        <input
-                            class="c-checkbox"
-                            type="checkbox"
-                            id="check-all-bottom"
-                            name="check-all"
-                            value="check-all"
-                        />
-                        <label class="c-label" for="check-all-bottom"></label>
-                    </div>
-                    <div class="box-control__item box-check-all">Chọn tất cả (3 sản phẩm)</div>
-                    <div class="box-control__item box-remove">
-                        <a href="?remove-product-id=#" class="box-icon-remove">Xóa</a>
-                    </div>
-                    <div class="box-control__item box-wistlist">
-                        <a href="?add-to-wistlist-id=1" class="box-a-wistlist">
-                            Lưu vào yêu thích
-                        </a>
-                    </div>
-                    <div class="box-control__item box-voucher">
-                        <div class="box-label-voucher">
-                            <ion-icon name="ticket-outline"></ion-icon>
-                            <span>Voucher</span>
+                <div class="box-payment">
+                    <div class="box-control box-payment__top">
+                        <div class="box-control__item">
+                            <input
+                                class="c-checkbox"
+                                type="checkbox"
+                                id="check-all-bottom"
+                                name="check-all"
+                                value="check-all"
+                            />
+                            <label class="c-label" for="check-all-bottom"></label>
                         </div>
-                        <span class="btn-show-popup">Nhập hoặc thêm voucher</span>
+                        <div class="box-control__item box-check-all">
+                            Chọn tất cả (3 sản phẩm)
+                        </div>
+                        <div class="box-control__item box-remove">
+                            <a href="?remove-product-id=#" class="box-icon-remove">Xóa</a>
+                        </div>
+                        <div class="box-control__item box-wistlist">
+                            <a href="?add-to-wistlist-id=1" class="box-a-wistlist">
+                                Lưu vào yêu thích
+                            </a>
+                        </div>
+                        <div class="box-control__item box-voucher">
+                            <div class="box-label-voucher">
+                                <ion-icon name="ticket-outline"></ion-icon>
+                                <span>Voucher</span>
+                            </div>
+                            <span class="btn-show-popup">Nhập hoặc thêm voucher</span>
+                        </div>
+                    </div>
+
+                    <div class="box-control box-payment__bottom">
+                        <div class="total-payment-product">Tổng thanh toán (5 sản phẩm)</div>
+                        <div class="total-payment-price text-primary text-bold">1.250.000</div>
+                        <a href="?payment=go" class="btn-primary btn-payment">Thanh toán</a>
                     </div>
                 </div>
             </div>
         </main>
+
+        <!-- popup add voucher -->
         <div class="box-popup-voucher">
             <div class="popup-voucher">
                 <h2 class="popup-title">Chọn hoặc nhập Voucher</h2>
@@ -283,16 +510,214 @@
                         name="voucher-input"
                         placeholder="Nhập mã voucher"
                     />
-                    <button class="btn-comfirm-voucher btn-use-voucher">Áp dụng</button>
+                    <button class="btn-comfirm-voucher btn-use-voucher btn-disabled" disabled>
+                        Áp dụng
+                    </button>
                 </div>
 
-                <div class="box-list-voucher"></div>
+                <div class="box-list-voucher">
+                    <div class="voucher-item">
+                        <div class="voucher-title">
+                            <div class="voucher-tag" data-tag="Số lượng có hạn"></div>
+                            <span>Miễn Phí vận chuyển</span>
+                        </div>
+                        <div class="voucher-description">
+                            <p class="voucher-description__title">
+                                Áp dụng cho đơn hàng trên 500k
+                            </p>
+                            <span class="voucher-description__item description-border">
+                                Giảm đến 70k
+                            </span>
+                            <p class="voucher-description__item">Hết hạn: còn 2 ngày</p>
+                        </div>
+                    </div>
+                    <div class="voucher-item">
+                        <div class="voucher-title">
+                            <div class="voucher-tag" data-tag="Số lượng có hạn"></div>
+                            <span>Miễn Phí vận chuyển</span>
+                        </div>
+                        <div class="voucher-description">
+                            <p class="voucher-description__title">
+                                Áp dụng cho đơn hàng trên 500k
+                            </p>
+                            <span class="voucher-description__item description-border">
+                                Giảm đến 70k
+                            </span>
+                            <p class="voucher-description__item">Hết hạn: còn 2 ngày</p>
+                        </div>
+                    </div>
+                    <div class="voucher-item">
+                        <div class="voucher-title">
+                            <div class="voucher-tag" data-tag="Số lượng có hạn"></div>
+                            <span>Miễn Phí vận chuyển</span>
+                        </div>
+                        <div class="voucher-description">
+                            <p class="voucher-description__title">
+                                Áp dụng cho đơn hàng trên 500k
+                            </p>
+                            <span class="voucher-description__item description-border">
+                                Giảm đến 70k
+                            </span>
+                            <p class="voucher-description__item">Hết hạn: còn 2 ngày</p>
+                        </div>
+                    </div>
+                    <div class="voucher-item">
+                        <div class="voucher-title">
+                            <div class="voucher-tag" data-tag="Số lượng có hạn"></div>
+                            <span>Miễn Phí vận chuyển</span>
+                        </div>
+                        <div class="voucher-description">
+                            <p class="voucher-description__title">
+                                Áp dụng cho đơn hàng trên 500k
+                            </p>
+                            <span class="voucher-description__item description-border">
+                                Giảm đến 70k
+                            </span>
+                            <p class="voucher-description__item">Hết hạn: còn 2 ngày</p>
+                        </div>
+                    </div>
+                    <div class="voucher-item">
+                        <div class="voucher-title">
+                            <div class="voucher-tag" data-tag="Số lượng có hạn"></div>
+                            <span>Miễn Phí vận chuyển</span>
+                        </div>
+                        <div class="voucher-description">
+                            <p class="voucher-description__title">
+                                Áp dụng cho đơn hàng trên 500k
+                            </p>
+                            <span class="voucher-description__item description-border">
+                                Giảm đến 70k
+                            </span>
+                            <p class="voucher-description__item">Hết hạn: còn 2 ngày</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="box-voucher-bottom">
                     <button class="btn-cancel">Trở về</button>
                     <button class="btn-comfirm-voucher btn-comfirm">OK</button>
                 </div>
             </div>
         </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="box">
+                    <section class="col-1-3">
+                        <div class="info">
+                            <div class="info-item">
+                                <div class="logo">
+                                    <img
+                                        class="logo-img"
+                                        src="./images/logo.jpg"
+                                        alt="footer-logo"
+                                    />
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <p class="text-info">
+                                    Noithatvippro là thương hiệu đến từ Việt Nam với hơn 35 năm
+                                    kinh nghiệm trong việc sản xuất và xuất khẩu nội thất đạt
+                                    chuẩn quốc tế.
+                                </p>
+                            </div>
+                            <div class="info-item">
+                                <p class="text-info">
+                                    Địa chỉ: Khu phố 6, phường Linh Trung, Tp. Thủ Đức
+                                </p>
+                            </div>
+                            <div class="info-item">
+                                <p class="text-info">Điện thoại: 0123456789, 0987654321</p>
+                            </div>
+                            <div class="info-item">
+                                <p class="text-info">Email: noithatvippro@gmail.com</p>
+                            </div>
+
+                            <div class="info-item">
+                                <a href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-google"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
+
+                            <div class="info-item">
+                                <p class="text-info">Copyright &copy; All rights reserved.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="col-1-3">
+                        <div class="info service">
+                            <div class="info-item">
+                                <h2 class="footer-title">Về chúng tôi</h2>
+                            </div>
+                            <div class="flex-col">
+                                <div class="col-item">
+                                    <div class="info-item">
+                                        <a class="text-info" href="#">Giới thiệu</a>
+                                    </div>
+                                    <div class="info-item">
+                                        <a class="text-info" href="#">Sản phẩm</a>
+                                    </div>
+                                    <div class="info-item">
+                                        <a class="text-info" href="#">Liên hệ</a>
+                                    </div>
+                                    <div class="info-item">
+                                        <a class="text-info" href="#">Cộng tác</a>
+                                    </div>
+                                </div>
+                                <div class="col-item">
+                                    <div class="info-item">
+                                        <a class="text-info" href="#">Giới thiệu</a>
+                                    </div>
+                                    <div class="info-item">
+                                        <a class="text-info" href="#">Sản phẩm</a>
+                                    </div>
+                                    <div class="info-item">
+                                        <a class="text-info" href="#">Liên hệ</a>
+                                    </div>
+                                    <div class="info-item">
+                                        <a class="text-info" href="#">Cộng tác</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="col-1-3">
+                        <div class="info">
+                            <div class="info-item">
+                                <h2 class="footer-title">Tham gia ngay</h2>
+                            </div>
+                            <div class="info-item">
+                                <p class="text-info">
+                                    Đăng ký ngay để nhận được nhiều thông tin, sự kiện và khuyến
+                                    mãi từ chúng tôi!
+                                </p>
+                            </div>
+                            <div class="info-item footer-signup">
+                                <form action="#" method="post">
+                                    <input
+                                        class="input pos-abs"
+                                        type="email"
+                                        name="email"
+                                        id="email"
+                                        placeholder="Hãy nhập vào email"
+                                    />
+                                    <a href="#" class="btn-signup pos-abs">
+                                        <i class="fas fa-location-arrow"></i>
+                                    </a>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </footer>
 
         <script src="js/cart.js"></script>
         <script
