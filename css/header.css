@@ -1,75 +1,131 @@
-/* id = section_logo */
-.header{
+.header {
     width: 100%;
-    height: 80px;
+    height: 6.4rem;
     background-color: #fff;
-
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
 }
 
-.header .logo {
-    height: 80px;
-    width: 20%;
-    float: left;
+.header .box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.header .logo .logo-img {
-    height: 80px;
-    padding-left: 30%;
+.logo {
+    width: 10%;
+    height: 6.4rem;
 }
 
-.header .navbar {
+.logo .logo-img {
+    height: 6.4rem;
+    vertical-align: baseline;
+}
+
+.navigation {
     width: 45%;
-    float: left;
-    height: 80px;
-}
-.header .navbar ul{
-    height: 80px;
-    margin: 0px;
-    padding: 0px;
-}
-.header .navbar .nav-list-item {
-    padding-right: 25px;
-    list-style-type: none;
-    float: left;
-    clear: right;
-    margin-top: 31.5px;
 }
 
-.header .navbar .nav-list-item a{
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: bolder;
-    color: gray;
-
+.navigation-list {
+    display: flex;
+    justify-content: center;
 }
 
-.header .header-btn{
-    width: 35%;
-    float: right;
-    height: 80px;
+.navigation-item {
+    cursor: pointer;
+    position: relative;
+}
 
+.navigation-item::after {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 0.5rem;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50px;
+    background-color: var(--primary-color);
+    opacity: 0.7;
+    display: none;
 }
-.header .header-btn ul{
-    height: 80px;
-    margin: 0px;
-    padding: 0px;
-}
-.header .header-btn .header-list-item{
-    float: left;
-    clear: right;
-    padding-left: 15px;
-    padding-right: 15px;
-    list-style-type: none;
 
+.navigation-item a {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
 }
-.header .header-btn .header-list-item a{
-    text-decoration: none;
-    font-size: 17px;
-    margin-top: 31.5px;
-    color: gray;
 
+.navigation-item.active a {
+    color: var(--primary-color);
 }
-.header .header-btn .text{
-    font-weight: bolder;
-    margin-top: 31.5px;
+
+.navigation-item.active::after {
+    display: block;
+}
+
+.navigation-item a {
+    font-size: 1.6rem;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+.navigation-item:hover a {
+    color: var(--primary-color);
+}
+
+.header-btn {
+    width: 45%;
+}
+
+.header-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header-item {
+    font-size: 1.6rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+}
+
+.header-item a {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+}
+
+.header-item:hover a {
+    color: var(--primary-color);
+}
+
+.header-item:hover {
+    background-color: var(--primary-color-rgba);
+}
+
+.header-item > a ion-icon {
+    font-size: 2.4rem;
+    vertical-align: middle;
+}
+
+.card-count {
+    font-size: 1rem;
+    color: #fff;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    z-index: 10;
+    top: 0;
+    right: 10%;
+    border-radius: 50px;
+    background-color: var(--primary-color);
 }
