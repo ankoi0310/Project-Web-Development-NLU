@@ -4,6 +4,13 @@
     background-color: rgb(245, 245, 245);
 }
 
+.content-title {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-grey);
+}
+
 .box-control {
     font-size: 1.4rem;
     color: var(--text-grey);
@@ -25,7 +32,7 @@
     display: flex;
     flex-direction: column;
     border-radius: 4px;
-    max-height: 60vh;
+    max-height: 50vh;
     overflow-y: overlay;
 }
 
@@ -204,6 +211,7 @@
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 -1rem 2rem rgb(0 0 0 / 5%);
 }
 
 .box-payment__top {

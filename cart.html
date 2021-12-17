@@ -41,69 +41,30 @@
                                     <ion-icon name="search-outline"></ion-icon>
                                 </a>
                             </li>
-                            <li class="header-item header__drop">
-                                <a href="?wishlist=true">
-                                    <ion-icon name="heart-outline"></ion-icon>
+                            <li class="header-item box-user">
+                                <a class="header-user" href="?user=id4">
+                                    <img
+                                        src="./images/user/user-4.jpg"
+                                        alt="User avatar"
+                                        class="user-avt"
+                                    />
+                                    <span class="user-name">Nguyen Van A</span>
                                 </a>
-                                <!-- if card have product in wishlist -> add class header__drop__empty -->
-                                <div class="header__drop-list">
-                                    <div class="header__mt">
-                                        <img
-                                            src="./images/emptywishlist.jpg"
-                                            alt="Giỏ hàng trống"
-                                            class="header__mt-img"
-                                        />
-                                        <h4 class="header__mt-msg">
-                                            Chưa có sản phẩm yêu thích
-                                        </h4>
-                                    </div>
 
-                                    <div class="header__drop-no-mt">
-                                        <p class="heading__drop__no-mt-msg">
-                                            Sản phẩm yêu thích
-                                        </p>
-
-                                        <div class="header__product-list">
-                                            <div class="header__product-item">
-                                                <img
-                                                    src="./images/ngan_ghep_ke_sach/ke_sach.png"
-                                                    alt="Header product card 1"
-                                                    class="header__product-item-img"
-                                                />
-                                                <span class="header__product-item-name">
-                                                    Ngăn Trang Trí - Ngăn Ghép Kệ Sách
-                                                </span>
-                                                <span class="header__product-item-price">
-                                                    129.000
-                                                </span>
-                                            </div>
-                                            <div class="header__product-item">
-                                                <img
-                                                    src="./images/ngan_ghep_ke_sach/ke_sach.png"
-                                                    alt="Header product card 1"
-                                                    class="header__product-item-img"
-                                                />
-                                                <span class="header__product-item-name">
-                                                    Ngăn Trang Trí - Ngăn Ghép Kệ Sách
-                                                </span>
-                                                <span class="header__product-item-price">
-                                                    129.000
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="header__drop__bottom">
-                                            <p class="heading__drop__bottom-msg">
-                                                2 sản phẩm mới thêm vào yêu thích
-                                            </p>
-                                            <a href="?mycart=true" class="header__drop__btn">
-                                                Xem Wishlist
-                                            </a>
-                                        </div>
+                                <div class="user-dropdown">
+                                    <div class="user-dropdown-list">
+                                        <a href="./info_user.html" class="user-dropdown__item">
+                                            Tài khoản của tôi
+                                        </a>
+                                        <a href="?don-mua" class="user-dropdown__item"
+                                            >Đơn mua</a
+                                        >
+                                        <a href="?logout=true" class="user-dropdown__item">
+                                            Đăng xuất
+                                        </a>
                                     </div>
                                 </div>
                             </li>
-                            <li class="header-item"><a href="#">Đăng nhập</a></li>
-                            <li class="header-item"><a href="#">Đăng ký</a></li>
                         </ul>
                     </div>
                 </div>
@@ -112,6 +73,7 @@
 
         <main class="content">
             <div class="container">
+                <div class="content-title">Giỏ hàng</div>
                 <div class="box-control box-header">
                     <div class="box-control__item">
                         <input
