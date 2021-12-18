@@ -2,120 +2,117 @@
     width: 100%;
     height: 550px;
     background: white;
+    opacity: 1;
+    /* visibility: hidden; */
+    margin-top: -1075px;
 }
-.container {
+.containerOfPage {
     width: 1200px;
     margin: 0 auto;
     background: white;
-    height: 550px;   
+    height: 600px;
     display: border-box;
 }
-.container .main_left{
+.containerOfPage .main_left{
     float: left;
     width: 25%;
-    background: #ee4d2d;
+    background: var(--primary-color);
 }
-.container .main_left .user_name{
+.containerOfPage .main_left .user_name{
     width: 100%;
     height: 60px;
     border-bottom: 2px solid gray;
 }
-.container .main_left .user_name .name{
-color: white;
-font-weight: 700;
-padding-top: 20px;
-text-align: center;
+.containerOfPage .main_left .user_name .name{
+    color: white;
+    font-weight: 700;
+    padding-top: 20px;
+    text-align: center;
 }
-.container .main_left .choice{
+.containerOfPage .main_left .choice{
     width: 100%;
-    height: 490px;
+    height: 540px;
     padding-top: 10px;
 }
-.container .main_left .choice .text_choice{
-color: white;
-height: 20px;
-width: 80%;
-cursor: pointer;
-padding-bottom: 10px;
-
-margin-bottom: 15px;
-margin-left: 10%;
+.containerOfPage .main_left .choice .text_choice{
+    color: white;
+    height: 30px;
+    width: 80%;
+    cursor: pointer;
+    margin-bottom: 15px;
+    margin-left: 10%;
 }
-.container .main_left .choice .text_choice .icon{
-   float: left;
-   width: 8%;
-height: 20px;
-padding-top: 6px;
-margin-left: 10%;
+.containerOfPage .main_left .choice .text_choice .icon{
+    float: left;
+    width: 8%;
+    height: 30px;
+    padding-top: 10px;
+    margin-left: 10%;
 }
-.container .main_left .choice .text_choice p{
+.containerOfPage .main_left .choice .text_choice p{
     float: right;
     width: 82%;
-height: 20px;
-padding-top: 6px;
-
+    height: 30px;
+    padding-top: 6px;
 }
-.container .main_left .choice .text_user{
-background: white;
-border-radius: 15px;
-color: black;
-margin-left: 10%;
+.containerOfPage .main_left .choice .text_user{
+    background: white;
+    border-radius: 15px;
+    color: black;
 }
 
-.container .main_right{
+.containerOfPage .main_right{
     float: right;
     width: 75%;
     background: whitesmoke;
 }
-.container .main_right .title{
+.containerOfPage .main_right .title{
     width: 100%;
     height: 60px;
     border-bottom: 2px solid gray;
 }
-.container .main_right .title p{
+.containerOfPage .main_right .title p{
     padding-left: 30px;
 }
-.container .main_right .title .p1{
-padding-top: 10px;
-font-size: 18px;
-font-weight: bolder;
-}
-.container .main_right .title .p2{
+.containerOfPage .main_right .title .p1{
     padding-top: 5px;
+    font-size: 18px;
+    font-weight: 700;
+}
+.containerOfPage .main_right .title .p2{
     font-size: 14px;
 }
-.container .main_right .info{
+.containerOfPage .main_right .info{
     width: 100%;
-    height: 500px;
-    
+    height: 540px;
 }
-.container .main_right .info .text{
-    width: 550px;
+.containerOfPage .main_right .info .text{
+    width: 850px;
     height: 40px;
     padding-top:10px;
     padding-left: 30px;
 }
-.container .main_right .info .text .p_left{
-float: left;
-width: 150px;
-padding-top: 10px;
+.containerOfPage .main_right .info .text .p_left{
+    float: left;
+    width: 150px;
+    padding-top: 10px;
 
 }
-.container .main_right .info .text .p_right{
-float: right;
-width: 400px;
-padding-top: 10px;
+.containerOfPage .main_right .info .text .p_right{
+    float: right;
+    width: 600px;
+    padding-top: 10px;
 }
-.container .main_right .info .btn{
+.containerOfPage .main_right .info .btn{
     width: 100%;
     height: 50px;
-    padding-top: 30px;
+    padding-top: 150px;
     text-align: center;
 }
-.container .main_right .info .btn a{  
+.containerOfPage .main_right .info .btn a{
     width: 100px;
     height: 50px;
-    background: #ee4d2d;
+    background: var(--teal) ;
     cursor: pointer;
     padding: 10px;
     color: white;
