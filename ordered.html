@@ -1,96 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.0/css/font-awesome.css" integrity="sha512-72McA95q/YhjwmWFMGe8RI3aZIMCTJWPBbV8iQY3jy1z9+bi6+jHnERuNrDPo/WGYEzzNs4WdHNyyEr/yXJ9pA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="anonymous" />
+    <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/header_signed_in.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/ordered.css">
+    <link rel="stylesheet" href="./css/root.css">
+    <title>Đơn mua</title>
 </head>
-<link rel="stylesheet" href="./css/ordered.css">
-<link rel="stylesheet" href="./css/base.css">
 <body>
-    <div class="page">
-        <main class="container">
-            <div class="main_left">
-                <div class="user_name">
-                    <div class="name">Nguyễn Văn A</div>
-                </div>
-                <div class="choice">
-                    <ul>
-                        <i><div class="text_choice " href="">                           
-                            <p>Tài khoản của tôi</p>    
-                            <div class="fa fa-user icon" aria-hidden="true"></div>                       
-                        </div></i>
-                        <i><div class="text_choice text_user" href="">                            
-                            <p>Đơn mua</p>  
-                            <div class="fa fa-list-alt icon" aria-hidden="true"></div>
-                        </div></i>
-                        <i><div class="text_choice" href="">                            
-                            <p>Đổi mật khẩu</p> 
-                            <div class="fa fa-refresh icon" aria-hidden="true"></div>
-                        </div></i>
-                    </ul>
-                </div>
+<header class="header">
+    <div class="container">
+        <div class="box">
+            <div class="logo">
+                <img src="./images/logo.jpg" alt="Logo" class="logo-img" />
             </div>
-            <div class="main_right">
-                <div class="title">
-                    <p class="p1">Đơn hàng đã mua</p>
-                </div>
-                <div class="info">
-                    <ul>
-                        <i><div class="text">
-                            <div class="product_img"></div>
-                            <div class="product_info">
-                                <div class="name"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum aperiam asperiores eius aliquid! Dolorum, fuga necessitatibus, quo unde quos dolore sed fugiat sint recusandae consequatur ipsa sunt veniam reprehenderit eligendi!</p></div>
-                                <div class="price"><p>Giá: 199.000 VNĐ</p></div>
-                                <div class="date"><p>Ngày mua: 20/01/2001</p></div>
+            <nav class="navigation">
+                <ul class="navigation-list">
+                    <li class="navigation-item"><a href="#">Trang chủ</a></li>
+                    <li class="navigation-item">
+                        <a href="/products.html">Sản phẩm</a>
+                    </li>
+                    <li class="navigation-item"><a href="#">Mới</a></li>
+                    <li class="navigation-item"><a href="#">Khuyến mãi</a></li>
+                    <li class="navigation-item"><a href="#">Blog</a></li>
+                </ul>
+            </nav>
+            <div class="header-btn">
+                <ul class="header-list">
+                    <li class="header-item">
+                        <a href="#">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </a>
+                    </li>
+                    <li class="header-item box-user">
+                        <a class="header-user" href="?user=id4">
+                            <img
+                                    src="./images/user/user-4.jpg"
+                                    alt="User avatar"
+                                    class="user-avt"
+                            />
+                            <span class="user-name">Nguyen Van A</span>
+                        </a>
+
+                        <div class="user-dropdown">
+                            <div class="user-dropdown-list">
+                                <a href="./info_user.html" class="user-dropdown__item">
+                                    Tài khoản của tôi
+                                </a>
+                                <a href="?don-mua" class="user-dropdown__item"
+                                >Đơn mua</a
+                                >
+                                <a href="?logout=true" class="user-dropdown__item">
+                                    Đăng xuất
+                                </a>
                             </div>
-                        </div></i>    
-                        <i><div class="text">
-                            <div class="product_img"></div>
-                            <div class="product_info">
-                                <div class="name"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum aperiam asperiores eius aliquid! Dolorum, fuga necessitatibus, quo unde quos dolore sed fugiat sint recusandae consequatur ipsa sunt veniam reprehenderit eligendi!</p></div>
-                                <div class="price"><p>Giá: 199.000 VNĐ</p></div>
-                                <div class="date"><p>Ngày mua: 20/01/2001</p></div>
-                            </div>
-                        </div></i>  
-                        <i><div class="text">
-                            <div class="product_img"></div>
-                            <div class="product_info">
-                                <div class="name"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum aperiam asperiores eius aliquid! Dolorum, fuga necessitatibus, quo unde quos dolore sed fugiat sint recusandae consequatur ipsa sunt veniam reprehenderit eligendi!</p></div>
-                                <div class="price"><p>Giá: 199.000 VNĐ</p></div>
-                                <div class="date"><p>Ngày mua: 20/01/2001</p></div>
-                            </div>
-                        </div></i>  
-                        <i><div class="text">
-                            <div class="product_img"></div>
-                            <div class="product_info">
-                                <div class="name"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum aperiam asperiores eius aliquid! Dolorum, fuga necessitatibus, quo unde quos dolore sed fugiat sint recusandae consequatur ipsa sunt veniam reprehenderit eligendi!</p></div>
-                                <div class="price"><p>Giá: 199.000 VNĐ</p></div>
-                                <div class="date"><p>Ngày mua: 20/01/2001</p></div>
-                            </div>
-                        </div></i>   
-                        <i><div class="text">
-                            <div class="product_img"></div>
-                            <div class="product_info">
-                                <div class="name"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum aperiam asperiores eius aliquid! Dolorum, fuga necessitatibus, quo unde quos dolore sed fugiat sint recusandae consequatur ipsa sunt veniam reprehenderit eligendi!</p></div>
-                                <div class="price"><p>Giá: 199.000 VNĐ</p></div>
-                                <div class="date"><p>Ngày mua: 20/01/2001</p></div>
-                            </div>
-                        </div></i>   
-                        <i><div class="text">
-                            <div class="product_img"></div>
-                            <div class="product_info">
-                                <div class="name"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum aperiam asperiores eius aliquid! Dolorum, fuga necessitatibus, quo unde quos dolore sed fugiat sint recusandae consequatur ipsa sunt veniam reprehenderit eligendi!</p></div>
-                                <div class="price"><p>Giá: 199.000 VNĐ</p></div>
-                                <div class="date"><p>Ngày mua: 20/01/2001</p></div>
-                            </div>
-                        </div></i>                     
-                    </ul>
-                </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
-        </main>
+        </div>
     </div>
+</header>
+
+<main class="container-body"></main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="box">
+            <section class="col-1-3">
+                <div class="info">
+                    <div class="info-item">
+                        <div class="logo">
+                            <img
+                                    class="logo-img"
+                                    src="./images/logo.jpg"
+                                    alt="footer-logo"
+                            />
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <p class="text-info">
+                            Noithatvippro là thương hiệu đến từ Việt Nam với hơn 35 năm
+                            kinh nghiệm trong việc sản xuất và xuất khẩu nội thất đạt
+                            chuẩn quốc tế.
+                        </p>
+                    </div>
+                    <div class="info-item">
+                        <p class="text-info">
+                            Địa chỉ: Khu phố 6, phường Linh Trung, Tp. Thủ Đức
+                        </p>
+                    </div>
+                    <div class="info-item">
+                        <p class="text-info">Điện thoại: 0123456789, 0987654321</p>
+                    </div>
+                    <div class="info-item">
+                        <p class="text-info">Email: noithatvippro@gmail.com</p>
+                    </div>
+
+                    <div class="info-item">
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+
+                    <div class="info-item">
+                        <p class="text-info">Copyright &copy; All rights reserved.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="col-1-3">
+                <div class="info service">
+                    <div class="info-item">
+                        <h2 class="footer-title">Về chúng tôi</h2>
+                    </div>
+                    <div class="flex-col">
+                        <div class="col-item">
+                            <div class="info-item">
+                                <a class="text-info" href="#">Giới thiệu</a>
+                            </div>
+                            <div class="info-item">
+                                <a class="text-info" href="#">Sản phẩm</a>
+                            </div>
+                            <div class="info-item">
+                                <a class="text-info" href="#">Liên hệ</a>
+                            </div>
+                            <div class="info-item">
+                                <a class="text-info" href="#">Cộng tác</a>
+                            </div>
+                        </div>
+                        <div class="col-item">
+                            <div class="info-item">
+                                <a class="text-info" href="#">Giới thiệu</a>
+                            </div>
+                            <div class="info-item">
+                                <a class="text-info" href="#">Sản phẩm</a>
+                            </div>
+                            <div class="info-item">
+                                <a class="text-info" href="#">Liên hệ</a>
+                            </div>
+                            <div class="info-item">
+                                <a class="text-info" href="#">Cộng tác</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="col-1-3">
+                <div class="info">
+                    <div class="info-item">
+                        <h2 class="footer-title">Tham gia ngay</h2>
+                    </div>
+                    <div class="info-item">
+                        <p class="text-info">
+                            Đăng ký ngay để nhận được nhiều thông tin, sự kiện và khuyến
+                            mãi từ chúng tôi!
+                        </p>
+                    </div>
+                    <div class="info-item footer-signup">
+                        <form action="#" method="post">
+                            <input
+                                    class="input pos-abs"
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    placeholder="Hãy nhập vào email"
+                            />
+                            <a href="#" class="btn-signup pos-abs">
+                                <i class="fas fa-location-arrow"></i>
+                            </a>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</footer>
+<div class="page">
+    <div class="containerOfPage">
+        <div class="main_left">
+            <div class="user_name">
+                <div class="img">
+                    <img
+                            src="./images/user/user-4.jpg"
+                            alt="User avatar"
+                            class="user-avt"
+                    />
+                </div>
+                <div class="name">Nguyễn Văn A</div>
+            </div>
+            <div class="choice">
+                <ul>
+                    <i><div class="text_choice " href="">
+                        <p>Tài khoản của tôi</p>
+                        <div class="fa fa-user icon" aria-hidden="true"></div>
+                    </div></i>
+                    <i><div class="text_choice text_user" href="">
+                        <p>Đơn mua</p>
+                        <div class="fa fa-list-alt icon" aria-hidden="true"></div>
+                    </div></i>
+                    <i><div class="text_choice" href="">
+                        <p>Đổi mật khẩu</p>
+                        <div class="fa fa-refresh icon" aria-hidden="true"></div>
+                    </div></i>
+                </ul>
+            </div>
+        </div>
+        <div class="main_right">
+            <div class="title">
+                <p class="p1">Đơn hàng đã mua</p>
+            </div>
+            <div class="info">
+                <ul>
+                    <i><div class="text">
+                        <div class="product_img"></div>
+                        <div class="product_info">
+                            <div class="name"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum aperiam asperiores eius aliquid! Dolorum, fuga necessitatibus, quo unde quos dolore sed fugiat sint recusandae consequatur ipsa sunt veniam reprehenderit eligendi!</p></div>
+                            <div class="price"><p>Giá: 199.000 VNĐ</p></div>
+                            <div class="date"><p>Ngày mua: 20/01/2001</p></div>
+                        </div>
+                    </div></i>
+                    <i><div class="text">
+                        <div class="product_img"></div>
+                        <div class="product_info">
+                            <div class="name"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum aperiam asperiores eius aliquid! Dolorum, fuga necessitatibus, quo unde quos dolore sed fugiat sint recusandae consequatur ipsa sunt veniam reprehenderit eligendi!</p></div>
+                            <div class="price"><p>Giá: 199.000 VNĐ</p></div>
+                            <div class="date"><p>Ngày mua: 20/01/2001</p></div>
+                        </div>
+                    </div></i>
+                    <i><div class="text">
+                        <div class="product_img"></div>
+                        <div class="product_info">
+                            <div class="name"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum aperiam asperiores eius aliquid! Dolorum, fuga necessitatibus, quo unde quos dolore sed fugiat sint recusandae consequatur ipsa sunt veniam reprehenderit eligendi!</p></div>
+                            <div class="price"><p>Giá: 199.000 VNĐ</p></div>
+                            <div class="date"><p>Ngày mua: 20/01/2001</p></div>
+                        </div>
+                    </div></i>
+                    <i><div class="text">
+                        <div class="product_img"></div>
+                        <div class="product_info">
+                            <div class="name"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum aperiam asperiores eius aliquid! Dolorum, fuga necessitatibus, quo unde quos dolore sed fugiat sint recusandae consequatur ipsa sunt veniam reprehenderit eligendi!</p></div>
+                            <div class="price"><p>Giá: 199.000 VNĐ</p></div>
+                            <div class="date"><p>Ngày mua: 20/01/2001</p></div>
+                        </div>
+                    </div></i>
+                    <i><div class="text">
+                        <div class="product_img"></div>
+                        <div class="product_info">
+                            <div class="name"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum aperiam asperiores eius aliquid! Dolorum, fuga necessitatibus, quo unde quos dolore sed fugiat sint recusandae consequatur ipsa sunt veniam reprehenderit eligendi!</p></div>
+                            <div class="price"><p>Giá: 199.000 VNĐ</p></div>
+                            <div class="date"><p>Ngày mua: 20/01/2001</p></div>
+                        </div>
+                    </div></i>
+                    <i><div class="text">
+                        <div class="product_img"></div>
+                        <div class="product_info">
+                            <div class="name"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum aperiam asperiores eius aliquid! Dolorum, fuga necessitatibus, quo unde quos dolore sed fugiat sint recusandae consequatur ipsa sunt veniam reprehenderit eligendi!</p></div>
+                            <div class="price"><p>Giá: 199.000 VNĐ</p></div>
+                            <div class="date"><p>Ngày mua: 20/01/2001</p></div>
+                        </div>
+                    </div></i>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script
+        type="module"
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+        nomodule
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+></script>
 </body>
 </html>
