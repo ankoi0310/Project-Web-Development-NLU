@@ -392,3 +392,62 @@
 .header-item.box-user:hover .user-dropdown__item {
     color: var(--text-black);
 }
+
+/* css for header search */
+.header-search {
+    flex: 1;
+    margin-right: 2rem;
+}
+
+.header-search:hover {
+    background-color: #fff;
+}
+
+form[role='search'] {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.search-input::-webkit-search-decoration,
+.search-input::-webkit-search-cancel-button,
+.search-input::-webkit-search-results-button,
+.search-input::-webkit-search-results-decoration {
+    appearance: none;
+}
+
+.search-input {
+    width: 75%;
+    height: 3rem;
+    padding: 1rem 3rem 1rem 2rem;
+    color: #3d4247;
+    background-color: var(--grey-color);
+    border: none;
+    border-radius: 16px;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.search-input:focus {
+    width: 90%;
+}
+
+.search-input::placeholder {
+    color: var(--text-grey);
+}
+
+.header-search-btn {
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-45%);
+}
+
+.header-search-btn ion-icon {
+    color: #8a8a8a;
+    font-size: 1.8rem;
+    --ionicon-stroke-width: 4.5rem;
+}

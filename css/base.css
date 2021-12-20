@@ -12,6 +12,14 @@
     --text-grey: #999;
     --grey-color: #eee;
 }
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+}
 
 *,
 *::after,
@@ -32,6 +40,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    overflow: overlay;
 }
 
 p {
