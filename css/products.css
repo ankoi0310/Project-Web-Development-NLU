@@ -222,6 +222,8 @@
     text-transform: uppercase;
     outline: none;
     opacity: 0;
+
+    cursor: pointer;
     position: absolute;
     top: 0;
     left: 0;
