@@ -12,6 +12,7 @@
     --text-grey: #999;
     --grey-color: #eee;
 }
+
 ::-webkit-scrollbar {
     width: 6px;
 }
