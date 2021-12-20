@@ -11,7 +11,4 @@ const optionsFilter = document.querySelectorAll('.filter-select > option')
 
 selectSort.onclick = () => {
     filterSelectTitle.innerHTML = selectSort.options[selectSort.selectedIndex].text
-    console.log(selectSort.options[selectSort.selectedIndex].text)
 }
-
-console.log(selectSort, filterSelectTitle)

@@ -91,4 +91,4 @@ signin = () => {
 signup = () => {
     $("#signin .close").first().click();
     $("#btnRegistration").click();
-} 
+}
