@@ -145,261 +145,46 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
+                                <form action="user?action=delete" method="post"></form>
                                 <table id="product" class="table table-bordered table-striped">
                                     <thead>
                                     <tr class="text-center">
+                                        <th><input type="checkbox" name="checkBoxAll" id="checkBoxAll"></th>
                                         <th class="align-middle">STT</th>
-                                        <th class="align-middle">Họ và tên</th>
-                                        <th class="align-middle">Email</th>
-                                        <th class="align-middle">Điện thoại</th>
                                         <th class="align-middle">Ảnh</th>
+                                        <th class="align-middle">Thông tin</th>
                                         <th class="align-middle">Đăng ký</th>
                                         <th class="align-middle">Cập nhật</th>
                                         <th class="align-middle">Khóa</th>
                                         <th class="align-middle">Trạng thái</th>
-                                        <th class="align-middle">Tác vụ</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td class="text-center">1</td>
-                                        <td>Sản phẩm 1</td>
-                                        <td class="text-center">
-                                            <input type="hidden" name="description" value="${product.description}"/>
-                                            <a href="#" class="btn btn-info" data-toggle="modal" data-target="#description-modal" onclick="showDescription(this)">Xem mô tả</a>
+                                        <th class="text-center align-middle"><input type="checkbox" class="checkboxId" name="id" value="1"></th>
+                                        <td class="text-center align-middle">1</td>
+                                        <td class="text-center align-middle"><img src="https://robohash.org/koi" alt="koi" width="100"></td>
+                                        <td>
+                                            <ul class="m-0">
+                                                <li>Họ và tên: Koi</li>
+                                                <li>Tên tài khoản: ankoi0310</li>
+                                                <li>Email: huynhvahuuan3620@gmail.com</li>
+                                                <li>Điện thoại: 0787782050</li>
+                                                <li>Giới tính: Nam</li>
+                                            </ul>
                                         </td>
-                                        <td class="text-center">Thương hiệu 1</td>
-                                        <td class="text-center">Loại sản phẩm 1</td>
-                                        <td class="text-center">09:30:19 19-12-2021</td>
-                                        <td class="text-center">11:45:13 19-12-2021</td>
-                                        <td class="text-center">
-                                            <form action="/admin/product?action=changeActive" method="POST">
-                                                <input type="hidden" name="id" value="1">
-                                                <button type="submit" class="btn btn-success btn-block">
-                                                    <span class="font-weight-bolder">Không khóa</span>&ensp;<i class="fas fa-lock-open"></i>
-                                                </button>
-                                            </form>
-                                        </td>
-                                        <td class="text-center text-success">
-                                            Đang mở bán
-                                            <form action="/admin/product?action=changeActive" method="POST" class="d-inline-block">
-                                                <input type="hidden" name="id" value="1">
-                                                <button type="submit" class="btn p-1 bg-transparent text-danger"><i class="fas fa-sync-alt"></i></button>
-                                            </form>
-                                        </td>
-                                        <td class="d-flex justify-content-center">
+                                        <td class="text-center align-middle">09:30:19 19-12-2021</td>
+                                        <td class="text-center align-middle">11:45:13 19-12-2021</td>
+                                        <td class="text-center align-middle text-success">Không khóa</td>
+                                        <td class="text-center align-middle text-success">Hoạt động</td>
+                                        <!--<td class="d-flex justify-content-center">
                                             <input type="hidden" name="id" value="1"/>
-                                            <button class="btn btn-warning d-block w-100 mr-1 update" data-toggle="modal"
-                                                    data-target="#update-modal" title="Cập nhật"><i class="fas fa-edit"></i></button>
                                             <button class="btn btn-danger d-block w-100 ml-1 delete" data-toggle="modal"
-                                                    data-target="#delete-modal" title="Xóa"><i class="fas fa-trash-alt"></i></button>
-                                        </td>
+                                                    data-target="#delete-modal" title="Khóa vĩnh viễn"><i class="fas fa-lock"></i></button>
+                                        </td>-->
                                     </tr>
                                     </tbody>
                                 </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Create modal -->
-            <div class="modal fade" id="create-modal" style="display: none;" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content card card-success">
-                        <div class="modal-header card-header">
-                            <h5 class="modal-title font-weight-bolder">Tạo mới</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">×</span>
-                            </button>
-                        </div>
-                        <form action="product.html" method="POST" id="create" novalidate="novalidate">
-                            <div class="modal-body card-body">
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="form-group">
-                                            <label>Tên sản phẩm</label>
-                                            <input type="text" name="name" class="form-control" placeholder="VD: Ghế sofa cao cấp"/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="form-group">
-                                            <label>Thương hiệu</label>
-                                            <select class="select2bs4" name="trademark" style="width: 100%;">
-                                                <option value="">-- Chọn thương hiệu --</option>
-
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="form-group">
-                                            <label>Loại sản phẩm</label>
-                                            <select class="select2bs4" name="category" style="width: 100%;">
-                                                <option value="">-- Chọn loại sản phẩm --</option>
-
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="form-group">
-                                            <label>Mô tả chi tiết</label>
-                                            <textarea name="description"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer justify-content-between">
-                                <button type="button" class="btn btn-danger font-weight-bolder" data-dismiss="modal">Đóng</button>
-                                <button type="submit" class="btn btn-primary font-weight-bolder">Lưu</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <!-- Create detail modal -->
-            <div class="modal fade" id="create-detail-modal" style="display: none;" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content card card-success">
-                        <div class="modal-header card-header">
-                            <h5 class="modal-title font-weight-bolder">Thêm chi tiết sản phẩm</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">×</span>
-                            </button>
-                        </div>
-                        <form action="product-detail.html" id="create-detail" novalidate="novalidate">
-                            <div class="modal-body card-body">
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="form-group">
-                                            <label>Màu sắc</label>
-                                            <button type="button" id="btnChoose">Chọn</button>
-                                            <input type="color" name="color">
-                                            <span id="choosedColor"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="form-group">
-                                            <label>Vật liệu</label>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="form-group">
-                                            <label>Kích thước</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer justify-content-between">
-                                <button type="button" class="btn btn-danger font-weight-bolder" data-dismiss="modal">Đóng</button>
-                                <button type="submit" class="btn btn-primary font-weight-bolder">Lưu</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <!-- Update modal -->
-            <div class="modal fade" id="update-modal" style="display: none;" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content card card-warning">
-                        <div class="modal-header card-header">
-                            <h5 class="modal-title font-weight-bolder">Cập nhật</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">×</span>
-                            </button>
-                        </div>
-                        <form action="product.html" method="POST" id="update" novalidate="novalidate">
-                            <input type="hidden" name="id"/>
-                            <div class="modal-body card-body">
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="form-group">
-                                            <label>Tên sản phẩm</label>
-                                            <input type="text" name="name" class="form-control" placeholder="VD: Ghế sofa cao cấp"/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="form-group">
-                                            <label>Thương hiệu</label>
-                                            <select class="select2bs4" name="trademark" style="width: 100%;">
-                                                <option value="">-- Chọn thương hiệu --</option>
-
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="form-group">
-                                            <label>Loại sản phẩm</label>
-                                            <select class="select2bs4" name="category" style="width: 100%;">
-                                                <option value="">-- Chọn loại sản phẩm --</option>
-
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="form-group">
-                                            <label>Mô tả chi tiết</label>
-                                            <textarea name="description-content" class="d-none"></textarea>
-                                            <textarea name="description" id="description-update"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer justify-content-between">
-                                <button type="button" class="btn btn-danger font-weight-bolder" data-dismiss="modal">Đóng</button>
-                                <button type="submit" class="btn btn-primary font-weight-bolder">Lưu</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <!-- Delete modal -->
-            <div class="modal fade" id="delete-modal" style="display: none;" aria-hidden="true">
-                <div class="modal-dialog modal-sm">
-                    <div class="modal-content card card-danger">
-                        <div class="modal-header card-header">
-                            <h5 class="modal-title font-weight-bolder">Cảnh báo</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">×</span>
-                            </button>
-                        </div>
-                        <form action="product.html" method="POST" id="delete">
-                            <input type="hidden" name="id"/>
-                            <div class="modal-body card-body">
-                                <div class="form-group">
-                                    <span>Bạn có chắc muốn xóa sản phẩm này?</span>
-                                </div>
-                            </div>
-                            <div class="modal-footer justify-content-between">
-                                <button type="button" class="btn btn-danger font-weight-bolder" data-dismiss="modal">Hủy</button>
-                                <button type="submit" class="btn btn-primary font-weight-bolder">Đồng ý</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <!-- Description modal -->
-            <div class="modal fade" id="description-modal" style="top: 15%; display: none;" aria-hidden="true">
-                <div class="modal-dialog modal-md">
-                    <div class="modal-content card bg-gradient-info">
-                        <div class="card-header">
-                            <h5>Mô tả sản phẩm</h5>
-                        </div>
-                        <div class="modal-body card-body">
-                            <div class="row">
-                                <div class="col">
-                                    <div class="position-relative p-3 bg-white" style="height: 180px">
-                                        <h6 class="description-content text-dark"></h6>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -475,18 +260,23 @@
         jQuery("#product").DataTable({
             "responsive": true, "lengthChange": false, "autoWidth": false, "pageLength" : 8,
             "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
+            "order": [[ 1, "asc" ]],
             "columnDefs": [
                 {
-                    "targets"  : 7,
-                    "width": "11%"
-                },
-                {
-                    "targets"  : 8,
+                    "targets"  : 0,
                     "orderable": false,
-                    "width": "10%"
+                    "width": "5%"
                 }
             ]
         }).buttons().container().appendTo('#product_wrapper .col-md-6:eq(0)');
+        
+        jQuery('#checkBoxAll').click(function () {
+            if ($(this).is(':checked')) {
+                $('.checkboxId').prop('checked', true);
+            } else {
+                $('.checkboxId').prop('checked', false);
+            }
+        })
     })
 </script>
 </body>
