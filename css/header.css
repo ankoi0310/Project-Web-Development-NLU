@@ -211,16 +211,22 @@
     display: flex;
     flex-direction: column;
     max-height: 28rem;
-    overflow-y: overlay;
+    overflow-y: auto;
 }
 
-.header__product-list::-webkit-scrollbar {
-    width: 5px;
-}
+@supports (overflow-y: overlay) {
+    .header__product-list {
+        overflow-y: overlay;
+    }
 
-.header__product-list::-webkit-scrollbar-thumb {
-    background-color: #dddddd;
-    border-radius: 25px;
+    .header__product-list::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .header__product-list::-webkit-scrollbar-thumb {
+        background-color: #dddddd;
+        border-radius: 25px;
+    }
 }
 
 /* css for header drop product */
