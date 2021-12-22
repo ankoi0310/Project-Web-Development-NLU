@@ -145,8 +145,10 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <form action="user?action=delete" method="post"></form>
-                                <table id="product" class="table table-bordered table-striped">
+                                <form method="post">
+                                    <button type="submit" class="btn btn-danger font-weight-bolder float-left" 
+                                            onclick="return confirm('Xác nhận khóa các người dùng đã chọn?')">Khóa&nbsp;<i class="fas fa-user-lock"></i></button>
+                                    <table id="product" class="table table-bordered table-striped">
                                     <thead>
                                     <tr class="text-center">
                                         <th><input type="checkbox" name="checkBoxAll" id="checkBoxAll"></th>
@@ -185,6 +187,7 @@
                                     </tr>
                                     </tbody>
                                 </table>
+                                </form>
                             </div>
                         </div>
                     </div>
