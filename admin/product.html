@@ -145,57 +145,57 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <table id="product" class="table table-bordered table-striped">
-                                    <thead>
-                                    <tr class="text-center">
-                                        <th class="align-middle">STT</th>
-                                        <th class="align-middle">Tên</th>
-                                        <th class="align-middle">Mô tả</th>
-                                        <th class="align-middle">Thương hiệu</th>
-                                        <th class="align-middle">Loại</th>
-                                        <th class="align-middle">Ngày tạo</th>
-                                        <th class="align-middle">Ngày cập nhật</th>
-                                        <th class="align-middle">Trạng thái</th>
-                                        <th>
-                                            <span class="d-none">Tác vụ</span>
-                                            <button type="button" class="btn btn-success btn-block" data-toggle="modal" data-target="#create-modal"
-                                                    title="Thêm">
-                                                <i class="fas fa-plus"></i>
-                                            </button>
-                                        </th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
+                                <form action="" method="post">
+                                    <button type="button" class="btn btn-success mr-2 float-left"
+                                            data-toggle="modal" data-target="#create-modal" title="Thêm"><i class="fas fa-plus"></i></button>
+                                    <button type="submit" class="btn btn-danger font-weight-bolder float-left"
+                                            onclick="return confirm('Xác nhận xóa các thương hiệu đã chọn?')"><i class="fas fa-trash-alt"></i></button>
+                                    <table id="product" class="table table-bordered table-striped">
+                                        <thead>
+                                        <tr class="text-center">
+                                            <th class="align-middle"><input type="checkbox" name="checkBoxAll" id="checkBoxAll"></th>
+                                            <th class="align-middle">Tên</th>
+                                            <th class="align-middle">Mô tả</th>
+                                            <th class="align-middle">Thương hiệu</th>
+                                            <th class="align-middle">Loại</th>
+                                            <th class="align-middle">Ngày tạo</th>
+                                            <th class="align-middle">Cập nhật</th>
+                                            <th class="align-middle">Trạng thái</th>
+                                            <th class="align-middle">
+                                                Tác vụ
+                                            </th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
                                         <tr>
-                                            <td class="text-center">1</td>
-                                            <td>Sản phẩm 1</td>
-                                            <td class="text-center">
+	                                        <td class="text-center align-middle"><input type="checkbox" class="checkBoxId" name="id"></td>
+                                            <td class="text-center align-middle">Sản phẩm 1</td>
+                                            <td class="text-center align-middle">
                                                 <input type="hidden" name="description" value="${product.description}"/>
                                                 <a href="#" class="btn btn-info" data-toggle="modal" data-target="#description-modal" onclick="showDescription(this)">Xem mô tả</a>
                                             </td>
-                                            <td class="text-center">Thương hiệu 1</td>
-                                            <td class="text-center">Loại sản phẩm 1</td>
-                                            <td class="text-center">09:30:19 19-12-2021</td>
-                                            <td class="text-center">11:45:13 19-12-2021</td>
-                                                <td class="text-center text-success">
-                                                    Đang mở bán
-                                                    <form action="/admin/product?action=changeActive" method="POST" class="d-inline-block">
-                                                        <input type="hidden" name="id" value="${product.id}">
-                                                        <button type="submit" class="btn p-1 bg-transparent text-danger"><i class="fas fa-sync-alt"></i></button>
-                                                    </form>
-                                                </td>
+                                            <td class="text-center align-middle">Thương hiệu 1</td>
+                                            <td class="text-center align-middle">Loại sản phẩm 1</td>
+                                            <td class="text-center align-middle">09:30:19 19-12-2021</td>
+                                            <td class="text-center align-middle">11:45:13 19-12-2021</td>
+                                            <td class="text-center align-middle text-success">
+                                                Đang mở bán
+                                                <form action="/admin/product?action=changeActive" method="POST" class="d-inline-block">
+                                                    <input type="hidden" name="id" value="${product.id}">
+                                                    <button type="submit" class="btn p-1 bg-transparent text-danger"><i class="fas fa-sync-alt"></i></button>
+                                                </form>
+                                            </td>
                                             <td class="d-flex justify-content-center">
                                                 <input type="hidden" name="id" value="1"/>
                                                 <button class="btn btn-dark d-block w-100 mr-1 create-detail" data-toggle="modal"
                                                         data-target="#create-detail-modal" title="Thêm chi tiết sản phẩm"><i class="fas fa-plus"></i></button>
                                                 <button class="btn btn-warning d-block w-100 mr-1 update" data-toggle="modal"
                                                         data-target="#update-modal" title="Cập nhật"><i class="fas fa-edit"></i></button>
-                                                <button class="btn btn-danger d-block w-100 ml-1 delete" data-toggle="modal"
-                                                        data-target="#delete-modal" title="Xóa"><i class="fas fa-trash-alt"></i></button>
                                             </td>
                                         </tr>
-                                    </tbody>
-                                </table>
+                                        </tbody>
+                                    </table>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -474,11 +474,12 @@
         jQuery("#product").DataTable({
             "responsive": true, "lengthChange": false, "autoWidth": false, "pageLength" : 8,
             "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
+	        "order": [[ 1, "asc" ]],
             "columnDefs": [
-                {
-                    "targets"  : 7,
-                    "width": "11%"
-                },
+	            {
+		            "targets"  : 0,
+		            "orderable": false,
+	            },
                 {
                     "targets"  : 8,
                     "orderable": false,
@@ -486,6 +487,14 @@
                 }
             ]
         }).buttons().container().appendTo('#product_wrapper .col-md-6:eq(0)');
+	
+	    jQuery('#checkBoxAll').click(function () {
+		    if ($(this).is(':checked')) {
+			    $('.checkBoxId').prop('checked', true);
+		    } else {
+			    $('.checkBoxId').prop('checked', false);
+		    }
+	    })
     })
 </script>
 </body>
