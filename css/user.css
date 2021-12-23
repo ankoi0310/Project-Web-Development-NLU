@@ -1,0 +1,460 @@
+.page{
+    width: 100%;
+    height: 600px;
+    background: white;
+    opacity: 1;
+    /* visibility: hidden; */
+    margin-top: -1075px;
+}
+.containerOfPage {
+    width: 1200px;
+    margin: 0 auto;
+    background: white;
+    height: 600px;
+    display: border-box;
+}
+.containerOfPage .main_left{
+    float: left;
+    width: 25%;
+    background: var(--primary-color);
+}
+.containerOfPage .main_left .user_name{
+    width: 100%;
+    height: 60px;
+    border-bottom: 2px solid gray;
+}
+.containerOfPage .main_left .user_name .img{
+    width: 30%;
+    float: left;
+    text-align: right;
+    padding-top: 15px;
+}
+.containerOfPage .main_left .user_name .img .user-avt{
+    height: 3rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+.containerOfPage .main_left .user_name .name{
+    color: white;
+    font-weight: 700;
+    padding-top: 20px;
+    text-align: left;
+}
+.containerOfPage .main_left .choice{
+    width: 100%;
+    height: 540px;
+    /* padding-top: 10px; */
+}
+.containerOfPage .main_left .choice .text_choice{
+    color: white;
+    height: 30px;
+    width: 80%;
+    cursor: pointer;
+    margin-bottom: 15px;
+    margin-left: 10%;
+}
+.containerOfPage .main_left .choice .text_choice .icon{
+    float: left;
+    width: 8%;
+    height: 30px;
+    padding-top: 10px;
+    margin-left: 10%;
+}
+.containerOfPage .main_left .choice .text_choice p{
+    float: right;
+    width: 82%;
+    height: 30px;
+    padding-top: 6px;
+
+}
+.containerOfPage .main_left .choice .text_user{
+    background: white;
+    border-radius: 15px;
+    color: black;
+}
+.containerOfPage .main_left .choice .nav-big{
+    width: 300px;
+    height: 540px;
+    position: absolute;
+    background: var(--primary-color);
+}
+.containerOfPage .main_left .choice nav ul{
+    position: relative;
+}
+.containerOfPage .main_left .choice nav ul li .a-big{
+    display: flex;
+    align-items: center;
+    font-family: arial;
+    font-size: 1.15em;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: white;
+    padding: 10px 0px;
+    height: 40px;
+    transition: .5s ease;
+}
+.containerOfPage .main_left .choice nav ul li a:hover{
+    background: rgba(255, 255, 255, 0.7);
+    color: black;
+}
+.containerOfPage .main_left .choice nav ul li a .text-choice{
+    width: 100%;
+}
+.containerOfPage .main_left .choice nav ul li a .text-choice i{
+    float: left;
+    width: 30%;
+    text-align: right;
+    padding-top: 5px;
+}
+.containerOfPage .main_left .choice nav ul li a .text-choice p{
+    float: right;
+    width: 70%;
+    text-align: left;
+    padding-left: 10px;
+}
+.containerOfPage .main_left .choice nav ul .ul-all{
+    position: absolute;
+    left: 300px;
+    width: 900px;
+    background: whitesmoke;
+    height: 600px;
+    display: none;
+}
+.containerOfPage .main_left .choice nav ul .ul-all .title{
+    width: 100%;
+    height: 60px;
+    border-bottom: 2px solid gray;
+}
+.containerOfPage .main_left .choice nav ul .ul-all .title .p1{
+    font-size: 18px;
+    color: black;
+    font-weight: 700;
+    padding-left: 30px;
+    padding-top: 5px;
+}
+.containerOfPage .main_left .choice nav ul .ul-order .title .p1{
+    padding-top: 15px;
+}
+.containerOfPage .main_left .choice nav ul .ul-psw .title .p1{
+    padding-top: 15px;
+}
+.containerOfPage .main_left .choice nav ul .ul-info .title .p2{
+    font-size: 14px;
+    color: black;
+    padding-left: 30px;
+}
+.containerOfPage .main_left .choice nav ul .ul-info .info{
+    width: 100%;
+    height: 540px;
+}
+.containerOfPage .main_left .choice nav ul .ul-info .info .text{
+    width: 850px;
+    height: 40px;
+    padding-top:10px;
+    padding-left: 60px;
+}
+.containerOfPage .main_left .choice nav ul .ul-info .info .text .p_left{
+    float: left;
+    width: 150px;
+    padding-top: 10px;
+
+}
+.containerOfPage .main_left .choice nav ul .ul-info .info .text .p_right{
+    float: right;
+    width: 600px;
+    padding-top: 10px;
+}
+.containerOfPage .main_left .choice nav ul .ul-info .info .btn{
+    width: 100%;
+    height: 50px;
+    padding-top: 150px;
+    text-align: center;
+}
+.containerOfPage .main_left .choice nav ul .ul-info .info .btn a{
+    width: 130px;
+    height: 50px;
+    background: var(--teal) ;
+    cursor: pointer;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    padding-left: 15px;
+
+}
+.containerOfPage .main_left .choice nav ul .ul-info{
+    top: -60px;
+}
+.containerOfPage .main_left .choice nav ul .ul-order{
+    top: -100px;
+}
+.containerOfPage .main_left .choice nav ul .ul-psw{
+    top: -140px;
+}
+.containerOfPage .main_left .choice nav ul .drop-down{
+    position: relative;
+}
+.containerOfPage .main_left .choice nav ul .drop-down:hover .ul-info{
+    display: initial;
+}
+.containerOfPage .main_left .choice nav ul .drop-down:hover .ul-order{
+    display: initial;
+}
+.containerOfPage .main_left .choice nav ul .drop-down:hover .ul-psw{
+    display: initial;
+}
+.containerOfPage .main_left .choice nav ul li .a-small{
+    display: flex;
+    align-items: center;
+    font-family: arial;
+    font-size: 1.15em;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: white;
+    padding: 10px 0px;
+    transition: .5s ease;
+}
+.containerOfPage .main_left .choice nav ul .ground{
+    position: absolute;
+    width: 900px;
+    background: whitesmoke;
+    height: 490px;
+    display: none;
+    background: gray;
+    overflow-y: scroll;
+}
+.containerOfPage .main_left .choice nav ul .drop2 .ground{
+    left: -150px;
+}
+.containerOfPage .main_left .choice nav ul .drop3 .ground{
+    left: -300px;
+}
+.containerOfPage .main_left .choice nav ul .drop4 .ground{
+    left: -450px;
+}
+.containerOfPage .main_left .choice nav ul .drop5 .ground{
+    left: -600px;
+}
+.containerOfPage .main_left .choice nav ul .drop6 .ground{
+    left: -750px;
+}
+.containerOfPage .main_left .choice nav ul .ul-order .info .bar{
+    width: 900px;
+    height: 50px;
+    margin: 0 auto;
+    background: white;
+    display: flex;
+}
+.containerOfPage .main_left .choice nav ul .ul-order .info .bar a{
+    display: block;
+    width:150px;
+    height: 50px;
+    color: black;
+    text-align: center;
+}
+.containerOfPage .main_left .choice nav ul .ul-order .info .bar .ground .item-order{
+    margin-top: 10px;
+    width: 100%;
+    height: 300px;
+    background: white;
+}
+.containerOfPage .main_left .choice nav ul .ul-order .info .bar .ground .item-order .top{
+    height: 50px;
+    width: 100%;
+    background: white;
+}
+.containerOfPage .main_left .choice nav ul .ul-order .info .bar .ground .item-order .top .left{
+    height: 50px;
+    width: 80%;
+    float: left;
+    text-align: right;
+    font-size: 15px;
+    padding-top: 10px;
+    color: black;
+}
+.containerOfPage .main_left .choice nav ul .ul-order .info .bar .ground .item-order .top .right{
+    height: 50px;
+    width: 20%;
+    float: right;
+    font-size: 15px;
+    padding-top: 10px;
+    padding-left: 10px;
+    color: teal;
+}
+.containerOfPage .main_left .choice nav ul .ul-order .info .bar .ground .item-order .mid{
+    height: 125px;
+    width: 100%;
+    background: white;
+    display: flex;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    cursor: pointer;
+}
+.containerOfPage .main_left .choice nav ul .ul-order .info .bar .ground .item-order .mid .img{
+    height: 100%;
+    width: 20%;
+    background: white;
+}
+.containerOfPage .main_left .choice nav ul .ul-order .info .bar .ground .item-order .mid .img img{
+    height: 123px;
+    width: 180px;
+}
+.containerOfPage .main_left .choice nav ul .ul-order .info .bar .ground .item-order .mid .name-sp{
+    height: 100%;
+    width: 35%;
+}
+.containerOfPage .main_left .choice nav ul .ul-order .info .bar .ground .item-order .mid .name-sp .name{
+    width: 100%;
+    height: 100px;
+}
+.containerOfPage .main_left .choice nav ul .ul-order .info .bar .ground .item-order .mid .name-sp .name p{
+    padding-left:10px ;
+    font-size: 18px;
+    padding-top: 30px;
+}
+.containerOfPage .main_left .choice nav ul .ul-order .info .bar .ground .item-order .mid .name-sp .sl{
+    width: 100%;
+    height: 25px;
+    padding-left: 10px;
+}
+.containerOfPage .main_left .choice nav ul .ul-order .info .bar .ground .item-order .mid .day{
+    height: 100%;
+    width: 30%;
+}
+.containerOfPage .main_left .choice nav ul .ul-order .info .bar .ground .item-order .mid .day .day-buy{
+    width: 100%;
+    height: 50%;
+    font-size: 15px;
+}
+.containerOfPage .main_left .choice nav ul .ul-order .info .bar .ground .item-order .mid .day .day-buy .text{
+    width: 30%;
+    height: 100%;
+    float: left;
+}
+.containerOfPage .main_left .choice nav ul .ul-order .info .bar .ground .item-order .mid .day .day-buy .day{
+    width: 70%;
+    height: 100%;
+    float: right;
+}
+.containerOfPage .main_left .choice nav ul .ul-order .info .bar .ground .item-order .mid .day .day-take{
+    width: 100%;
+    height: 50%;
+    font-size: 15px;
+}
+.containerOfPage .main_left .choice nav ul .ul-order .info .bar .ground .item-order .mid .day .day-take .text{
+    width: 30%;
+    height: 100%;
+    float: left;
+}
+.containerOfPage .main_left .choice nav ul .ul-order .info .bar .ground .item-order .mid .day .day-take .day{
+    width: 70%;
+    height: 100%;
+    float: right;
+}
+.containerOfPage .main_left .choice nav ul .ul-order .info .bar .ground .item-order .mid .day p{
+    padding-top: 15px;
+}
+.containerOfPage .main_left .choice nav ul .ul-order .info .bar .ground .item-order .mid .price{
+    height: 100%;
+    width: 15%;
+}
+.containerOfPage .main_left .choice nav ul .ul-order .info .bar .ground .item-order .mid .price p{
+    font-size: 15px;
+    text-align: right;
+    padding-right: 10px;
+    padding-top: 50px;
+}
+.containerOfPage .main_left .choice nav ul .ul-order .info .bar .ground .item-order .bot{
+    height: 125px;
+    width: 100%;
+    background: white;
+}
+.containerOfPage .main_left .choice nav ul .ul-order .info .bar .ground .item-order .bot .total-price{
+    width: 100%;
+    height: 50%;
+    font-size: 20px;
+}
+.containerOfPage .main_left .choice nav ul .ul-order .info .bar .ground .item-order .bot .total-price p{
+    padding-top: 18px;
+}
+.containerOfPage .main_left .choice nav ul .ul-order .info .bar .ground .item-order .bot .total-price .total-price-left{
+    width: 85%;
+    float: left;
+    text-align: right;
+}
+.containerOfPage .main_left .choice nav ul .ul-order .info .bar .ground .item-order .bot .total-price .total-price-right{
+    width: 15%;
+    float: right;
+    text-align: center;
+}
+.containerOfPage .main_left .choice nav ul .ul-order .info .bar .ground .item-order .bot .button{
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+.containerOfPage .main_left .choice nav ul .ul-order .info .bar .ground .item-order .bot .button p{
+    padding-top: 12px;
+    font-size: 15px;
+    color: white;
+}
+.containerOfPage .main_left .choice nav ul .ul-order .info .bar .ground .item-order .bot .button .button-again{
+    width: 100px;
+    background: teal;
+    border-radius: 5px;
+    margin-left: 60%;
+    cursor: pointer;
+}
+.containerOfPage .main_left .choice nav ul .ul-order .info .bar .ground .item-order .bot .button .button-review{
+    width: 200px;
+    background: teal;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.containerOfPage .main_left .choice nav ul .ul-psw .info{
+    width: 100%;
+    height: 540px;
+}
+.containerOfPage .main_left .choice nav ul .ul-psw .info .text{
+    width: 550px;
+    height: 40px;
+    padding-top:20px;
+    padding-left: 30px;
+}
+.containerOfPage .main_left .choice nav ul .ul-psw .info .text .p_left{
+    float: left;
+    width: 150px;
+    padding-top: 10px;
+
+}
+.containerOfPage .main_left .choice nav ul .ul-psw .info .text .p_right{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    overflow: hidden;
+    float: right;
+    width: 300px;
+    height: 30px;
+    margin-top: 5px;
+}
+.containerOfPage .main_left .choice nav ul .ul-psw .info .btn{
+    width: 100%;
+    height: 50px;
+    padding-top: 350px;
+    text-align: center;
+}
+.containerOfPage .main_left .choice nav ul .ul-psw .info .btn a{
+    width: 130px;
+    height: 50px;
+    background: var(--teal);
+    cursor: pointer;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+}
+.containerOfPage .main_left .choice nav ul .drop{
+    position: relative;
+}
+.containerOfPage .main_left .choice nav ul .drop:hover .ground{
+    display: initial;
+}
