@@ -20,6 +20,7 @@
         <link rel="stylesheet" href="./css/header.css" />
         <link rel="stylesheet" href="./css/footer.css" />
         <link rel="stylesheet" href="./css/checkout.css" />
+        <link rel="stylesheet" href="./css/popup-voucher.css" />
         <title>Thanh Toán</title>
     </head>
     <body>
@@ -101,10 +102,93 @@
                                 <span class="text-bold user-name">Nguyen Van A</span>
                                 <span class="text-bold user-phone">(0312345678)</span>
                                 <span class="user-address">
-                                    Khu phố 6, Linh Trung, Thủ Đức, Tp. HCM
+                                    Khu phố 6, Linh Trung, Thủ Đức, Tp. Hồ Chí Minh
                                 </span>
                             </div>
                             <span class="text-primary change-address">Thay đổi</span>
+                        </div>
+
+                        <div class="box-change-address">
+                            <div class="address-action">
+                                <button class="btn-primary add-new-address">
+                                    &plus; Thêm địa chỉ mới
+                                </button>
+                                <a
+                                    href="?goto-setting-address"
+                                    class="btn-primary setting-address"
+                                >
+                                    Thiết lập địa chỉ
+                                </a>
+                            </div>
+                            <div class="list-address">
+                                <div class="address-item">
+                                    <input
+                                        type="radio"
+                                        class="user__check-address"
+                                        id="check-address__1"
+                                        name="check-address"
+                                        checked
+                                    />
+                                    <label for="check-address__1">
+                                        <div class="address__user-info">
+                                            <span class="address__user-name">Nguyen Van A</span>
+                                            <span class="address__user-phone">
+                                                (0312345678)
+                                            </span>
+                                        </div>
+                                        <div class="address__user-address">
+                                            Khu phố 6, Linh Trung, Thủ Đức, Tp. Hồ Chí Minh
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="address-item">
+                                    <input
+                                        type="radio"
+                                        class="user__check-address"
+                                        id="check-address__2"
+                                        name="check-address"
+                                    />
+                                    <label for="check-address__2">
+                                        <div class="address__user-info">
+                                            <span class="address__user-name">Le Thi B</span>
+                                            <span class="address__user-phone">
+                                                (0323456232)
+                                            </span>
+                                        </div>
+                                        <div class="address__user-address">
+                                            Đường D1, Linh Tây, Thủ Đức, Tp. Hồ Chí Minh
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="address-item">
+                                    <input
+                                        type="radio"
+                                        class="user__check-address"
+                                        id="check-address__3"
+                                        name="check-address"
+                                    />
+                                    <label for="check-address__3">
+                                        <div class="address__user-info">
+                                            <span class="address__user-name">Nguyen Van A</span>
+                                            <span class="address__user-phone">
+                                                (0323459678)
+                                            </span>
+                                        </div>
+                                        <div class="address__user-address">
+                                            1 Đường B KDC Him Lam Phú Đông Bình, Đường 3, An
+                                            Bình, Dĩ An, Bình Dương 75307, Việt Nam
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="action__check-address">
+                                <button class="btn-primary checked-option-address">
+                                    Hoàn thành
+                                </button>
+                                <button class="btn-primary back-to-previous-address">
+                                    Trở lại
+                                </button>
+                            </div>
                         </div>
                     </section>
 
@@ -175,7 +259,10 @@
                         </div>
                         <span class="text-primary">
                             <ion-icon name="checkmark-circle-outline"></ion-icon>
-                            <span>Giảm ngay 500k cho đơn từ 10 triệu</span>
+                            <span class="voucher-checkout-description">
+                                Giảm ngay 500k cho đơn từ 10 triệu
+                            </span>
+                            <span class="text-primary btn-show-popup">Thay đổi</span>
                         </span>
                     </section>
 
@@ -190,7 +277,7 @@
                         </div>
                         <div class="discount-amount">
                             <span>Voucher giảm giá:</span>
-                            <span>500.000 &#8363;</span>
+                            <span>-500.000 &#8363;</span>
                         </div>
                         <div class="total-price">
                             <span>Tổng thanh toán:</span>
@@ -210,6 +297,107 @@
                 </div>
             </div>
         </main>
+
+        <div class="box-popup-voucher">
+            <div class="popup-voucher">
+                <h2 class="popup-title">Chọn hoặc nhập Voucher</h2>
+                <div class="box-input-voucher">
+                    <label for="voucher-input">Mã Voucher</label>
+                    <input
+                        type="text"
+                        class="voucher-input"
+                        id="voucher-input"
+                        name="voucher-input"
+                        placeholder="Nhập mã voucher"
+                    />
+                    <button class="btn-comfirm-voucher btn-use-voucher btn-disabled" disabled>
+                        Áp dụng
+                    </button>
+                </div>
+
+                <div class="box-list-voucher">
+                    <div class="voucher-item">
+                        <div class="voucher-title">
+                            <div class="voucher-tag" data-tag="Số lượng có hạn"></div>
+                            <span>Miễn Phí vận chuyển</span>
+                        </div>
+                        <div class="voucher-description">
+                            <p class="voucher-description__title">
+                                Áp dụng cho đơn hàng trên 500k
+                            </p>
+                            <span class="voucher-description__item description-border">
+                                Giảm đến 70k
+                            </span>
+                            <p class="voucher-description__item">Hết hạn: còn 2 ngày</p>
+                        </div>
+                    </div>
+                    <div class="voucher-item">
+                        <div class="voucher-title">
+                            <div class="voucher-tag" data-tag="Số lượng có hạn"></div>
+                            <span>Miễn Phí vận chuyển</span>
+                        </div>
+                        <div class="voucher-description">
+                            <p class="voucher-description__title">
+                                Áp dụng cho đơn hàng trên 500k
+                            </p>
+                            <span class="voucher-description__item description-border">
+                                Giảm đến 70k
+                            </span>
+                            <p class="voucher-description__item">Hết hạn: còn 2 ngày</p>
+                        </div>
+                    </div>
+                    <div class="voucher-item">
+                        <div class="voucher-title">
+                            <div class="voucher-tag" data-tag="Số lượng có hạn"></div>
+                            <span>Miễn Phí vận chuyển</span>
+                        </div>
+                        <div class="voucher-description">
+                            <p class="voucher-description__title">
+                                Áp dụng cho đơn hàng trên 500k
+                            </p>
+                            <span class="voucher-description__item description-border">
+                                Giảm đến 70k
+                            </span>
+                            <p class="voucher-description__item">Hết hạn: còn 2 ngày</p>
+                        </div>
+                    </div>
+                    <div class="voucher-item">
+                        <div class="voucher-title">
+                            <div class="voucher-tag" data-tag="Số lượng có hạn"></div>
+                            <span>Miễn Phí vận chuyển</span>
+                        </div>
+                        <div class="voucher-description">
+                            <p class="voucher-description__title">
+                                Áp dụng cho đơn hàng trên 500k
+                            </p>
+                            <span class="voucher-description__item description-border">
+                                Giảm đến 70k
+                            </span>
+                            <p class="voucher-description__item">Hết hạn: còn 2 ngày</p>
+                        </div>
+                    </div>
+                    <div class="voucher-item">
+                        <div class="voucher-title">
+                            <div class="voucher-tag" data-tag="Số lượng có hạn"></div>
+                            <span>Miễn Phí vận chuyển</span>
+                        </div>
+                        <div class="voucher-description">
+                            <p class="voucher-description__title">
+                                Áp dụng cho đơn hàng trên 500k
+                            </p>
+                            <span class="voucher-description__item description-border">
+                                Giảm đến 70k
+                            </span>
+                            <p class="voucher-description__item">Hết hạn: còn 2 ngày</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-voucher-bottom">
+                    <button class="btn-cancel">Trở về</button>
+                    <button class="btn-comfirm-voucher btn-comfirm">OK</button>
+                </div>
+            </div>
+        </div>
 
         <footer class="footer">
             <div class="container">
@@ -328,5 +516,7 @@
                 </div>
             </div>
         </footer>
+        <script src="js/popup-voucher.js"></script>
+        <script src="js/checkout.js"></script>
     </body>
 </html>

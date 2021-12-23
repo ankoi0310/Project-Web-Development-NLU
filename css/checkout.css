@@ -184,8 +184,12 @@
     align-items: center;
 }
 
-.section-control.voucher > * > ion-icon {
-    margin-right: 1rem;
+.section-control .box-label-voucher > span {
+    margin-left: 1rem;
+}
+
+.section-control.voucher .voucher-checkout-description {
+    margin: 0 3rem 0 1rem;
 }
 
 /* css for total checkout */
@@ -238,6 +242,124 @@
     width: 50%;
     height: 5rem;
     font-size: 1.6rem;
+}
+
+.box-change-address {
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+.address-action {
+    margin: -4rem 0 0 auto;
+    width: 32%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.address-action > * {
+    padding: 0.5rem 2rem;
+    color: var(--text-black);
+    background-color: #fff;
+    border: 1px solid var(--grey-color);
+}
+
+.address-action > *:hover {
+    background-color: #fff;
+}
+
+.list-address {
+    display: flex;
+    flex-direction: column;
+}
+
+.address-item {
+    margin: 1.5rem 0 0 6rem;
+    position: relative;
+}
+
+.user__check-address {
+    display: none;
+}
+
+.user__check-address + label,
+.user__check-address + label::before,
+.user__check-address + label::after {
+    transition: all 0.1s;
+}
+
+.user__check-address:checked + label {
+    background-color: var(--primary-color-rgba);
+    border: 2px solid var(--primary-color);
+}
+
+.user__check-address:checked + label::before {
+    background-color: #daf7e9;
+    border: 2px solid var(--primary-color);
+}
+.user__check-address:checked + label::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.user__check-address + label {
+    color: var(--text-black);
+    display: block;
+    padding: 1rem 5rem;
+    border: 2px solid var(--grey-color);
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+.user__check-address + label::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 4rem;
+    height: 4rem;
+    background-color: #fff;
+    border: 2px solid var(--grey-color);
+    border-radius: 50%;
+}
+
+.user__check-address + label::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.action__check-address {
+    margin: 2rem 0 0 10rem;
+}
+
+.back-to-previous-address {
+    margin-left: 2rem;
+    color: var(--text-black);
+    background-color: #fff;
+    border: 1px solid var(--grey-color);
+}
+
+.back-to-previous-address:hover {
+    background-color: #fff;
+}
+
+/* css class for hide address choosing */
+.comfirm-address.show-choosing-address > .address-user {
+    display: none;
+}
+
+.comfirm-address.show-choosing-address > .box-change-address {
+    display: block;
 }
 
 .footer {
