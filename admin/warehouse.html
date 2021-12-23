@@ -22,7 +22,7 @@
 	<link rel="stylesheet" href="dist/css/adminlte.min.css">
 	<!-- summernote -->
 	<link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
-	<title>Quản lý | Kho</title>
+	<title>Quản lý | Kho hàng</title>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -111,7 +111,7 @@
 					<li class="nav-item">
 						<a href="warehouse.html" class="nav-link">
 							<i class="nav-icon fas fa-warehouse"></i>
-							<p>Kho</p>
+							<p>Kho hàng</p>
 						</a>
 					</li>
 					<li class="nav-item">
@@ -122,9 +122,9 @@
 					</li>
 					<li class="nav-header">BÁO CÁO</li>
 					<li class="nav-item">
-						<a href="invoice.html" class="nav-link">
+						<a href="order.html" class="nav-link">
 							<i class="nav-icon fas fa-file-invoice"></i>
-							<p>Hóa đơn</p>
+							<p>Đơn hàng</p>
 						</a>
 					</li>
 					<li class="nav-item">
@@ -142,7 +142,7 @@
 	<div class="content-wrapper">
 		<!-- Content Header (Page header) -->
 		<div class="d-flex justify-content-center pt-3 pb-3">
-			<h1 class="font-weight-bolder">QUẢN LÝ SẢN PHẨM</h1>
+			<h1 class="font-weight-bolder">QUẢN LÝ KHO HÀNG</h1>
 		</div>
 		<!-- /.content-header -->
 		<section class="content">
@@ -152,8 +152,6 @@
 						<div class="card">
 							<div class="card-body">
 								<form action="" method="post">
-									<button type="button" class="btn btn-success mr-2 float-left"
-									        data-toggle="modal" data-target="#create-modal" title="Thêm"><i class="fas fa-plus"></i></button>
 									<button type="submit" class="btn btn-danger font-weight-bolder float-left"
 									        onclick="return confirm('Xác nhận xóa các sản phẩm đã chọn?')"><i class="fas fa-trash-alt"></i></button>
 									<table id="warehouse" class="table table-bordered table-striped">
@@ -161,6 +159,7 @@
 										<tr class="text-center">
 											<th class="align-middle"><input type="checkbox" name="checkBoxAll" id="checkBoxAll"></th>
 											<th class="align-middle">Tên</th>
+											<th class="align-middle">Ảnh</th>
 											<th class="align-middle">Màu</th>
 											<th class="align-middle">Giá bán</th>
 											<th class="align-middle">Số lượng</th>
@@ -175,6 +174,7 @@
 										<tr>
 											<td class="text-center align-middle"><input type="checkbox" class="checkBoxId" name="id"></td>
 											<td class="text-center align-middle">Sản phẩm 1</td>
+											<th class="text-center align-middle"><img src="https://robohash.org/sanpham1" width="100px" alt="Sản phẩm 1"></th>
 											<td class="text-center align-middle">
 												<div style="height: 15px;background-color: #000000;"></div>
 											</td>
@@ -190,9 +190,9 @@
 													<button type="submit" class="btn p-1 bg-transparent text-danger"><i class="fas fa-sync-alt"></i></button>
 												</form>
 											</td>
-											<td class="d-flex justify-content-center">
+											<td class="align-middle">
 												<input type="hidden" name="id" value="1"/>
-												<button class="btn btn-warning d-block w-100 mr-1 update" data-toggle="modal"
+												<button type="button" class="btn btn-warning d-block w-100 mr-1 update" data-toggle="modal"
 												        data-target="#update-modal" title="Cập nhật"><i class="fas fa-edit"></i></button>
 											</td>
 										</tr>
@@ -201,106 +201,6 @@
 								</form>
 							</div>
 						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Create modal -->
-			<div class="modal fade" id="create-modal" style="display: none;" aria-hidden="true">
-				<div class="modal-dialog modal-lg">
-					<div class="modal-content card card-success">
-						<div class="modal-header card-header">
-							<h5 class="modal-title font-weight-bolder">Tạo mới</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">×</span>
-							</button>
-						</div>
-						<form action="product.html" method="POST" id="create" novalidate="novalidate">
-							<div class="modal-body card-body">
-								<div class="row">
-									<div class="col">
-										<div class="form-group">
-											<label>Tên sản phẩm</label>
-											<input type="text" name="name" class="form-control" placeholder="VD: Ghế sofa cao cấp"/>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col">
-										<div class="form-group">
-											<label>Thương hiệu</label>
-											<select class="select2bs4" name="trademark" style="width: 100%;">
-												<option value="">-- Chọn thương hiệu --</option>
-											
-											</select>
-										</div>
-									</div>
-									<div class="col">
-										<div class="form-group">
-											<label>Loại sản phẩm</label>
-											<select class="select2bs4" name="category" style="width: 100%;">
-												<option value="">-- Chọn loại sản phẩm --</option>
-											
-											</select>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col">
-										<div class="form-group">
-											<label>Mô tả chi tiết</label>
-											<textarea name="description"></textarea>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="modal-footer justify-content-between">
-								<button type="button" class="btn btn-danger font-weight-bolder" data-dismiss="modal">Đóng</button>
-								<button type="submit" class="btn btn-primary font-weight-bolder">Lưu</button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-			<!-- Create detail modal -->
-			<div class="modal fade" id="create-detail-modal" style="display: none;" aria-hidden="true">
-				<div class="modal-dialog modal-lg">
-					<div class="modal-content card card-success">
-						<div class="modal-header card-header">
-							<h5 class="modal-title font-weight-bolder">Thêm chi tiết sản phẩm</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">×</span>
-							</button>
-						</div>
-						<form action="product-detail.html" id="create-detail" novalidate="novalidate">
-							<div class="modal-body card-body">
-								<div class="row">
-									<div class="col">
-										<div class="form-group">
-											<label>Màu sắc</label>
-											<button type="button" id="btnChoose">Chọn</button>
-											<input type="color" name="color">
-											<span id="choosedColor"></span>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col">
-										<div class="form-group">
-											<label>Vật liệu</label>
-										</div>
-									</div>
-									<div class="col">
-										<div class="form-group">
-											<label>Kích thước</label>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="modal-footer justify-content-between">
-								<button type="button" class="btn btn-danger font-weight-bolder" data-dismiss="modal">Đóng</button>
-								<button type="submit" class="btn btn-primary font-weight-bolder">Lưu</button>
-							</div>
-						</form>
 					</div>
 				</div>
 			</div>
@@ -321,26 +221,22 @@
 									<div class="col">
 										<div class="form-group">
 											<label>Tên sản phẩm</label>
-											<input type="text" name="name" class="form-control" placeholder="VD: Ghế sofa cao cấp"/>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col">
-										<div class="form-group">
-											<label>Thương hiệu</label>
-											<select class="select2bs4" name="trademark" style="width: 100%;">
-												<option value="">-- Chọn thương hiệu --</option>
-											
-											</select>
+											<input type="text" name="name" class="form-control" placeholder="VD: Ghế sofa cao cấp" value="Sản phẩm 1" disabled/>
 										</div>
 									</div>
 									<div class="col">
 										<div class="form-group">
-											<label>Loại sản phẩm</label>
-											<select class="select2bs4" name="category" style="width: 100%;">
-												<option value="">-- Chọn loại sản phẩm --</option>
-											
+											<label>Màu sắc</label>
+											<select class="select2bs4"
+											        name="color" style="width: 100%;">
+												<option value="">--Vui lòng chọn màu--</option>
+												<option value="#000000" selected>Màu 1</option>
+												<option value="#111111">Màu 2</option>
+												<option value="#222222">Màu 3</option>
+												<option value="#333333">Màu 4</option>
+												<option value="#444444">Màu 5</option>
+												<option value="#555555">Màu 6</option>
+												<option value="#666666">Màu 7</option>
 											</select>
 										</div>
 									</div>
@@ -348,9 +244,20 @@
 								<div class="row">
 									<div class="col">
 										<div class="form-group">
-											<label>Mô tả chi tiết</label>
-											<textarea name="description-content" class="d-none"></textarea>
-											<textarea name="description" id="description-update"></textarea>
+											<label>Giá bán</label>
+											<input type="number" name="unit_price" class="form-control" placeholder="0">
+										</div>
+									</div>
+									<div class="col">
+										<div class="form-group">
+											<label>Số lượng</label>
+											<input type="number" name="unit_in_stock" class="form-control" placeholder="0">
+										</div>
+									</div>
+									<div class="col">
+										<div class="form-group">
+											<label>Giảm giá (%)</label>
+											<input type="number" name="discount" class="form-control" placeholder="0">
 										</div>
 									</div>
 								</div>
@@ -454,17 +361,10 @@
 <script src="dist/js/demo.js"></script>
 <script>
 	jQuery(function () {
-		// Summernote
-		jQuery('textarea[name="description"]').summernote({
-			height: 200,
-			placeholder: 'Mô tả chi tiết về sản phẩm...',
-		})
-		
 		// Select2
 		jQuery('.select2bs4').select2({
 			theme: 'bootstrap4'
 		})
-		
 		// Toast
 		let Toast = Swal.mixin({
 			toast: true,
@@ -484,7 +384,11 @@
 					"orderable": false,
 				},
 				{
-					"targets": 9,
+					"targets": 2,
+					"orderable": false,
+				},
+				{
+					"targets": 10,
 					"orderable": false,
 					"width": "10%"
 				}
