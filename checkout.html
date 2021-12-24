@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
         <script
             type="module"
             src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -11,6 +12,11 @@
         <script
             nomodule
             src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+        ></script>
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous"
         ></script>
         <link rel="stylesheet" href="./css/fontawesome.css" />
         <link rel="stylesheet" href="./css/brands.css" />
@@ -86,6 +92,69 @@
                 </div>
             </div>
         </header>
+
+        <!-- popup add address -->
+        <div class="popup-add-address">
+            <div class="box-add-address">
+                <h3 class="popup-title">Địa chỉ mới</h3>
+                <form action="/addresses/add" method="post">
+                    <div class="form-control form-username-phone">
+                        <input
+                            type="text"
+                            class="form-user-input"
+                            placeholder="Họ và tên"
+                            name="name"
+                        />
+                        <label>Họ và tên</label>
+                        <input
+                            type="text"
+                            class="form-user-input"
+                            placeholder="Số điện thoại"
+                            name="phone"
+                        />
+                        <label class="form-user-phone">Số điện thoại</label>
+                    </div>
+                    <div class="form-control">
+                        <select class="form-user-input" name="province_city"></select>
+                        <label>Tỉnh/ Thành Phố</label>
+                        <i class="fas fa-sort-down"></i>
+                    </div>
+                    <div class="form-control">
+                        <select class="form-user-input" name="district" disabled></select>
+                        <label>Quận/ Huyện</label>
+                        <i class="fas fa-sort-down"></i>
+                    </div>
+                    <div class="form-control">
+                        <select class="form-user-input" name="ward_commune" disabled></select>
+                        <label>Phường/ Xã</label>
+                        <i class="fas fa-sort-down"></i>
+                    </div>
+                    <div class="form-control">
+                        <input
+                            type="text"
+                            class="form-user-input"
+                            placeholder="Đường. VD: Đường số 1 (tùy chọn)"
+                            name="street"
+                        />
+                        <label>Đường</label>
+                    </div>
+                    <div class="form-control">
+                        <input
+                            type="text"
+                            class="form-user-input"
+                            placeholder="Số nhà, lô, kios (tùy chọn)"
+                            name="number-house_lot"
+                        />
+                        <label>Số nhà</label>
+                    </div>
+
+                    <div class="form-control form-action-btn">
+                        <span class="btn-primary close-add-address">Hủy</span>
+                        <button type="submit" class="btn-primary">Lưu</button>
+                    </div>
+                </form>
+            </div>
+        </div>
 
         <main class="content">
             <div class="container">

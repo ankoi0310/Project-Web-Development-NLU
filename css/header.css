@@ -403,6 +403,7 @@
 .header-search {
     flex: 1;
     margin-right: 2rem;
+    cursor: default;
 }
 
 .header-search:hover {

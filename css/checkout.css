@@ -26,6 +26,12 @@
     position: relative;
 }
 
+.comfirm-address {
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s;
+}
+
 .comfirm-address::before {
     content: '';
     width: 100%;
@@ -56,10 +62,17 @@
 .address-user {
     display: flex;
     align-items: center;
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+    backface-visibility: hidden;
+    perspective: 1000px;
+    transform: translateY(0) rotateX(0);
+    transition: all 0.2s;
 }
 
 .address-user-content {
-    color: var(--text-grey);
+    color: var(--text-black-2);
     flex: 0 0 70%;
     display: flex;
     align-items: center;
@@ -72,7 +85,7 @@
 }
 
 .address-user .user-address {
-    color: var(--text-grey);
+    color: var(--text-black-2);
 }
 
 .change-address {
@@ -123,7 +136,7 @@
 }
 
 .product-checkout > * {
-    color: #696969;
+    color: var(--text-black-2);
     font-size: 1.5rem;
 }
 
@@ -170,7 +183,7 @@
 /* css for voucher */
 .section-control.voucher {
     margin-bottom: 0;
-    color: #696969;
+    color: var(--text-black-2);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -199,7 +212,7 @@
     border-bottom: 2px dashed #ebebeb;
     box-shadow: none;
     margin-bottom: 0;
-    color: #696969;
+    color: var(--text-black-2);
     display: flex;
     flex-direction: column;
 }
@@ -247,8 +260,17 @@
 .box-change-address {
     display: flex;
     flex-direction: column;
-    display: none;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    backface-visibility: hidden;
+    perspective: 1000px;
+    transform-origin: bottom;
+    transform: translateY(30%) rotateX(-90deg);
+    transition: all 0.1s;
+    background-color: #fff;
 }
+
 .address-action {
     margin: -4rem 0 0 auto;
     width: 32%;
@@ -355,13 +377,136 @@
 
 /* css class for hide address choosing */
 .comfirm-address.show-choosing-address > .address-user {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100%) rotateX(-90deg);
 }
 
 .comfirm-address.show-choosing-address > .box-change-address {
-    display: block;
+    height: auto;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
 }
 
-.footer {
+/* css for popup add new address */
+.popup-add-address {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2px);
+    z-index: 500;
+    transition: all 0.2s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.popup-add-address.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.box-add-address {
+    padding: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateX(90deg);
+    width: 50rem;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: rgba(255, 255, 255, 0.3) 0px 7px 29px 0px;
+    transition: all 0.2s;
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+.box-add-address.open {
+    transform: translate(-50%, -50%) rotateX(0);
+}
+
+.box-add-address form {
+    display: flex;
+    flex-direction: column;
+}
+
+.box-add-address .form-control {
+    margin-top: 1.8rem;
+    position: relative;
+}
+
+.form-control.form-username-phone {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-control.form-username-phone .form-user-input {
+    width: 49%;
+}
+
+.form-control select.form-user-input {
+    appearance: none;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.form-control .form-user-input + label {
+    position: absolute;
+    top: 0;
+    left: 1.5rem;
+    transform: translateY(-50%);
+    color: var(--text-grey);
+    background-color: #fff;
+    padding: 0 0.5rem;
+}
+
+.form-control .form-user-input + .form-user-phone {
+    left: calc(50% + 2rem);
+}
+
+.form-control .form-user-input {
+    width: 100%;
+    height: 4rem;
+    padding: 1rem 2rem;
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 4px;
+    outline: none;
+}
+
+.form-control > i {
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+    color: var(--text-grey);
+}
+
+.form-control .form-user-input:focus {
+    box-shadow: 0 1px 1rem rgba(0, 0, 0, 0.1);
+}
+
+.form-action-btn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form-action-btn > * {
+    width: 25%;
+    padding: 0.5rem 2rem;
+}
+
+.form-action-btn > span {
+    cursor: pointer;
+    margin-right: 1.5rem;
+    text-align: center;
+    border: 1px solid var(--grey-color);
+    background-color: #fff;
+    color: var(--text-black);
+}
+.form-action-btn > span:hover {
+    background-color: #fff;
+}
+
+.form .footer {
     margin-top: 0;
 }
