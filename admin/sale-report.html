@@ -22,7 +22,7 @@
 	<link rel="stylesheet" href="dist/css/adminlte.min.css">
 	<!-- summernote -->
 	<link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
-	<title>Quản lý | Báo cáo sản phẩm</title>
+	<title>Quản lý | Báo cáo doanh thu</title>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -109,7 +109,7 @@
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href="product.html" class="nav-link">
+						<a href="warehouse.html" class="nav-link">
 							<i class="nav-icon fas fa-warehouse"></i>
 							<p>Kho hàng</p>
 						</a>
@@ -128,12 +128,6 @@
 					</li>
 					<li class="nav-header">BÁO CÁO</li>
 					<li class="nav-item">
-						<a href="sold-product-report.html" class="nav-link">
-							<i class="nav-icon fas fa-dollar-sign"></i>
-							<p>Sản phẩm</p>
-						</a>
-					</li>
-					<li class="nav-item">
 						<a href="sale-report.html" class="nav-link">
 							<i class="nav-icon fas fa-dollar-sign"></i>
 							<p>Doanh thu</p>
@@ -149,7 +143,7 @@
 	<div class="content-wrapper">
 		<!-- Content Header (Page header) -->
 		<div class="d-flex justify-content-center pt-3 pb-3">
-			<h1 class="font-weight-bolder">BÁO CÁO SẢN PHẨM</h1>
+			<h1 class="font-weight-bolder">BÁO CÁO DOANH THU</h1>
 		</div>
 		<!-- /.content-header -->
 		<!-- Main content -->
@@ -160,9 +154,9 @@
 						<form action="sold-product-report.html" method="get">
 							<div class="form-group float-left">
 								<select name="orderBy" class="form-control" onchange="this.form.submit()">
-									<option value="day">Day</option>
-									<option value="month" selected>Month</option>
-									<option value="year">Year</option>
+									<option value="day">Ngày</option>
+									<option value="month" selected>Tháng</option>
+									<option value="year">Năm</option>
 								</select>
 							</div>
 						</form>
@@ -172,24 +166,26 @@
 					<div class="col-12">
 						<div class="card">
 							<div class="card-body">
-									<table id="sold-product-report" class="table table-bordered table-striped">
-										<thead>
-										<tr class="text-center">
-											<th class="align-middle">Mã sản phẩm</th>
-											<th class="align-middle">Tên</th>
-											<th class="align-middle">Tồn kho</th>
-											<th class="align-middle">Đã bán</th>
-										</tr>
-										</thead>
-										<tbody>
-										<tr>
-											<td class="text-center align-middle">GHEMIN9262</td>
-											<td class="text-center align-middle">Sản phẩm 1</td>
-											<td class="text-center align-middle">200</td>
-											<td class="text-center align-middle">100</td>
-										</tr>
-										</tbody>
-									</table>
+								<table id="sold-product-report" class="table table-bordered table-striped">
+									<thead>
+									<tr class="text-center">
+										<th class="align-middle">Mã sản phẩm</th>
+										<th class="align-middle">Tên sản phẩm</th>
+										<th class="align-middle">Đã bán</th>
+										<th class="align-middle">Tồn kho</th>
+										<th class="align-middle">Doanh thu</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td class="text-center align-middle">GHEMIN9262</td>
+										<td class="text-center align-middle">Sản phẩm 1</td>
+										<td class="text-center align-middle">100</td>
+										<td class="text-center align-middle">200</td>
+										<td class="text-center align-middle">17.000.000 VNĐ</td>
+									</tr>
+									</tbody>
+								</table>
 							</div>
 						</div>
 					</div>
