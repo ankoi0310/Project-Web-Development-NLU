@@ -34,10 +34,10 @@
 				<a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
 			</li>
 			<li class="nav-item d-none d-sm-inline-block">
-				<a href="" class="nav-link">Home</a>
+				<a href="" class="nav-link">Trang chủ</a>
 			</li>
 			<li class="nav-item d-none d-sm-inline-block">
-				<a href="#" class="nav-link">Logout</a>
+				<a href="#" class="nav-link">Đăng xuất</a>
 			</li>
 		</ul>
 		<!-- Right navbar links -->
@@ -120,17 +120,23 @@
 							<p>Thương hiệu</p>
 						</a>
 					</li>
-					<li class="nav-header">BÁO CÁO</li>
 					<li class="nav-item">
 						<a href="order.html" class="nav-link">
 							<i class="nav-icon fas fa-file-invoice"></i>
 							<p>Đơn hàng</p>
 						</a>
 					</li>
+					<li class="nav-header">BÁO CÁO</li>
 					<li class="nav-item">
-						<a href="" class="nav-link">
+						<a href="sold-product-report.html" class="nav-link">
 							<i class="nav-icon fas fa-dollar-sign"></i>
-							<p>Lợi nhuận</p>
+							<p>Sản phẩm</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="sale-report.html" class="nav-link">
+							<i class="nav-icon fas fa-dollar-sign"></i>
+							<p>Doanh thu</p>
 						</a>
 					</li>
 				</ul>
@@ -158,6 +164,7 @@
 										<thead>
 										<tr class="text-center">
 											<th class="align-middle"><input type="checkbox" name="checkBoxAll" id="checkBoxAll"></th>
+											<th class="align-middle">Mã sản phẩm</th>
 											<th class="align-middle">Tên</th>
 											<th class="align-middle">Ảnh</th>
 											<th class="align-middle">Màu</th>
@@ -173,6 +180,7 @@
 										<tbody>
 										<tr>
 											<td class="text-center align-middle"><input type="checkbox" class="checkBoxId" name="id"></td>
+											<th class="text-center align-middle">GHEMIN9262</th>
 											<td class="text-center align-middle">Sản phẩm 1</td>
 											<th class="text-center align-middle"><img src="https://robohash.org/sanpham1" width="100px" alt="Sản phẩm 1"></th>
 											<td class="text-center align-middle">
@@ -292,25 +300,6 @@
 								<button type="submit" class="btn btn-primary font-weight-bolder">Đồng ý</button>
 							</div>
 						</form>
-					</div>
-				</div>
-			</div>
-			<!-- Description modal -->
-			<div class="modal fade" id="description-modal" style="top: 15%; display: none;" aria-hidden="true">
-				<div class="modal-dialog modal-md">
-					<div class="modal-content card bg-gradient-info">
-						<div class="card-header">
-							<h5>Mô tả sản phẩm</h5>
-						</div>
-						<div class="modal-body card-body">
-							<div class="row">
-								<div class="col">
-									<div class="position-relative p-3 bg-white" style="height: 180px">
-										<h6 class="description-content text-dark"></h6>
-									</div>
-								</div>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>

@@ -3,8 +3,6 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>AdminLTE 3 | Dashboard</title>
-	
 	<!-- Google Font: Source Sans Pro -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
 	<!-- Font Awesome -->
@@ -25,6 +23,7 @@
 	<link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
 	<!-- summernote -->
 	<link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+	<title>AdminLTE 3 | Hồ sơ</title>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -36,10 +35,10 @@
 				<a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
 			</li>
 			<li class="nav-item d-none d-sm-inline-block">
-				<a href="" class="nav-link">Home</a>
+				<a href="" class="nav-link">Trang chủ</a>
 			</li>
 			<li class="nav-item d-none d-sm-inline-block">
-				<a href="#" class="nav-link">Logout</a>
+				<a href="#" class="nav-link">Đăng xuất</a>
 			</li>
 		</ul>
 		<!-- Right navbar links -->
@@ -111,7 +110,7 @@
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href="product.html" class="nav-link">
+						<a href="warehouse.html" class="nav-link">
 							<i class="nav-icon fas fa-warehouse"></i>
 							<p>Kho hàng</p>
 						</a>
@@ -122,17 +121,23 @@
 							<p>Thương hiệu</p>
 						</a>
 					</li>
-					<li class="nav-header">BÁO CÁO</li>
 					<li class="nav-item">
 						<a href="order.html" class="nav-link">
 							<i class="nav-icon fas fa-file-invoice"></i>
 							<p>Đơn hàng</p>
 						</a>
 					</li>
+					<li class="nav-header">BÁO CÁO</li>
 					<li class="nav-item">
-						<a href="" class="nav-link">
+						<a href="sold-product-report.html" class="nav-link">
 							<i class="nav-icon fas fa-dollar-sign"></i>
-							<p>Lợi nhuận</p>
+							<p>Sản phẩm</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="sale-report.html" class="nav-link">
+							<i class="nav-icon fas fa-dollar-sign"></i>
+							<p>Doanh thu</p>
 						</a>
 					</li>
 				</ul>
@@ -353,7 +358,7 @@
 <script>
 	function updateTime() {
 		/// Increment serverTime by second and update the html for '#time'
-		let time = DateFormat.format.date(new Date(), 'HH:mm:ss dd-MM-yyyy');
+		let time = DateFormat.format.date(new Date(), 'HH:mm:ss dd/MM/yyyy');
 		$('#realtime').html(time);
 	}
 	
