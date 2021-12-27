@@ -181,12 +181,47 @@
 										<td class="text-center align-middle">00:00:00 25/12/2021</td>
 										<td class="text-center align-middle"><span class="badge badge-success">Đang giao hàng</span></td>
 										<td class="text-center align-middle">
-											<a href="" role="button" class="btn btn-info">Chi tiết đơn hàng</a>
+											<button type="button" data-toggle="modal"
+											   data-target="#detail-modal" class="btn btn-info">Chi tiết sản phẩm</button>
 										</td>
 									</tr>
 									</tbody>
 								</table>
 							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade" id="detail-modal" style="display: none;" aria-hidden="true">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content card card-success">
+						<div class="modal-header card-header">
+							<h5 class="modal-title font-weight-bolder">Tạo mới</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">×</span>
+							</button>
+						</div>
+						<div class="modal-body card-body">
+							<table class="table table-bordered table-striped">
+								<thead>
+								<tr class="text-center">
+									<th class="align-middle">STT</th>
+									<th class="align-middle">Tên sản phẩm</th>
+									<th class="align-middle">Mã sản phẩm</th>
+									<th class="align-middle">Giá bán (VNĐ)</th>
+									<th class="align-middle">Số lượng mua</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+									<td class="text-center align-middle">1</td>
+									<td class="align-middle">Sản phẩm 1</td>
+									<td class="text-center align-middle">GHEMIN9262</td>
+									<td class="text-center align-middle">135.000</td>
+									<td class="text-center align-middle">100</td>
+								</tr>
+								</tbody>
+							</table>
 						</div>
 					</div>
 				</div>

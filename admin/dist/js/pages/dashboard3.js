@@ -21,7 +21,7 @@ $(function () {
         {
           backgroundColor: '#007bff',
           borderColor: '#007bff',
-          data: [1000, 2000, 3000, 2500, 2700, 2500, 3000]
+          data: [1000000, 2000000, 3000000, 2500000, 2700000, 2500000, 900000]
         }
       ]
     },
@@ -52,12 +52,14 @@ $(function () {
 
             // Include a dollar sign in the ticks
             callback: function (value) {
-              if (value >= 1000) {
+              if (value >= 1000000) {
+                value /= 1000000
+                value += 'tr'
+              } else if (value >= 1000) {
                 value /= 1000
                 value += 'k'
               }
-
-              return '$' + value
+              return value
             }
           }, ticksStyle)
         }],
