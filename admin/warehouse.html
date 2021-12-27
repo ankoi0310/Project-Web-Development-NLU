@@ -22,6 +22,11 @@
 	<link rel="stylesheet" href="dist/css/adminlte.min.css">
 	<!-- summernote -->
 	<link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+	<style>
+		option {
+			background:#fff;
+		}
+	</style>
 	<title>Quản lý | Kho hàng</title>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -158,6 +163,8 @@
 						<div class="card">
 							<div class="card-body">
 								<form action="" method="post">
+									<button type="button" class="btn btn-success mr-2 float-left"
+									        data-toggle="modal" data-target="#create-modal" title="Thêm"><i class="fas fa-plus"></i></button>
 									<button type="submit" class="btn btn-danger font-weight-bolder float-left"
 									        onclick="return confirm('Xác nhận xóa các sản phẩm đã chọn?')"><i class="fas fa-trash-alt"></i></button>
 									<table id="warehouse" class="table table-bordered table-striped">
@@ -214,6 +221,104 @@
 					</div>
 				</div>
 			</div>
+			<!-- Create modal -->
+			<div class="modal fade" id="create-modal" style="display: none;" aria-hidden="true">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content card card-success">
+						<div class="modal-header card-header">
+							<h5 class="modal-title font-weight-bolder">Thêm chi tiết sản phẩm</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">×</span>
+							</button>
+						</div>
+						<form action="product-detail.html" id="create" novalidate="novalidate">
+							<div class="modal-body card-body">
+								<div class="row">
+									<div class="col">
+										<div class="form-group">
+											<label>Sản phẩm</label>
+											<select class="select-product form-control"
+											        name="product" style="width: 100%;">
+												<option value="">--Chọn sản phẩm--</option>
+												<option value="1">Sản phẩm 1</option>
+												<option value="2">Sản phẩm 2</option>
+												<option value="3">Sản phẩm 3</option>
+												<option value="4">Sản phẩm 4</option>
+												<option value="5">Sản phẩm 5</option>
+												<option value="6">Sản phẩm 6</option>
+												<option value="7">Sản phẩm 7</option>
+											</select>
+										</div>
+									</div>
+									<div class="col">
+										<div class="form-group">
+											<label>Kích thước</label>
+											<input type="text" name="size" class="form-control" placeholder="VD: D2 x R1.5 x C1.75">
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col">
+										<div class="form-group">
+											<label>Màu sắc</label>
+											<select class="select-color form-control" onchange="changeColor(this);" name="color" style="width: 100%;">
+												<option value="">--Chọn màu--</option>
+												<option value="#006A4E">#006A4E</option>
+												<option value="#124AAA">#124AAA</option>
+												<option value="#EDF485">#EDF485</option>
+												<option value="#915C83">#915C83</option>
+												<option value="#FDEE00">#FDEE00</option>
+												<option value="#E32636">#E32636</option>
+												<option value="#89CFF0">#89CFF0</option>
+											</select>
+										</div>
+									</div>
+									<div class="col">
+										<div class="form-group">
+											<label>Vật liệu</label>
+											<select class="select-material form-control"
+											        name="material" style="width: 100%;">
+												<option value="">--Chọn vật liệu--</option>
+												<option value="VL1">Vật liệu 1</option>
+												<option value="VL2">Vật liệu 2</option>
+												<option value="VL3">Vật liệu 3</option>
+												<option value="VL4">Vật liệu 4</option>
+												<option value="VL5">Vật liệu 5</option>
+												<option value="VL6">Vật liệu 6</option>
+												<option value="VL7">Vật liệu 7</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col">
+										<div class="form-group">
+											<label>Giá bán (VNĐ)</label>
+											<input type="number" name="unit_price" class="form-control" placeholder="0">
+										</div>
+									</div>
+									<div class="col">
+										<div class="form-group">
+											<label>Số lượng</label>
+											<input type="number" name="unit_in_stock" class="form-control" placeholder="0">
+										</div>
+									</div>
+									<div class="col">
+										<div class="form-group">
+											<label>Giảm giá (%)</label>
+											<input type="number" name="discount" class="form-control" placeholder="0">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer justify-content-between">
+								<button type="button" class="btn btn-danger font-weight-bolder" data-dismiss="modal">Đóng</button>
+								<button type="submit" class="btn btn-primary font-weight-bolder">Lưu</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
 			<!-- Update modal -->
 			<div class="modal fade" id="update-modal" style="display: none;" aria-hidden="true">
 				<div class="modal-dialog modal-lg">
@@ -230,23 +335,56 @@
 								<div class="row">
 									<div class="col">
 										<div class="form-group">
-											<label>Tên sản phẩm</label>
-											<input type="text" name="name" class="form-control" placeholder="VD: Ghế sofa cao cấp" value="Sản phẩm 1" disabled/>
+											<label>Sản phẩm</label>
+											<select class="select-product form-control"
+											        name="color" style="width: 100%;">
+												<option value="">--Chọn sản phẩm--</option>
+												<option value="1">Sản phẩm 1</option>
+												<option value="2">Sản phẩm 2</option>
+												<option value="3">Sản phẩm 3</option>
+												<option value="4">Sản phẩm 4</option>
+												<option value="5">Sản phẩm 5</option>
+												<option value="6">Sản phẩm 6</option>
+												<option value="7">Sản phẩm 7</option>
+											</select>
 										</div>
 									</div>
 									<div class="col">
 										<div class="form-group">
+											<label>Kích thước</label>
+											<input type="text" name="size" class="form-control" placeholder="VD: D2 x R1.5 x C1.75">
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col">
+										<div class="form-group">
 											<label>Màu sắc</label>
-											<select class="select2bs4"
+											<select class="select-color form-control" onchange="changeColor(this);" name="color" style="width: 100%;">
+												<option value="">--Chọn màu--</option>
+												<option value="#006A4E">#006A4E</option>
+												<option value="#124AAA">#124AAA</option>
+												<option value="#EDF485">#EDF485</option>
+												<option value="#915C83">#915C83</option>
+												<option value="#FDEE00">#FDEE00</option>
+												<option value="#E32636">#E32636</option>
+												<option value="#89CFF0">#89CFF0</option>
+											</select>
+										</div>
+									</div>
+									<div class="col">
+										<div class="form-group">
+											<label>Vật liệu</label>
+											<select class="select-material form-control"
 											        name="color" style="width: 100%;">
-												<option value="">--Vui lòng chọn màu--</option>
-												<option value="#000000" selected>Màu 1</option>
-												<option value="#111111">Màu 2</option>
-												<option value="#222222">Màu 3</option>
-												<option value="#333333">Màu 4</option>
-												<option value="#444444">Màu 5</option>
-												<option value="#555555">Màu 6</option>
-												<option value="#666666">Màu 7</option>
+												<option value="">--Chọn vật liệu--</option>
+												<option value="VL1">Vật liệu 1</option>
+												<option value="VL2">Vật liệu 2</option>
+												<option value="VL3">Vật liệu 3</option>
+												<option value="VL4">Vật liệu 4</option>
+												<option value="VL5">Vật liệu 5</option>
+												<option value="VL6">Vật liệu 6</option>
+												<option value="VL7">Vật liệu 7</option>
 											</select>
 										</div>
 									</div>
@@ -351,19 +489,17 @@
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
 <script>
+	function changeColor(colorParam) {
+		let color = colorParam.value;
+		var selectElements = document.getElementsByClassName('select-color');
+		for (let selector of selectElements) {
+			if (colorParam == selector) {
+				selector.style.background = color;
+			}
+		}
+	};
+	
 	jQuery(function () {
-		// Select2
-		jQuery('.select2bs4').select2({
-			theme: 'bootstrap4'
-		})
-		// Toast
-		let Toast = Swal.mixin({
-			toast: true,
-			position: 'top-end',
-			showConfirmButton: false,
-			timer: 3000
-		});
-		
 		// Datatables
 		jQuery("#warehouse").DataTable({
 			"responsive": true, "lengthChange": false, "autoWidth": false, "pageLength": 8,

@@ -197,8 +197,6 @@
 											</td>
 											<td class="d-flex justify-content-center">
 												<input type="hidden" name="id" value="1"/>
-												<button type="button" class="btn btn-dark d-block w-100 mr-1 create-detail" data-toggle="modal"
-												        data-target="#create-detail-modal" title="Phân loại sản phẩm"><i class="fas fa-plus"></i></button>
 												<a href="product-detail.html" role="button" class="btn btn-secondary d-block w-100 mr-1 create-detail" 
 												   title="Xem các sản phẩm liên quan"><i class="fas fa-chevron-right"></i></a>
 												<button type="button" class="btn btn-warning d-block w-100 mr-1 update" data-toggle="modal"
@@ -270,49 +268,6 @@
 					</div>
 				</div>
 			</div>
-			<!-- Create detail modal -->
-			<div class="modal fade" id="create-detail-modal" style="display: none;" aria-hidden="true">
-				<div class="modal-dialog modal-lg">
-					<div class="modal-content card card-success">
-						<div class="modal-header card-header">
-							<h5 class="modal-title font-weight-bolder">Thêm chi tiết sản phẩm</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">×</span>
-							</button>
-						</div>
-						<form action="product-detail.html" id="create-detail" novalidate="novalidate">
-							<div class="modal-body card-body">
-								<div class="row">
-									<div class="col">
-										<div class="form-group">
-											<label>Màu sắc</label>
-											<button type="button" id="btnChoose">Chọn</button>
-											<input type="color" name="color">
-											<span id="choosedColor"></span>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col">
-										<div class="form-group">
-											<label>Vật liệu</label>
-										</div>
-									</div>
-									<div class="col">
-										<div class="form-group">
-											<label>Kích thước</label>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="modal-footer justify-content-between">
-								<button type="button" class="btn btn-danger font-weight-bolder" data-dismiss="modal">Đóng</button>
-								<button type="submit" class="btn btn-primary font-weight-bolder">Lưu</button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
 			<!-- Update modal -->
 			<div class="modal fade" id="update-modal" style="display: none;" aria-hidden="true">
 				<div class="modal-dialog modal-lg">
@@ -349,7 +304,6 @@
 											<label>Loại sản phẩm</label>
 											<select class="select2bs4" name="category" style="width: 100%;">
 												<option value="">-- Chọn loại sản phẩm --</option>
-											
 											</select>
 										</div>
 									</div>
