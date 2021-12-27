@@ -34,7 +34,7 @@
 				<a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
 			</li>
 			<li class="nav-item d-none d-sm-inline-block">
-				<a href="" class="nav-link">Trang chủ</a>
+				<a href="index.html" class="nav-link">Trang chủ</a>
 			</li>
 			<li class="nav-item d-none d-sm-inline-block">
 				<a href="#" class="nav-link">Đăng xuất</a>
@@ -58,7 +58,7 @@
 	<!-- Main Sidebar Container -->
 	<aside class="main-sidebar sidebar-dark-primary elevation-4">
 		<!-- Brand Logo -->
-		<a href="/admin" class="brand-link">
+		<a href="index.html" class="brand-link">
 			<img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
 			<span class="brand-text font-weight-light">ALC - FIT</span>
 		</a>
@@ -67,7 +67,7 @@
 			<!-- Sidebar user panel (optional) -->
 			<div class="user-panel mt-3 pb-3 mb-3 d-flex">
 				<div class="image">
-					<img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+					<img src="https://www.robohash.org/koi" class="img-circle elevation-2" alt="User Image">
 				</div>
 				<div class="info">
 					<a href="profile.html" class="d-block">Huỳnh Văn Hữu Ân</a>
@@ -106,6 +106,12 @@
 						<a href="product.html" class="nav-link">
 							<i class="nav-icon fas fa-box"></i>
 							<p>Sản phẩm</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="category.html" class="nav-link">
+							<i class="nav-icon fab fa-buffer"></i>
+							<p>Loại sản phẩm</p>
 						</a>
 					</li>
 					<li class="nav-item">
@@ -151,7 +157,7 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-2">
-						<form action="sold-product-report.html" method="get">
+						<form action="sale-report.html" method="get">
 							<div class="form-group float-left">
 								<select name="orderBy" class="form-control" onchange="this.form.submit()">
 									<option value="day">Ngày</option>
@@ -166,14 +172,14 @@
 					<div class="col-12">
 						<div class="card">
 							<div class="card-body">
-								<table id="sold-product-report" class="table table-bordered table-striped">
+								<table id="sale-report" class="table table-bordered table-striped">
 									<thead>
 									<tr class="text-center">
 										<th class="align-middle">Mã sản phẩm</th>
 										<th class="align-middle">Tên sản phẩm</th>
 										<th class="align-middle">Đã bán</th>
 										<th class="align-middle">Tồn kho</th>
-										<th class="align-middle">Doanh thu</th>
+										<th class="align-middle">Doanh thu (VNĐ)</th>
 									</tr>
 									</thead>
 									<tbody>
@@ -182,7 +188,7 @@
 										<td class="text-center align-middle">Sản phẩm 1</td>
 										<td class="text-center align-middle">100</td>
 										<td class="text-center align-middle">200</td>
-										<td class="text-center align-middle">17.000.000 VNĐ</td>
+										<td class="text-center align-middle">17.000.000</td>
 									</tr>
 									</tbody>
 								</table>
@@ -246,10 +252,10 @@
 <script>
 	jQuery(function () {
 		// Datatables
-		jQuery("#sold-product-report").DataTable({
+		jQuery("#sale-report").DataTable({
 			"responsive": true, "lengthChange": false, "autoWidth": false, "pageLength": 8,
 			"buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
-		}).buttons().container().appendTo('#sold-product-report_wrapper .col-md-6:eq(0)');
+		}).buttons().container().appendTo('#sale-report_wrapper .col-md-6:eq(0)');
 	})
 </script>
 </body>

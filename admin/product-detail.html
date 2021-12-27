@@ -34,7 +34,7 @@
 				<a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
 			</li>
 			<li class="nav-item d-none d-sm-inline-block">
-				<a href="" class="nav-link">Trang chủ</a>
+				<a href="index.html" class="nav-link">Trang chủ</a>
 			</li>
 			<li class="nav-item d-none d-sm-inline-block">
 				<a href="#" class="nav-link">Đăng xuất</a>
@@ -58,7 +58,7 @@
 	<!-- Main Sidebar Container -->
 	<aside class="main-sidebar sidebar-dark-primary elevation-4">
 		<!-- Brand Logo -->
-		<a href="/admin" class="brand-link">
+		<a href="index.html" class="brand-link">
 			<img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
 			<span class="brand-text font-weight-light">ALC - FIT</span>
 		</a>
@@ -67,7 +67,7 @@
 			<!-- Sidebar user panel (optional) -->
 			<div class="user-panel mt-3 pb-3 mb-3 d-flex">
 				<div class="image">
-					<img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+					<img src="https://www.robohash.org/koi" class="img-circle elevation-2" alt="User Image">
 				</div>
 				<div class="info">
 					<a href="profile.html" class="d-block">Huỳnh Văn Hữu Ân</a>
@@ -109,6 +109,12 @@
 						</a>
 					</li>
 					<li class="nav-item">
+						<a href="category.html" class="nav-link">
+							<i class="nav-icon fab fa-buffer"></i>
+							<p>Loại sản phẩm</p>
+						</a>
+					</li>
+					<li class="nav-item">
 						<a href="warehouse.html" class="nav-link">
 							<i class="nav-icon fas fa-warehouse"></i>
 							<p>Kho hàng</p>
@@ -142,7 +148,7 @@
 	<div class="content-wrapper">
 		<!-- Content Header (Page header) -->
 		<div class="d-flex justify-content-center pt-3 pb-3">
-			<h1 class="font-weight-bolder">QUẢN LÝ KHO HÀNG</h1>
+			<h1 class="font-weight-bolder">CHI TIẾT SẢN PHẢM</h1>
 		</div>
 		<!-- /.content-header -->
 		<section class="content">
@@ -158,9 +164,8 @@
 										<thead>
 										<tr class="text-center">
 											<th class="align-middle"><input type="checkbox" name="checkBoxAll" id="checkBoxAll"></th>
-											<th class="align-middle">Tên</th>
+											<th class="align-middle">Thông tin sản phẩm</th>
 											<th class="align-middle">Ảnh</th>
-											<th class="align-middle">Màu</th>
 											<th class="align-middle">Giá bán</th>
 											<th class="align-middle">Số lượng</th>
 											<th class="align-middle">Giảm giá (%)</th>
@@ -173,11 +178,16 @@
 										<tbody>
 										<tr>
 											<td class="text-center align-middle"><input type="checkbox" class="checkBoxId" name="id"></td>
-											<td class="text-center align-middle">Sản phẩm 1</td>
-											<th class="text-center align-middle"><img src="https://robohash.org/sanpham1" width="100px" alt="Sản phẩm 1"></th>
-											<td class="text-center align-middle">
-												<div style="height: 15px;background-color: #000000;"></div>
+											<td class="align-middle">
+												<ul class="p-2" style="">
+													<li>Mã sản phẩm: GHEMIN9262</li>
+													<li>Tên sản phẩm: Sản phẩm 1</li>
+													<li>Kích thước: D2 x R1.5 X C1.3</li>
+													<li>Vật liệu: Gỗ, vải mịn</li>
+													<li>Màu sắc: <span style="display: inline-block; width:60px; height: 15px;background-color: #000000;"></span></li>
+												</ul>
 											</td>
+											<td class="text-center align-middle"><img src="https://robohash.org/sanpham1" width="100px" alt="Sản phẩm 1"></td>
 											<td class="text-center align-middle">135.000 VNĐ</td>
 											<td class="text-center align-middle">100</td>
 											<td class="text-center align-middle">0</td>
@@ -369,7 +379,7 @@
 					"orderable": false,
 				},
 				{
-					"targets": 10,
+					"targets": 9,
 					"orderable": false,
 					"width": "10%"
 				}
