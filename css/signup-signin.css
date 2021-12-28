@@ -352,3 +352,55 @@
 .policy-link {
     color: var(--primary-color);
 }
+
+.form-group.box-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group .box-left,
+.form-group .box-right {
+    width: 49%;
+    display: flex;
+    align-items: center;
+}
+
+.form-group .box-right label {
+    left: calc(50% + 2rem);
+}
+
+.form-group .box-right .form-input:focus + label {
+    left: calc(50% + 1.5rem) !important;
+}
+
+.box-right span {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--text-grey);
+}
+
+input[name='gender'] {
+    display: none;
+}
+
+input[name='gender']:checked + label {
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    color: var(--text-white);
+}
+
+input[name='gender'] + label {
+    font-size: 1.4rem;
+    color: #6b6b6b;
+    width: 30%;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--text-grey);
+    border-radius: 6px;
+    margin-left: 2rem;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s;
+}
