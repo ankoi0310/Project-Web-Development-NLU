@@ -31,29 +31,224 @@
                     </div>
                     <nav class="navigation">
                         <ul class="navigation-list">
-                            <li class="navigation-item"><a href="#">Trang chủ</a></li>
-                            <li class="navigation-item">
-                                <a href="/products.html">Sản phẩm</a>
+                            <li class="navigation-item"><a href="home.html">Trang chủ</a></li>
+                            <li class="navigation-item active">
+                                <a href="products.html">Sản phẩm</a>
                             </li>
-                            <li class="navigation-item"><a href="#">Mới</a></li>
-                            <li class="navigation-item"><a href="#">Khuyến mãi</a></li>
-                            <li class="navigation-item"><a href="#">Blog</a></li>
+                            <li class="navigation-item">
+                                <a href="contact-us.html">Liên hệ</a>
+                            </li>
+                            <li class="navigation-item">
+                                <a href="about-us.html">Về chúng tôi</a>
+                            </li>
+                            <li class="navigation-item">
+                                <a href="faqs.html">FAQS</a>
+                            </li>
                         </ul>
                     </nav>
                     <div class="header-btn">
                         <ul class="header-list">
-                            <li class="header-item">
-                                <a href="#"><ion-icon name="search-outline"></ion-icon></a>
+                            <li class="header-item header-search">
+                                <form role="search" action="" method="get">
+                                    <input
+                                        type="search"
+                                        name="search"
+                                        class="search-input"
+                                        placeholder="Tìm sản phẩm"
+                                        autocomplete="off"
+                                    />
+                                    <button type="submit" class="header-search-btn">
+                                        <ion-icon name="search-outline"></ion-icon>
+                                    </button>
+                                </form>
                             </li>
-                            <li class="header-item">
-                                <a href="#"><ion-icon name="heart-outline"></ion-icon></a>
+                            <li class="header-item header__drop">
+                                <a href="wishlist.html">
+                                    <ion-icon name="heart-outline"></ion-icon>
+                                </a>
+                                <!-- if card have product in wishlist -> add class header__drop__empty -->
+                                <div class="header__drop-list">
+                                    <div class="header__mt">
+                                        <img
+                                            src="./images/emptywishlist.jpg"
+                                            alt="Giỏ hàng trống"
+                                            class="header__mt-img"
+                                        />
+                                        <h4 class="header__mt-msg">
+                                            Chưa có sản phẩm yêu thích
+                                        </h4>
+                                    </div>
+                                    <div class="header__drop-no-mt">
+                                        <p class="heading__drop__no-mt-msg">
+                                            Sản phẩm yêu thích
+                                        </p>
+                                        <div class="header__product-list">
+                                            <div class="header__product-item">
+                                                <a
+                                                    class="header__product-link"
+                                                    href="/product-detail.html"
+                                                >
+                                                </a>
+                                                <img
+                                                    src="./images/ngan_ghep_ke_sach/ke_sach.png"
+                                                    alt="Header product card 1"
+                                                    class="header__product-item-img"
+                                                />
+                                                <span class="header__product-item-name">
+                                                    Ngăn Trang Trí - Ngăn Ghép Kệ Sách
+                                                </span>
+                                                <span class="header__product-item-price">
+                                                    129.000
+                                                </span>
+                                            </div>
+                                            <div class="header__product-item">
+                                                <a
+                                                    class="header__product-link"
+                                                    href="/product-detail.html"
+                                                >
+                                                </a>
+                                                <img
+                                                    src="./images/ngan_ghep_ke_sach/ke_sach.png"
+                                                    alt="Header product card 1"
+                                                    class="header__product-item-img"
+                                                />
+                                                <span class="header__product-item-name">
+                                                    Ngăn Trang Trí - Ngăn Ghép Kệ Sách
+                                                </span>
+                                                <span class="header__product-item-price">
+                                                    129.000
+                                                </span>
+                                            </div>
+                                            <div class="header__product-item">
+                                                <a
+                                                    class="header__product-link"
+                                                    href="/product-detail.html"
+                                                >
+                                                </a>
+                                                <img
+                                                    src="./images/ngan_ghep_ke_sach/ke_sach.png"
+                                                    alt="Header product card 1"
+                                                    class="header__product-item-img"
+                                                />
+                                                <span class="header__product-item-name">
+                                                    Ngăn Trang Trí - Ngăn Ghép Kệ Sách
+                                                </span>
+                                                <span class="header__product-item-price">
+                                                    129.000
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="header__drop__bottom">
+                                            <p class="heading__drop__bottom-msg">
+                                                2 sản phẩm mới thêm vào yêu thích
+                                            </p>
+                                            <a href="wishlist.html" class="header__drop__btn">
+                                                Xem Wishlist
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
-                            <li class="header-item">
-                                <a href="#"><ion-icon name="cart-outline"></ion-icon></a>
-                                <span class="card-count">0</span>
+                            <li class="header-item header__drop">
+                                <a href="/cart.html">
+                                    <ion-icon name="cart-outline"></ion-icon>
+                                </a>
+                                <!-- if card have product -> add class header__drop__empty -->
+                                <div class="header__drop-list">
+                                    <div class="header__mt">
+                                        <img
+                                            src="./images/cart-empty.png"
+                                            alt="Giỏ hàng trống"
+                                            class="header__mt-img"
+                                        />
+                                        <h4 class="header__mt-msg">Chưa có sản phẩm</h4>
+                                    </div>
+
+                                    <div class="header__drop-no-mt">
+                                        <p class="heading__drop__no-mt-msg">
+                                            Sản phẩm mới thêm
+                                        </p>
+
+                                        <div class="header__product-list">
+                                            <div class="header__product-item">
+                                                <img
+                                                    src="./images/ngan_ghep_ke_sach/ke_sach.png"
+                                                    alt="Header product card 1"
+                                                    class="header__product-item-img"
+                                                />
+                                                <span class="header__product-item-name">
+                                                    Ngăn Trang Trí - Ngăn Ghép Kệ Sách
+                                                </span>
+                                                <span class="header__product-item-price">
+                                                    129.000
+                                                </span>
+                                            </div>
+                                            <div class="header__product-item">
+                                                <img
+                                                    src="./images/ngan_ghep_ke_sach/ke_sach.png"
+                                                    alt="Header product card 1"
+                                                    class="header__product-item-img"
+                                                />
+                                                <span class="header__product-item-name">
+                                                    Ngăn Trang Trí - Ngăn Ghép Kệ Sách
+                                                </span>
+                                                <span class="header__product-item-price">
+                                                    129.000
+                                                </span>
+                                            </div>
+                                            <div class="header__product-item">
+                                                <img
+                                                    src="./images/ngan_ghep_ke_sach/ke_sach.png"
+                                                    alt="Header product card 1"
+                                                    class="header__product-item-img"
+                                                />
+                                                <span class="header__product-item-name">
+                                                    Ngăn Trang Trí - Ngăn Ghép Kệ Sách
+                                                </span>
+                                                <span class="header__product-item-price">
+                                                    129.000
+                                                </span>
+                                            </div>
+                                            <div class="header__product-item">
+                                                <img
+                                                    src="./images/ngan_ghep_ke_sach/ke_sach.png"
+                                                    alt="Header product card 1"
+                                                    class="header__product-item-img"
+                                                />
+                                                <span class="header__product-item-name">
+                                                    Ngăn Trang Trí - Ngăn Ghép Kệ Sách
+                                                </span>
+                                                <span class="header__product-item-price">
+                                                    129.000
+                                                </span>
+                                            </div>
+                                            <div class="header__product-item">
+                                                <img
+                                                    src="./images/ngan_ghep_ke_sach/ke_sach.png"
+                                                    alt="Header product card 1"
+                                                    class="header__product-item-img"
+                                                />
+                                                <span class="header__product-item-name">
+                                                    Ngăn Trang Trí - Ngăn Ghép Kệ Sách
+                                                </span>
+                                                <span class="header__product-item-price">
+                                                    129.000
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="header__drop__bottom">
+                                            <p class="heading__drop__bottom-msg">
+                                                5 sản phẩm mới thêm vào giỏ hàng
+                                            </p>
+                                            <a href="/cart.html" class="header__drop__btn">
+                                                Xem giỏ hàng
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
-                            <li class="header-item"><a href="#">Đăng nhập</a></li>
-                            <li class="header-item"><a href="#">Đăng ký</a></li>
+                            <li class="header-item sign-in"><a>Đăng nhập</a></li>
                         </ul>
                     </div>
                 </div>
@@ -67,53 +262,60 @@
                         <section class="product-img">
                             <div class="product-img-main">
                                 <img
-                                    src="./images/sofa_vai_poppy/sofa_vai_poppy_mau_hong_5.jpg"
-                                    alt=""
+                                    src="./images/bo-ban-an-4-ghe-go-milan-901/bo-ban-an-4-ghe-go-milan-901-1.jpg"
+                                    alt="image product"
                                 />
                             </div>
                             <div class="product-img-list">
                                 <img
                                     class="product-img-item active mx-3"
-                                    src="./images/sofa_vai_poppy/sofa_vai_poppy_mau_hong_5.jpg"
-                                    alt=""
+                                    src="./images/bo-ban-an-4-ghe-go-milan-901/bo-ban-an-4-ghe-go-milan-901-1.jpg"
+                                    alt="image product"
                                 />
                                 <img
                                     class="product-img-item mx-3"
-                                    src="./images/sofa_vai_poppy/sofa_vai_poppy_mau_hong_2.jpg"
-                                    alt=""
+                                    src="./images/bo-ban-an-4-ghe-go-milan-901/bo-ban-an-4-ghe-go-milan-901-2.jpg"
+                                    alt="image product"
                                 />
                                 <img
                                     class="product-img-item mx-3"
-                                    src="./images/sofa_vai_poppy/sofa_vai_poppy_mau_hong_1.jpg"
-                                    alt=""
+                                    src="./images/bo-ban-an-4-ghe-go-milan-901/bo-ban-an-4-ghe-go-milan-901-3.jpg"
+                                    alt="image product"
                                 />
                                 <img
                                     class="product-img-item mx-3"
-                                    src="./images/sofa_vai_poppy/sofa_vai_poppy_den_xam.jpg"
-                                    alt=""
+                                    src="./images/bo-ban-an-4-ghe-go-milan-901/bo-ban-an-4-ghe-go-milan-901-4.jpg"
+                                    alt="image product"
                                 />
                                 <img
                                     class="product-img-item mx-3"
-                                    src="./images/sofa_vai_poppy/sofa_vai_poppy_xanh_duong.jpg"
-                                    alt=""
+                                    src="./images/bo-ban-an-4-ghe-go-milan-901/bo-ban-an-4-ghe-go-milan-901-5.jpg"
+                                    alt="image product"
                                 />
                             </div>
                         </section>
                         <section class="product-detail">
                             <h1 class="product-title">Sofa vải Poppy màu hồng</h1>
-                            <p class="product-description">
+                            <!-- <p class="product-description">
                                 Warm and welcoming, neat and stylish. The supporting seat
                                 cushions, the cover's soft finish and the tight fit gives this
                                 sofa a perfect balance between its comport, functions and look.
-                            </p>
-                            <br />
+                            </p> -->
                             <p class="product-text">
                                 <span class="p-title">Kích thước:</span>
-                                <span class="product-size">D2400/1350 - R830 - C700 mm</span>
+                                <span class="product-size">
+                                    Bàn ăn Dài 120cm x Rộng 75cm x Cao 74cm, Ghế ăn Dài 52cm x
+                                    Rộng 49cm x Cao 74cm
+                                </span>
                             </p>
                             <p class="product-text">
                                 <span class="p-title">Vật liệu:</span>
-                                <span class="product-material">Chân gỗ - Vải cao cấp</span>
+                                <span class="product-material"
+                                    >Mặt bàn: Gỗ công nghiệp PB chuẩn CARB-P2 (*), Veneer gỗ sồi
+                                    tự nhiên - Chân bàn: Gỗ cao su tự nhiên - Ghế ăn: Gỗ cao su
+                                    tự nhiên/Gỗ tần bì tự nhiên, Vải bọc polyester chống nhăn,
+                                    kháng bụi bẩn và nấm mốc
+                                </span>
                             </p>
                             <form class="form" action="" method="get">
                                 <div class="product-color">
@@ -127,25 +329,11 @@
                                                 name="color"
                                                 checked
                                             />
-                                            <label class="color-title" for="color-1"> </label>
-                                        </li>
-                                        <li class="color-item">
-                                            <input
-                                                class="input-radio"
-                                                id="color-2"
-                                                type="radio"
-                                                name="color"
-                                            />
-                                            <label class="color-title" for="color-2"> </label>
-                                        </li>
-                                        <li class="color-item">
-                                            <input
-                                                class="input-radio"
-                                                id="color-3"
-                                                type="radio"
-                                                name="color"
-                                            />
-                                            <label class="color-title" for="color-3"> </label>
+                                            <label
+                                                class="color-title"
+                                                for="color-1"
+                                                style="background-color: #d2af84"
+                                            ></label>
                                         </li>
                                     </ul>
                                 </div>
@@ -165,7 +353,7 @@
                                     <ion-icon name="star-outline"></ion-icon>
                                     <ion-icon name="star"></ion-icon>
                                     <span>4.2</span>
-                                    <span class="rate-count">(8 khách hàng đã review)</span>
+                                    <span class="rate-count">(3 khách hàng đã review)</span>
                                 </div>
                                 <div class="product-price">
                                     <span class="promotion-price">25.415.000</span>
@@ -192,16 +380,15 @@
                     <div class="description">
                         <h2 class="product-info-text">MÔ TẢ SẢN PHẨM</h2>
                         <p class="paragraph">
-                            Sofa Poppy góc phải vải màu xanh Sẽ không ngoa nếu nói rằng mùa hè
-                            này những gì tươi trẻ nhất, xanh tươi nhất và hiện đại nhất sẽ gọi
-                            tên chiếc Sofa này với thiết kế hiện đại tinh giản và với tông màu
-                            không thể nào hot hơn là xanh Pastel cho sắc màu không gian nhà bạn
-                            luôn bừng sáng và sức sống. Với thiết kế góc nhỏ gọn nhưng không kém
-                            phần tiện dụng cho bạn sự trải nghiệm êm ái và thoải mái khi có thể
-                            duỗi thẳng cơ thể nằm oài cho 1 ngày thư thái bạn nhé!
+                            Kích thước: -Bàn ăn: Dài 120cm x Rộng 75cm x Cao 74cm - Ghế ăn
+                            ODESSA: Dài 43cm x Rộng 51cm x Cao 92cm - Ghế ăn MILAN: Dài 52cm x
+                            Rộng 49cm x Cao 74cm Chất liệu: - Mặt bàn: Gỗ công nghiệp PB chuẩn
+                            CARB-P2 (*), Veneer gỗ sồi tự nhiên - Chân bàn: Gỗ cao su tự nhiên -
+                            Ghế ăn: Gỗ cao su tự nhiên/Gỗ tần bì tự nhiên, Vải bọc polyester
+                            chống nhăn, kháng bụi bẩn và nấm mốc (*) Tiêu chuẩn California Air
+                            Resources Board xuất khẩu Mỹ, đảm bảo gỗ không độc hại, an toàn cho
+                            sức khỏe Chống thấm, cong vênh, trầy xước, mối mọt
                         </p>
-                        <p class="paragraph">Kích thước: D2400/1350 - R830 - C700 mm</p>
-                        <p class="paragraph">Vật liệu: Chân gỗ - Vải cao cấp</p>
                     </div>
 
                     <div class="review">
@@ -298,9 +485,8 @@
                         <h2 class="product-info-text">SẢN PHẨM LIÊN QUAN</h2>
                         <div class="cards">
                             <div class="card">
-                                <div class="card-sale">
-                                    <span class="percent-sale">-35%</span>
-                                </div>
+                                <a href="product-detail.html" class="card-link"></a>
+                                <div class="card-discount">35% giảm</div>
                                 <div class="card-img">
                                     <img
                                         class="card-img-item"
@@ -310,7 +496,9 @@
                                 </div>
                                 <div class="card-content">
                                     <div class="card-title">
-                                        <p>Ngăn Trang Trí - Ngăn Ghép Kệ Sách</p>
+                                        <a href="product-detail.html"
+                                            >Ngăn Trang Trí - Ngăn Ghép Kệ Sách</a
+                                        >
                                     </div>
                                     <div class="card-price">
                                         <span class="card-promotion-price">129.000</span>
@@ -327,28 +515,29 @@
                                         </div>
                                     </div>
                                     <a href="/product-detail.html" class="btn-add-card"
-                                        >Xem ngay</a
+                                        >Thêm vào giỏ hàng</a
                                     >
                                 </div>
                             </div>
                             <div class="card">
-                                <div class="card-sale">
-                                    <span class="percent-sale">-35%</span>
-                                </div>
+                                <a href="product-detail.html" class="card-link"></a>
+                                <div class="card-discount">20% giảm</div>
                                 <div class="card-img">
                                     <img
                                         class="card-img-item"
-                                        src="./images/ngan_ghep_ke_sach/ke_sach.png"
+                                        src="./images/giuong-ngu-go-vline601/giuong-ngu-go-vline-1.png"
                                         alt="card image"
                                     />
                                 </div>
                                 <div class="card-content">
                                     <div class="card-title">
-                                        <p>Ngăn Trang Trí - Ngăn Ghép Kệ Sách</p>
+                                        <a href="product-detail.html"
+                                            >Giường Ngủ Gỗ MOHO VLINE 601</a
+                                        >
                                     </div>
                                     <div class="card-price">
-                                        <span class="card-promotion-price">129.000</span>
-                                        <span class="card-original-price">199.000</span>
+                                        <span class="card-promotion-price">4.632.000</span>
+                                        <span class="card-original-price">5.790.000</span>
                                     </div>
                                     <div class="card-detail">
                                         <div class="card-rate">
@@ -361,28 +550,29 @@
                                         </div>
                                     </div>
                                     <a href="/product-detail.html" class="btn-add-card"
-                                        >Xem ngay</a
+                                        >Thêm vào giỏ hàng</a
                                     >
                                 </div>
                             </div>
                             <div class="card">
-                                <div class="card-sale">
-                                    <span class="percent-sale">-35%</span>
-                                </div>
+                                <a href="product-detail.html" class="card-link"></a>
+                                <div class="card-discount">20% giảm</div>
                                 <div class="card-img">
                                     <img
                                         class="card-img-item"
-                                        src="./images/ngan_ghep_ke_sach/ke_sach.png"
+                                        src="./images/ban-tra-tron-cao-go/ban-sofa-ban-cafe-ban-tra-tron-cao-go.png"
                                         alt="card image"
                                     />
                                 </div>
                                 <div class="card-content">
                                     <div class="card-title">
-                                        <p>Ngăn Trang Trí - Ngăn Ghép Kệ Sách</p>
+                                        <a href="product-detail.html">
+                                            Bàn Sofa - Bàn Cafe - Bàn Trà Tròn Cao
+                                        </a>
                                     </div>
                                     <div class="card-price">
-                                        <span class="card-promotion-price">129.000</span>
-                                        <span class="card-original-price">199.000</span>
+                                        <span class="card-promotion-price">639.000</span>
+                                        <span class="card-original-price">799.000</span>
                                     </div>
                                     <div class="card-detail">
                                         <div class="card-rate">
@@ -395,28 +585,27 @@
                                         </div>
                                     </div>
                                     <a href="/product-detail.html" class="btn-add-card"
-                                        >Xem ngay</a
+                                        >Thêm vào giỏ hàng</a
                                     >
                                 </div>
                             </div>
                             <div class="card">
-                                <div class="card-sale">
-                                    <span class="percent-sale">-35%</span>
-                                </div>
+                                <a href="product-detail.html" class="card-link"></a>
+                                <!-- <div class="card-discount">0% giảm</div> -->
                                 <div class="card-img">
                                     <img
                                         class="card-img-item"
-                                        src="./images/ngan_ghep_ke_sach/ke_sach.png"
+                                        src="./images/tu-ke-tivi-go/tu_ke_tu_tivi_go_1.jpg"
                                         alt="card image"
                                     />
                                 </div>
                                 <div class="card-content">
                                     <div class="card-title">
-                                        <p>Ngăn Trang Trí - Ngăn Ghép Kệ Sách</p>
+                                        <a href="product-detail.html">Tủ Kệ Tivi Gỗ</a>
                                     </div>
                                     <div class="card-price">
-                                        <span class="card-promotion-price">129.000</span>
-                                        <span class="card-original-price">199.000</span>
+                                        <span class="card-promotion-price">2.490.000</span>
+                                        <span class="card-original-price">2490.000</span>
                                     </div>
                                     <div class="card-detail">
                                         <div class="card-rate">
@@ -429,7 +618,7 @@
                                         </div>
                                     </div>
                                     <a href="/product-detail.html" class="btn-add-card"
-                                        >Xem ngay</a
+                                        >Thêm vào giỏ hàng</a
                                     >
                                 </div>
                             </div>
