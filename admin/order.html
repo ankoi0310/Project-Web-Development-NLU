@@ -157,18 +157,25 @@
 					<div class="col-12">
 						<div class="card">
 							<div class="card-body">
+								<a href="" role="button" class="btn btn-primary mr-2 float-left" title="Đã xác nhận"><i class="fas fa-check-circle"></i></a>
+								<a href="" role="button" class="btn btn-danger mr-2 float-left" title="Đang chuẩn bị"><i class="fas fa-truck-loading"></i></a>
+								<a href="" role="button" class="btn btn-warning mr-2 float-left" title="Đang giao hàng"><i class="fas fa-shipping-fast"></i></a>
+								<a href="" role="button" class="btn btn-success float-left" title="Đã giao hàng"><i class="fas fa-clipboard-check"></i></a>
 								<table id="trademark" class="table table-bordered table-striped">
 									<thead>
 									<tr class="text-center">
+										<th class="align-middle"><input type="checkbox" name="checkBoxAll" id="checkBoxAll"></th>
 										<th class="align-middle">Mã đơn hàng</th>
 										<th class="align-middle">Thông tin người đặt</th>
 										<th class="align-middle">Ngày tạo</th>
+										<th class="align-middle">Lần cuối cập nhật</th>
 										<th class="align-middle">Trạng thái</th>
 										<th class="align-middle">Tác vụ</th>
 									</tr>
 									</thead>
 									<tbody>
 									<tr>
+										<td class="text-center align-middle"><input type="checkbox" class="checkBoxId" name="id"></td>
 										<td class="text-center align-middle">1aknf-afnja-ncyab582y82nc</td>
 										<td class="align-middle">
 											<ul>
@@ -179,10 +186,11 @@
 											</ul>
 										</td>
 										<td class="text-center align-middle">00:00:00 25/12/2021</td>
+										<td class="text-center align-middle">22:00:00 26/12/2021</td>
 										<td class="text-center align-middle"><span class="badge badge-success">Đang giao hàng</span></td>
 										<td class="text-center align-middle">
-											<button type="button" data-toggle="modal"
-											   data-target="#detail-modal" class="btn btn-info">Chi tiết sản phẩm</button>
+											<button type="button" data-toggle="modal" data-target="#detail-modal" class="btn btn-info" 
+											        title="Chi tiết sản phẩm"><i class="fas fa-info-circle"></i></button>
 										</td>
 									</tr>
 									</tbody>
@@ -285,9 +293,12 @@
 			"order": [[1, "asc"]],
 			"columnDefs": [
 				{
-					"targets": 4,
+					"targets": 0,
 					"orderable": false,
-					"width": "15%"
+				},
+				{
+					"targets": 6,
+					"orderable": false,
 				}
 			]
 		}).buttons().container().appendTo('#trademark_wrapper .col-md-6:eq(0)');

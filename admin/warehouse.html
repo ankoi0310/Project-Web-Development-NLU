@@ -189,7 +189,6 @@
 												<ul class="p-2" style="">
 													<li>Mã sản phẩm: GHEMIN9262</li>
 													<li>Tên sản phẩm: Sản phẩm 1</li>
-													<li>Kích thước: D2 x R1.5 X C1.3</li>
 													<li>Vật liệu: Gỗ, vải mịn</li>
 													<li>Màu sắc: <span style="display: inline-block; width:60px; height: 15px;background-color: #000000;"></span></li>
 												</ul>
@@ -250,10 +249,13 @@
 											</select>
 										</div>
 									</div>
-									<div class="col">
+									<div class="col-4">
 										<div class="form-group">
-											<label>Kích thước</label>
-											<input type="text" name="size" class="form-control" placeholder="VD: D2 x R1.5 x C1.75">
+											<label>Ảnh</label>
+											<div class="custom-file">
+												<input type="file" name="image" class="custom-file-input" accept="image/*">
+												<label class="custom-file-label">Choose file</label>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -333,7 +335,7 @@
 							<input type="hidden" name="id"/>
 							<div class="modal-body card-body">
 								<div class="row">
-									<div class="col">
+									<div class="col-8">
 										<div class="form-group">
 											<label>Sản phẩm</label>
 											<select class="select-product form-control"
@@ -349,10 +351,22 @@
 											</select>
 										</div>
 									</div>
+								</div>
+								<div class="row">
 									<div class="col">
 										<div class="form-group">
-											<label>Kích thước</label>
-											<input type="text" name="size" class="form-control" placeholder="VD: D2 x R1.5 x C1.75">
+											<label>Ảnh hiện tại</label>
+											<input type="hidden" name="image" value="">
+											<img src="https://www.robohash.org/koi" alt="Image">
+										</div>
+									</div>
+									<div class="offset-2 col">
+										<div class="form-group">
+											<label>Ảnh cập nhật</label>
+											<div class="custom-file">
+												<input type="file" name="imageUpdate" class="custom-file-input" accept="image/*">
+												<label class="custom-file-label">Choose file</label>
+											</div>
 										</div>
 									</div>
 								</div>

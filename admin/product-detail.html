@@ -182,7 +182,6 @@
 												<ul class="p-2" style="">
 													<li>Mã sản phẩm: GHEMIN9262</li>
 													<li>Tên sản phẩm: Sản phẩm 1</li>
-													<li>Kích thước: D2 x R1.5 X C1.3</li>
 													<li>Vật liệu: Gỗ, vải mịn</li>
 													<li>Màu sắc: <span style="display: inline-block; width:60px; height: 15px;background-color: #000000;"></span></li>
 												</ul>
@@ -228,25 +227,19 @@
 							<input type="hidden" name="id"/>
 							<div class="modal-body card-body">
 								<div class="row">
-									<div class="col">
+									<div class="col-8">
 										<div class="form-group">
-											<label>Tên sản phẩm</label>
-											<input type="text" name="name" class="form-control" placeholder="VD: Ghế sofa cao cấp" value="Sản phẩm 1" disabled/>
-										</div>
-									</div>
-									<div class="col">
-										<div class="form-group">
-											<label>Màu sắc</label>
-											<select class="select2bs4"
+											<label>Sản phẩm</label>
+											<select class="select-product form-control"
 											        name="color" style="width: 100%;">
-												<option value="">--Vui lòng chọn màu--</option>
-												<option value="#000000" selected>Màu 1</option>
-												<option value="#111111">Màu 2</option>
-												<option value="#222222">Màu 3</option>
-												<option value="#333333">Màu 4</option>
-												<option value="#444444">Màu 5</option>
-												<option value="#555555">Màu 6</option>
-												<option value="#666666">Màu 7</option>
+												<option value="">--Chọn sản phẩm--</option>
+												<option value="1">Sản phẩm 1</option>
+												<option value="2">Sản phẩm 2</option>
+												<option value="3">Sản phẩm 3</option>
+												<option value="4">Sản phẩm 4</option>
+												<option value="5">Sản phẩm 5</option>
+												<option value="6">Sản phẩm 6</option>
+												<option value="7">Sản phẩm 7</option>
 											</select>
 										</div>
 									</div>
@@ -254,7 +247,58 @@
 								<div class="row">
 									<div class="col">
 										<div class="form-group">
-											<label>Giá bán</label>
+											<label>Ảnh hiện tại</label>
+											<input type="hidden" name="image" value="">
+											<img src="https://www.robohash.org/koi" alt="Image">
+										</div>
+									</div>
+									<div class="offset-2 col">
+										<div class="form-group">
+											<label>Ảnh cập nhật</label>
+											<div class="custom-file">
+												<input type="file" name="imageUpdate" class="custom-file-input" accept="image/*">
+												<label class="custom-file-label">Choose file</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col">
+										<div class="form-group">
+											<label>Màu sắc</label>
+											<select class="select-color form-control" onchange="changeColor(this);" name="color" style="width: 100%;">
+												<option value="">--Chọn màu--</option>
+												<option value="#006A4E">#006A4E</option>
+												<option value="#124AAA">#124AAA</option>
+												<option value="#EDF485">#EDF485</option>
+												<option value="#915C83">#915C83</option>
+												<option value="#FDEE00">#FDEE00</option>
+												<option value="#E32636">#E32636</option>
+												<option value="#89CFF0">#89CFF0</option>
+											</select>
+										</div>
+									</div>
+									<div class="col">
+										<div class="form-group">
+											<label>Vật liệu</label>
+											<select class="select-material form-control"
+											        name="color" style="width: 100%;">
+												<option value="">--Chọn vật liệu--</option>
+												<option value="VL1">Vật liệu 1</option>
+												<option value="VL2">Vật liệu 2</option>
+												<option value="VL3">Vật liệu 3</option>
+												<option value="VL4">Vật liệu 4</option>
+												<option value="VL5">Vật liệu 5</option>
+												<option value="VL6">Vật liệu 6</option>
+												<option value="VL7">Vật liệu 7</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col">
+										<div class="form-group">
+											<label>Giá bán (VNĐ)</label>
 											<input type="number" name="unit_price" class="form-control" placeholder="0">
 										</div>
 									</div>
