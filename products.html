@@ -1184,6 +1184,9 @@
                             <div class="flex-col">
                                 <div class="col-item">
                                     <div class="info-item">
+                                        <a class="text-info" href="home.html">Trang chủ</a>
+                                    </div>
+                                    <div class="info-item">
                                         <a class="text-info" href="products.html">Sản phẩm</a>
                                     </div>
                                     <div class="info-item">
@@ -1192,10 +1195,12 @@
                                 </div>
                                 <div class="col-item">
                                     <div class="info-item">
-                                        <a class="text-info" href="about-us.html">About us</a>
+                                        <a class="text-info" href="faqs.html">FAQS</a>
                                     </div>
                                     <div class="info-item">
-                                        <a class="text-info" href="faqs.html">FAQS</a>
+                                        <a class="text-info" href="about-us.html">
+                                            Về chúng tôi
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -1315,23 +1320,48 @@
                             <span class="popup-header__title">Đăng Ký Ngay</span>
                         </div>
                         <form action="" method="post" class="popup-form">
-                            <div class="form-group">
-                                <input
-                                    type="text"
-                                    name="fullname"
-                                    class="form-input"
-                                    placeholder=" "
-                                />
-                                <label class="form-label">Tên của bạn</label>
+                            <div class="form-group box-flex">
+                                <div class="box-left">
+                                    <input
+                                        type="text"
+                                        name="lastname"
+                                        class="form-input"
+                                        placeholder=" "
+                                    />
+                                    <label class="form-label">Họ của bạn</label>
+                                </div>
+                                <div class="box-right">
+                                    <input
+                                        type="text"
+                                        name="firstname"
+                                        class="form-input"
+                                        placeholder=" "
+                                    />
+                                    <label class="form-label">Tên của bạn</label>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <input
-                                    type="text"
-                                    name="phone-number"
-                                    class="form-input"
-                                    placeholder=" "
-                                />
-                                <label class="form-label">Số điện thoại của bạn</label>
+                            <div class="form-group box-flex">
+                                <div class="box-left">
+                                    <input
+                                        type="text"
+                                        name="phone-number"
+                                        class="form-input"
+                                        placeholder=" "
+                                    />
+                                    <label class="form-label">Số điện thoại của bạn</label>
+                                </div>
+                                <div class="box-right">
+                                    <span>Tôi là: </span>
+                                    <input type="radio" name="gender" value="male" id="male" />
+                                    <label for="male">Nam</label>
+                                    <input
+                                        type="radio"
+                                        name="gender"
+                                        value="female"
+                                        id="female"
+                                    />
+                                    <label for="female">Nữ</label>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <input
@@ -1405,8 +1435,8 @@
                 </div>
             </div>
         </div>
-        <script src="js/products.js"></script>
         <script src="js/signup-signin.js"></script>
+        <script src="js/products.js"></script>
         <script
             type="module"
             src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
