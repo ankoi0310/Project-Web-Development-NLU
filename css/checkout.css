@@ -180,35 +180,9 @@
     text-align: right;
 }
 
-/* css for voucher */
-.section-control.voucher {
-    margin-bottom: 0;
-    color: var(--text-black-2);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    box-shadow: none;
-}
-
-.section-control.voucher > * {
-    display: flex;
-    align-items: center;
-}
-
-.section-control .box-label-voucher > span {
-    margin-left: 1rem;
-}
-
-.section-control.voucher .voucher-checkout-description {
-    margin: 0 3rem 0 1rem;
-}
-
 /* css for total checkout */
 .section-control.total-checkout {
-    border-radius: 0;
-    border-top: 2px dashed #ebebeb;
+    border-radius: 4px 4px 0 0;
     border-bottom: 2px dashed #ebebeb;
     box-shadow: none;
     margin-bottom: 0;
@@ -395,7 +369,7 @@
     inset: 0;
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(2px);
-    z-index: 500;
+    z-index: 990;
     transition: all 0.2s;
     opacity: 0;
     visibility: hidden;
@@ -404,6 +378,10 @@
 .popup-add-address.open {
     opacity: 1;
     visibility: visible;
+}
+
+.popup-title {
+    font-size: 1.8rem;
 }
 
 .box-add-address {
@@ -435,15 +413,6 @@
     position: relative;
 }
 
-.form-control.form-username-phone {
-    display: flex;
-    justify-content: space-between;
-}
-
-.form-control.form-username-phone .form-user-input {
-    width: 49%;
-}
-
 .form-control select.form-user-input {
     appearance: none;
     cursor: pointer;
@@ -458,10 +427,6 @@
     color: var(--text-grey);
     background-color: #fff;
     padding: 0 0.5rem;
-}
-
-.form-control .form-user-input + .form-user-phone {
-    left: calc(50% + 2rem);
 }
 
 .form-control .form-user-input {

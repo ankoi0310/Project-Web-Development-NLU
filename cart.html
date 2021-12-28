@@ -14,7 +14,6 @@
         <link rel="stylesheet" href="./css/header.css" />
         <link rel="stylesheet" href="./css/footer.css" />
         <link rel="stylesheet" href="./css/cart.css" />
-        <link rel="stylesheet" href="./css/popup-voucher.css" />
         <title>Giỏ hàng</title>
     </head>
     <body>
@@ -457,13 +456,6 @@
                                 Lưu vào yêu thích
                             </a>
                         </div>
-                        <div class="box-control__item box-voucher">
-                            <div class="box-label-voucher">
-                                <ion-icon name="ticket-outline"></ion-icon>
-                                <span>Voucher</span>
-                            </div>
-                            <span class="btn-show-popup">Nhập voucher</span>
-                        </div>
                     </div>
 
                     <div class="box-control box-payment__bottom">
@@ -474,108 +466,6 @@
                 </div>
             </div>
         </main>
-
-        <!-- popup add voucher -->
-        <div class="box-popup-voucher">
-            <div class="popup-voucher">
-                <h2 class="popup-title">Chọn hoặc nhập Voucher</h2>
-                <div class="box-input-voucher">
-                    <label for="voucher-input">Mã Voucher</label>
-                    <input
-                        type="text"
-                        class="voucher-input"
-                        id="voucher-input"
-                        name="voucher-input"
-                        placeholder="Nhập mã voucher"
-                    />
-                    <button class="btn-comfirm-voucher btn-use-voucher btn-disabled" disabled>
-                        Áp dụng
-                    </button>
-                </div>
-
-                <div class="box-list-voucher">
-                    <div class="voucher-item">
-                        <div class="voucher-title">
-                            <div class="voucher-tag" data-tag="Số lượng có hạn"></div>
-                            <span>Miễn Phí vận chuyển</span>
-                        </div>
-                        <div class="voucher-description">
-                            <p class="voucher-description__title">
-                                Áp dụng cho đơn hàng trên 500k
-                            </p>
-                            <span class="voucher-description__item description-border">
-                                Giảm đến 70k
-                            </span>
-                            <p class="voucher-description__item">Hết hạn: còn 2 ngày</p>
-                        </div>
-                    </div>
-                    <div class="voucher-item">
-                        <div class="voucher-title">
-                            <div class="voucher-tag" data-tag="Số lượng có hạn"></div>
-                            <span>Miễn Phí vận chuyển</span>
-                        </div>
-                        <div class="voucher-description">
-                            <p class="voucher-description__title">
-                                Áp dụng cho đơn hàng trên 500k
-                            </p>
-                            <span class="voucher-description__item description-border">
-                                Giảm đến 70k
-                            </span>
-                            <p class="voucher-description__item">Hết hạn: còn 2 ngày</p>
-                        </div>
-                    </div>
-                    <div class="voucher-item">
-                        <div class="voucher-title">
-                            <div class="voucher-tag" data-tag="Số lượng có hạn"></div>
-                            <span>Miễn Phí vận chuyển</span>
-                        </div>
-                        <div class="voucher-description">
-                            <p class="voucher-description__title">
-                                Áp dụng cho đơn hàng trên 500k
-                            </p>
-                            <span class="voucher-description__item description-border">
-                                Giảm đến 70k
-                            </span>
-                            <p class="voucher-description__item">Hết hạn: còn 2 ngày</p>
-                        </div>
-                    </div>
-                    <div class="voucher-item">
-                        <div class="voucher-title">
-                            <div class="voucher-tag" data-tag="Số lượng có hạn"></div>
-                            <span>Miễn Phí vận chuyển</span>
-                        </div>
-                        <div class="voucher-description">
-                            <p class="voucher-description__title">
-                                Áp dụng cho đơn hàng trên 500k
-                            </p>
-                            <span class="voucher-description__item description-border">
-                                Giảm đến 70k
-                            </span>
-                            <p class="voucher-description__item">Hết hạn: còn 2 ngày</p>
-                        </div>
-                    </div>
-                    <div class="voucher-item">
-                        <div class="voucher-title">
-                            <div class="voucher-tag" data-tag="Số lượng có hạn"></div>
-                            <span>Miễn Phí vận chuyển</span>
-                        </div>
-                        <div class="voucher-description">
-                            <p class="voucher-description__title">
-                                Áp dụng cho đơn hàng trên 500k
-                            </p>
-                            <span class="voucher-description__item description-border">
-                                Giảm đến 70k
-                            </span>
-                            <p class="voucher-description__item">Hết hạn: còn 2 ngày</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="box-voucher-bottom">
-                    <button class="btn-cancel">Trở về</button>
-                    <button class="btn-comfirm-voucher btn-comfirm">OK</button>
-                </div>
-            </div>
-        </div>
 
         <footer class="footer">
             <div class="container">
@@ -689,7 +579,6 @@
         </footer>
 
         <script src="js/cart.js"></script>
-        <script src="js/popup-voucher.js"></script>
         <script
             type="module"
             src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
