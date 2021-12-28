@@ -168,6 +168,7 @@
 											<th><input type="checkbox" name="checkBoxAll" id="checkBoxAll"></th>
 											<th class="align-middle">Mã loại </th>
 											<th class="align-middle">Tên loại</th>
+											<th class="align-middle">Trạng thái</th>
 											<th>
 												<span class="align-middle">Tác vụ</span>
 											</th>
@@ -178,6 +179,13 @@
 											<td class="text-center align-middle"><input type="checkbox" class="checkBoxId" name="id" value="1"></td>
 											<td class="text-center align-middle">GH</td>
 											<td class="text-center align-middle">Ghế</td>
+											<td class="text-center align-middle text-success">
+												Mở
+												<form action="/admin/product?action=changeActive" method="POST" class="d-inline-block">
+													<input type="hidden" name="id" value="${product.id}">
+													<button type="submit" class="btn p-1 bg-transparent text-danger"><i class="fas fa-sync-alt"></i></button>
+												</form>
+											</td>
 											<td class="d-flex justify-content-center">
 												<input type="hidden" name="id" value="1"/>
 												<button type="button" class="btn btn-warning d-block w-100 update" data-toggle="modal"
@@ -348,7 +356,7 @@
 					"orderable": false,
 				},
 				{
-					"targets"  : 3,
+					"targets"  : 4,
 					"orderable": false,
 					"width": "15%"
 				}

@@ -168,8 +168,9 @@
 											<th class="align-middle"><input type="checkbox" name="checkBoxAll" id="checkBoxAll"></th>
 											<th class="align-middle">Tên</th>
 											<th class="align-middle">Mô tả</th>
+											<th class="align-middle">Kích thước</th>
 											<th class="align-middle">Thương hiệu</th>
-											<th class="align-middle">Loại sản phẩm</th>
+											<th class="align-middle">Loại</th>
 											<th class="align-middle">Ngày tạo</th>
 											<th class="align-middle">Cập nhật</th>
 											<th class="align-middle">Trạng thái</th>
@@ -179,13 +180,14 @@
 										<tbody>
 										<tr>
 											<td class="text-center align-middle"><input type="checkbox" class="checkBoxId" name="id"></td>
-											<td class="text-center align-middle">Sản phẩm 1</td>
+											<td class="align-middle">Sản phẩm 1</td>
 											<td class="text-center align-middle">
 												<input type="hidden" name="description" value="${product.description}"/>
 												<a href="#" class="btn btn-info" data-toggle="modal" data-target="#description-modal" onclick="showDescription(this)">Xem mô tả</a>
 											</td>
+											<td class="text-center align-middle">D2 x R1 x C1.5</td>
 											<td class="text-center align-middle">Thương hiệu 1</td>
-											<td class="text-center align-middle">Loại sản phẩm 1</td>
+											<td class="text-center align-middle">Loại 1</td>
 											<td class="text-center align-middle">09:30:19 19-12-2021</td>
 											<td class="text-center align-middle">11:45:13 19-12-2021</td>
 											<td class="text-center align-middle text-success">
@@ -230,6 +232,12 @@
 											<input type="text" name="name" class="form-control" placeholder="VD: Ghế sofa cao cấp"/>
 										</div>
 									</div>
+									<div class="col-4">
+										<div class="form-group">
+											<label>Kích thước</label>
+											<input type="text" name="size" class="form-control" placeholder="VD: D2 x R1.5 x C2"/>
+										</div>
+									</div>
 								</div>
 								<div class="row">
 									<div class="col">
@@ -237,7 +245,11 @@
 											<label>Thương hiệu</label>
 											<select class="select2bs4" name="trademark" style="width: 100%;">
 												<option value="">-- Chọn thương hiệu --</option>
-											
+												<option value="1">Thương hiệu 1</option>
+												<option value="2">Thương hiệu 2</option>
+												<option value="3">Thương hiệu 3</option>
+												<option value="4">Thương hiệu 4</option>
+												<option value="5">Thương hiệu 5</option>
 											</select>
 										</div>
 									</div>
@@ -246,7 +258,11 @@
 											<label>Loại sản phẩm</label>
 											<select class="select2bs4" name="category" style="width: 100%;">
 												<option value="">-- Chọn loại sản phẩm --</option>
-											
+												<option value="1">Loại 1</option>
+												<option value="2">Loại 2</option>
+												<option value="3">Loại 3</option>
+												<option value="4">Loại 4</option>
+												<option value="5">Loại 5</option>
 											</select>
 										</div>
 									</div>
@@ -288,6 +304,12 @@
 											<input type="text" name="name" class="form-control" placeholder="VD: Ghế sofa cao cấp"/>
 										</div>
 									</div>
+									<div class="col-4">
+										<div class="form-group">
+											<label>Kích thước</label>
+											<input type="text" name="name" class="form-control" placeholder="VD: D2 x R1.5 x C2"/>
+										</div>
+									</div>
 								</div>
 								<div class="row">
 									<div class="col">
@@ -295,7 +317,11 @@
 											<label>Thương hiệu</label>
 											<select class="select2bs4" name="trademark" style="width: 100%;">
 												<option value="">-- Chọn thương hiệu --</option>
-											
+												<option value="1">Thương hiệu 1</option>
+												<option value="2">Thương hiệu 2</option>
+												<option value="3">Thương hiệu 3</option>
+												<option value="4">Thương hiệu 4</option>
+												<option value="5">Thương hiệu 5</option>
 											</select>
 										</div>
 									</div>
@@ -304,6 +330,11 @@
 											<label>Loại sản phẩm</label>
 											<select class="select2bs4" name="category" style="width: 100%;">
 												<option value="">-- Chọn loại sản phẩm --</option>
+												<option value="1">Loại 1</option>
+												<option value="2">Loại 2</option>
+												<option value="3">Loại 3</option>
+												<option value="4">Loại 4</option>
+												<option value="5">Loại 5</option>
 											</select>
 										</div>
 									</div>
@@ -447,7 +478,7 @@
 					"orderable": false,
 				},
 				{
-					"targets": 8,
+					"targets": 9,
 					"orderable": false,
 					"width": "10%"
 				}

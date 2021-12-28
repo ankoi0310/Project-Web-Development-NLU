@@ -169,6 +169,7 @@
 											<th class="align-middle">Tên thương hiệu</th>
 											<th class="align-middle">Địa chỉ</th>
 											<th class="align-middle">Website</th>
+											<th class="align-middle">Trạng thái</th>
 											<th>
 												<span class="align-middle">Tác vụ</span>
 											</th>
@@ -200,6 +201,13 @@
 												</ul>
 											</td>
 											<td class="align-middle">https://fit.hcmuaf.edu.vn</td>
+											<td class="text-center align-middle text-success">
+												Mở
+												<form action="/admin/product?action=changeActive" method="POST" class="d-inline-block">
+													<input type="hidden" name="id" value="${product.id}">
+													<button type="submit" class="btn p-1 bg-transparent text-danger"><i class="fas fa-sync-alt"></i></button>
+												</form>
+											</td>
 											<td class="d-flex justify-content-center">
 												<input type="hidden" name="id" value="1"/>
 												<button type="button" class="btn btn-warning d-block w-100 update" data-toggle="modal"
@@ -512,16 +520,16 @@
 				},
 				{
 					"targets": 2,
-					"width": "45%"
+					"width": "40%"
 				},
 				{
 					"targets": 3,
 					"width": "20%"
 				},
 				{
-					"targets": 4,
+					"targets": 5,
 					"orderable": false,
-					"width": "15%"
+					"width": "10%"
 				}
 			]
 		}).buttons().container().appendTo('#trademark_wrapper .col-md-6:eq(0)');
